@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "/home/roby-jacob/hardware-projects/full-adder/full.xst" -ofn "/home/roby-jacob/hardware-projects/full-adder/full.syr" 
+xst -intstyle ise -ifn "/home/roby-jacob/hardware-projects/full-adder/full.xst" -ofn "/home/roby-jacob/hardware-projects/full-adder/full.syr" 
+xst -intstyle ise -ifn "/home/roby-jacob/hardware-projects/full-adder/full.xst" -ofn "/home/roby-jacob/hardware-projects/full-adder/full.syr" 
+xst -intstyle ise -ifn "/home/roby-jacob/hardware-projects/full_adder/full.xst" -ofn "/home/roby-jacob/hardware-projects/full_adder/full.syr" 

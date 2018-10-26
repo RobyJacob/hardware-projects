@@ -1,0 +1,32 @@
+Command line:
+   alu_test_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  48129
+
+Tue Sep  4 23:01:10 2018
+
+
+ Elaboration Time: 0.04 sec
+
+ Current Memory Usage: 246.665 Meg
+
+ Total Signals          : 12
+ Total Nets             : 38
+ Total Signal Drivers   : 6
+ Total Blocks           : 6
+ Total Primitive Blocks : 5
+ Total Processes        : 4
+ Total Traceable Variables  : 15
+ Total Scalar Nets and Variables : 539
+Total Line Count : 19
+In process alu.vhd:45 
+ Target Size 9 and source size 18 for array dimension 0 does not match. 
+
+
+ Total Simulation Time: 0.05 sec
+
+ Current Memory Usage: 322.167 Meg
+
+Tue Sep  4 23:01:47 2018
+

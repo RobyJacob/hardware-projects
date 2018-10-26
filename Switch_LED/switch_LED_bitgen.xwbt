@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/roby-jacob/hardware-projects/Switch_LED/switch_LED.ncd
+OUTFILE=/home/roby-jacob/hardware-projects/Switch_LED/switch_LED.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4vq100
+WORKINGDIR=/home/roby-jacob/hardware-projects/Switch_LED
+LICENSE=WebPack
+USER_INFO=211569678_0_0_458

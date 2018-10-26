@@ -1,0 +1,8 @@
+V3 3
+FL /home/roby-jacob/hardware-projects/full_adder/full_adder.vhd 2018/10/26.18:11:54 P.20131013
+EN work/full_adder 1540557730 \
+      FL /home/roby-jacob/hardware-projects/full_adder/full_adder.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/full_adder/Behavioral 1540557731 \
+      FL /home/roby-jacob/hardware-projects/full_adder/full_adder.vhd \
+      EN work/full_adder 1540557730

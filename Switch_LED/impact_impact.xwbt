@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/home/roby/hardware-projects/Switch_LED/impact.xsl
+OUTFILE=/home/roby/hardware-projects/Switch_LED/impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=/home/roby/hardware-projects/Switch_LED
+LICENSE=iMPACT
+USER_INFO=iMPACT

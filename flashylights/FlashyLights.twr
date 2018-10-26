@@ -1,0 +1,532 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml FlashyLights.twx FlashyLights.ncd -o FlashyLights.twr
+FlashyLights.pcf -ucf pin.ucf
+
+Design file:              FlashyLights.ncd
+Physical constraint file: FlashyLights.pcf
+Device,package,speed:     xc3s500e,vq100,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: NET "CLK_BUFGP/IBUFG" PERIOD = 31.25 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 65 paths analyzed, 33 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   3.658ns.
+--------------------------------------------------------------------------------
+
+Paths for end point addr_count/blk00000001/blk00000020 (SLICE_X3Y72.CIN), 8 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     27.592ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addr_count/blk00000001/blk00000017 (FF)
+  Destination:          addr_count/blk00000001/blk00000020 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      3.658ns (Levels of Logic = 5)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: addr_count/blk00000001/blk00000017 to addr_count/blk00000001/blk00000020
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y68.XQ       Tcko                  0.591   count<0>
+                                                       addr_count/blk00000001/blk00000017
+    SLICE_X3Y68.F1       net (fanout=2)        0.549   count<0>
+    SLICE_X3Y68.COUT     Topcyf                1.162   count<0>
+                                                       addr_count/blk00000001/blk00000029
+                                                       addr_count/blk00000001/blk00000004
+                                                       addr_count/blk00000001/blk00000007
+    SLICE_X3Y69.CIN      net (fanout=1)        0.000   addr_count/blk00000001/sig00000005
+    SLICE_X3Y69.COUT     Tbyp                  0.118   count<2>
+                                                       addr_count/blk00000001/blk00000009
+                                                       addr_count/blk00000001/blk0000000b
+    SLICE_X3Y70.CIN      net (fanout=1)        0.000   addr_count/blk00000001/sig00000007
+    SLICE_X3Y70.COUT     Tbyp                  0.118   count<4>
+                                                       addr_count/blk00000001/blk0000000d
+                                                       addr_count/blk00000001/blk0000000f
+    SLICE_X3Y71.CIN      net (fanout=1)        0.000   addr_count/blk00000001/sig00000009
+    SLICE_X3Y71.COUT     Tbyp                  0.118   count<6>
+                                                       addr_count/blk00000001/blk00000011
+                                                       addr_count/blk00000001/blk00000013
+    SLICE_X3Y72.CIN      net (fanout=1)        0.000   addr_count/blk00000001/sig0000000b
+    SLICE_X3Y72.CLK      Tcinck                1.002   count<8>
+                                                       addr_count/blk00000001/blk00000015
+                                                       addr_count/blk00000001/blk00000006
+                                                       addr_count/blk00000001/blk00000020
+    -------------------------------------------------  ---------------------------
+    Total                                      3.658ns (3.109ns logic, 0.549ns route)
+                                                       (85.0% logic, 15.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     27.746ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addr_count/blk00000001/blk00000019 (FF)
+  Destination:          addr_count/blk00000001/blk00000020 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      3.504ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: addr_count/blk00000001/blk00000019 to addr_count/blk00000001/blk00000020
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y69.XQ       Tcko                  0.591   count<2>
+                                                       addr_count/blk00000001/blk00000019
+    SLICE_X3Y69.F2       net (fanout=2)        0.513   count<2>
+    SLICE_X3Y69.COUT     Topcyf                1.162   count<2>
+                                                       count<2>_rt
+                                                       addr_count/blk00000001/blk00000009
+                                                       addr_count/blk00000001/blk0000000b
+    SLICE_X3Y70.CIN      net (fanout=1)        0.000   addr_count/blk00000001/sig00000007
+    SLICE_X3Y70.COUT     Tbyp                  0.118   count<4>
+                                                       addr_count/blk00000001/blk0000000d
+                                                       addr_count/blk00000001/blk0000000f
+    SLICE_X3Y71.CIN      net (fanout=1)        0.000   addr_count/blk00000001/sig00000009
+    SLICE_X3Y71.COUT     Tbyp                  0.118   count<6>
+                                                       addr_count/blk00000001/blk00000011
+                                                       addr_count/blk00000001/blk00000013
+    SLICE_X3Y72.CIN      net (fanout=1)        0.000   addr_count/blk00000001/sig0000000b
+    SLICE_X3Y72.CLK      Tcinck                1.002   count<8>
+                                                       addr_count/blk00000001/blk00000015
+                                                       addr_count/blk00000001/blk00000006
+                                                       addr_count/blk00000001/blk00000020
+    -------------------------------------------------  ---------------------------
+    Total                                      3.504ns (2.991ns logic, 0.513ns route)
+                                                       (85.4% logic, 14.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     27.751ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addr_count/blk00000001/blk0000001a (FF)
+  Destination:          addr_count/blk00000001/blk00000020 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      3.499ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: addr_count/blk00000001/blk0000001a to addr_count/blk00000001/blk00000020
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y69.YQ       Tcko                  0.587   count<2>
+                                                       addr_count/blk00000001/blk0000001a
+    SLICE_X3Y69.G3       net (fanout=2)        0.673   count<3>
+    SLICE_X3Y69.COUT     Topcyg                1.001   count<2>
+                                                       count<3>_rt
+                                                       addr_count/blk00000001/blk0000000b
+    SLICE_X3Y70.CIN      net (fanout=1)        0.000   addr_count/blk00000001/sig00000007
+    SLICE_X3Y70.COUT     Tbyp                  0.118   count<4>
+                                                       addr_count/blk00000001/blk0000000d
+                                                       addr_count/blk00000001/blk0000000f
+    SLICE_X3Y71.CIN      net (fanout=1)        0.000   addr_count/blk00000001/sig00000009
+    SLICE_X3Y71.COUT     Tbyp                  0.118   count<6>
+                                                       addr_count/blk00000001/blk00000011
+                                                       addr_count/blk00000001/blk00000013
+    SLICE_X3Y72.CIN      net (fanout=1)        0.000   addr_count/blk00000001/sig0000000b
+    SLICE_X3Y72.CLK      Tcinck                1.002   count<8>
+                                                       addr_count/blk00000001/blk00000015
+                                                       addr_count/blk00000001/blk00000006
+                                                       addr_count/blk00000001/blk00000020
+    -------------------------------------------------  ---------------------------
+    Total                                      3.499ns (2.826ns logic, 0.673ns route)
+                                                       (80.8% logic, 19.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point addr_count/blk00000001/blk0000001e (SLICE_X3Y71.CIN), 6 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     27.710ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addr_count/blk00000001/blk00000017 (FF)
+  Destination:          addr_count/blk00000001/blk0000001e (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      3.540ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: addr_count/blk00000001/blk00000017 to addr_count/blk00000001/blk0000001e
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y68.XQ       Tcko                  0.591   count<0>
+                                                       addr_count/blk00000001/blk00000017
+    SLICE_X3Y68.F1       net (fanout=2)        0.549   count<0>
+    SLICE_X3Y68.COUT     Topcyf                1.162   count<0>
+                                                       addr_count/blk00000001/blk00000029
+                                                       addr_count/blk00000001/blk00000004
+                                                       addr_count/blk00000001/blk00000007
+    SLICE_X3Y69.CIN      net (fanout=1)        0.000   addr_count/blk00000001/sig00000005
+    SLICE_X3Y69.COUT     Tbyp                  0.118   count<2>
+                                                       addr_count/blk00000001/blk00000009
+                                                       addr_count/blk00000001/blk0000000b
+    SLICE_X3Y70.CIN      net (fanout=1)        0.000   addr_count/blk00000001/sig00000007
+    SLICE_X3Y70.COUT     Tbyp                  0.118   count<4>
+                                                       addr_count/blk00000001/blk0000000d
+                                                       addr_count/blk00000001/blk0000000f
+    SLICE_X3Y71.CIN      net (fanout=1)        0.000   addr_count/blk00000001/sig00000009
+    SLICE_X3Y71.CLK      Tcinck                1.002   count<6>
+                                                       addr_count/blk00000001/blk00000011
+                                                       addr_count/blk00000001/blk00000014
+                                                       addr_count/blk00000001/blk0000001e
+    -------------------------------------------------  ---------------------------
+    Total                                      3.540ns (2.991ns logic, 0.549ns route)
+                                                       (84.5% logic, 15.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     27.864ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addr_count/blk00000001/blk00000019 (FF)
+  Destination:          addr_count/blk00000001/blk0000001e (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      3.386ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: addr_count/blk00000001/blk00000019 to addr_count/blk00000001/blk0000001e
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y69.XQ       Tcko                  0.591   count<2>
+                                                       addr_count/blk00000001/blk00000019
+    SLICE_X3Y69.F2       net (fanout=2)        0.513   count<2>
+    SLICE_X3Y69.COUT     Topcyf                1.162   count<2>
+                                                       count<2>_rt
+                                                       addr_count/blk00000001/blk00000009
+                                                       addr_count/blk00000001/blk0000000b
+    SLICE_X3Y70.CIN      net (fanout=1)        0.000   addr_count/blk00000001/sig00000007
+    SLICE_X3Y70.COUT     Tbyp                  0.118   count<4>
+                                                       addr_count/blk00000001/blk0000000d
+                                                       addr_count/blk00000001/blk0000000f
+    SLICE_X3Y71.CIN      net (fanout=1)        0.000   addr_count/blk00000001/sig00000009
+    SLICE_X3Y71.CLK      Tcinck                1.002   count<6>
+                                                       addr_count/blk00000001/blk00000011
+                                                       addr_count/blk00000001/blk00000014
+                                                       addr_count/blk00000001/blk0000001e
+    -------------------------------------------------  ---------------------------
+    Total                                      3.386ns (2.873ns logic, 0.513ns route)
+                                                       (84.8% logic, 15.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     27.869ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addr_count/blk00000001/blk0000001a (FF)
+  Destination:          addr_count/blk00000001/blk0000001e (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      3.381ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: addr_count/blk00000001/blk0000001a to addr_count/blk00000001/blk0000001e
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y69.YQ       Tcko                  0.587   count<2>
+                                                       addr_count/blk00000001/blk0000001a
+    SLICE_X3Y69.G3       net (fanout=2)        0.673   count<3>
+    SLICE_X3Y69.COUT     Topcyg                1.001   count<2>
+                                                       count<3>_rt
+                                                       addr_count/blk00000001/blk0000000b
+    SLICE_X3Y70.CIN      net (fanout=1)        0.000   addr_count/blk00000001/sig00000007
+    SLICE_X3Y70.COUT     Tbyp                  0.118   count<4>
+                                                       addr_count/blk00000001/blk0000000d
+                                                       addr_count/blk00000001/blk0000000f
+    SLICE_X3Y71.CIN      net (fanout=1)        0.000   addr_count/blk00000001/sig00000009
+    SLICE_X3Y71.CLK      Tcinck                1.002   count<6>
+                                                       addr_count/blk00000001/blk00000011
+                                                       addr_count/blk00000001/blk00000014
+                                                       addr_count/blk00000001/blk0000001e
+    -------------------------------------------------  ---------------------------
+    Total                                      3.381ns (2.708ns logic, 0.673ns route)
+                                                       (80.1% logic, 19.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point addr_count/blk00000001/blk0000001c (SLICE_X3Y70.CIN), 4 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     27.828ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addr_count/blk00000001/blk00000017 (FF)
+  Destination:          addr_count/blk00000001/blk0000001c (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      3.422ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: addr_count/blk00000001/blk00000017 to addr_count/blk00000001/blk0000001c
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y68.XQ       Tcko                  0.591   count<0>
+                                                       addr_count/blk00000001/blk00000017
+    SLICE_X3Y68.F1       net (fanout=2)        0.549   count<0>
+    SLICE_X3Y68.COUT     Topcyf                1.162   count<0>
+                                                       addr_count/blk00000001/blk00000029
+                                                       addr_count/blk00000001/blk00000004
+                                                       addr_count/blk00000001/blk00000007
+    SLICE_X3Y69.CIN      net (fanout=1)        0.000   addr_count/blk00000001/sig00000005
+    SLICE_X3Y69.COUT     Tbyp                  0.118   count<2>
+                                                       addr_count/blk00000001/blk00000009
+                                                       addr_count/blk00000001/blk0000000b
+    SLICE_X3Y70.CIN      net (fanout=1)        0.000   addr_count/blk00000001/sig00000007
+    SLICE_X3Y70.CLK      Tcinck                1.002   count<4>
+                                                       addr_count/blk00000001/blk0000000d
+                                                       addr_count/blk00000001/blk00000010
+                                                       addr_count/blk00000001/blk0000001c
+    -------------------------------------------------  ---------------------------
+    Total                                      3.422ns (2.873ns logic, 0.549ns route)
+                                                       (84.0% logic, 16.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     27.982ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addr_count/blk00000001/blk00000019 (FF)
+  Destination:          addr_count/blk00000001/blk0000001c (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      3.268ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: addr_count/blk00000001/blk00000019 to addr_count/blk00000001/blk0000001c
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y69.XQ       Tcko                  0.591   count<2>
+                                                       addr_count/blk00000001/blk00000019
+    SLICE_X3Y69.F2       net (fanout=2)        0.513   count<2>
+    SLICE_X3Y69.COUT     Topcyf                1.162   count<2>
+                                                       count<2>_rt
+                                                       addr_count/blk00000001/blk00000009
+                                                       addr_count/blk00000001/blk0000000b
+    SLICE_X3Y70.CIN      net (fanout=1)        0.000   addr_count/blk00000001/sig00000007
+    SLICE_X3Y70.CLK      Tcinck                1.002   count<4>
+                                                       addr_count/blk00000001/blk0000000d
+                                                       addr_count/blk00000001/blk00000010
+                                                       addr_count/blk00000001/blk0000001c
+    -------------------------------------------------  ---------------------------
+    Total                                      3.268ns (2.755ns logic, 0.513ns route)
+                                                       (84.3% logic, 15.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     27.987ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addr_count/blk00000001/blk0000001a (FF)
+  Destination:          addr_count/blk00000001/blk0000001c (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      3.263ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: addr_count/blk00000001/blk0000001a to addr_count/blk00000001/blk0000001c
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y69.YQ       Tcko                  0.587   count<2>
+                                                       addr_count/blk00000001/blk0000001a
+    SLICE_X3Y69.G3       net (fanout=2)        0.673   count<3>
+    SLICE_X3Y69.COUT     Topcyg                1.001   count<2>
+                                                       count<3>_rt
+                                                       addr_count/blk00000001/blk0000000b
+    SLICE_X3Y70.CIN      net (fanout=1)        0.000   addr_count/blk00000001/sig00000007
+    SLICE_X3Y70.CLK      Tcinck                1.002   count<4>
+                                                       addr_count/blk00000001/blk0000000d
+                                                       addr_count/blk00000001/blk00000010
+                                                       addr_count/blk00000001/blk0000001c
+    -------------------------------------------------  ---------------------------
+    Total                                      3.263ns (2.590ns logic, 0.673ns route)
+                                                       (79.4% logic, 20.6% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: NET "CLK_BUFGP/IBUFG" PERIOD = 31.25 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point rom_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram.A (RAMB16_X0Y9.ADDRA4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.339ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               addr_count/blk00000001/blk00000017 (FF)
+  Destination:          rom_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram.A (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      1.354ns (Levels of Logic = 0)
+  Clock Path Skew:      0.015ns (0.118 - 0.103)
+  Source Clock:         CLK_BUFGP rising at 31.250ns
+  Destination Clock:    CLK_BUFGP rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: addr_count/blk00000001/blk00000017 to rom_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y68.XQ       Tcko                  0.473   count<0>
+                                                       addr_count/blk00000001/blk00000017
+    RAMB16_X0Y9.ADDRA4   net (fanout=2)        1.012   count<0>
+    RAMB16_X0Y9.CLKA     Tbcka       (-Th)     0.131   rom_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram
+                                                       rom_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram.A
+    -------------------------------------------------  ---------------------------
+    Total                                      1.354ns (0.342ns logic, 1.012ns route)
+                                                       (25.3% logic, 74.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point rom_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram.A (RAMB16_X0Y9.ADDRA11), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.354ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               addr_count/blk00000001/blk0000001e (FF)
+  Destination:          rom_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram.A (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      1.351ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.003ns (0.055 - 0.058)
+  Source Clock:         CLK_BUFGP rising at 31.250ns
+  Destination Clock:    CLK_BUFGP rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: addr_count/blk00000001/blk0000001e to rom_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y71.YQ       Tcko                  0.470   count<6>
+                                                       addr_count/blk00000001/blk0000001e
+    RAMB16_X0Y9.ADDRA11  net (fanout=2)        1.012   count<7>
+    RAMB16_X0Y9.CLKA     Tbcka       (-Th)     0.131   rom_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram
+                                                       rom_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram.A
+    -------------------------------------------------  ---------------------------
+    Total                                      1.351ns (0.339ns logic, 1.012ns route)
+                                                       (25.1% logic, 74.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point rom_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram.A (RAMB16_X0Y9.ADDRA7), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.356ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               addr_count/blk00000001/blk0000001a (FF)
+  Destination:          rom_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram.A (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      1.371ns (Levels of Logic = 0)
+  Clock Path Skew:      0.015ns (0.118 - 0.103)
+  Source Clock:         CLK_BUFGP rising at 31.250ns
+  Destination Clock:    CLK_BUFGP rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: addr_count/blk00000001/blk0000001a to rom_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y69.YQ       Tcko                  0.470   count<2>
+                                                       addr_count/blk00000001/blk0000001a
+    RAMB16_X0Y9.ADDRA7   net (fanout=2)        1.032   count<3>
+    RAMB16_X0Y9.CLKA     Tbcka       (-Th)     0.131   rom_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram
+                                                       rom_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram.A
+    -------------------------------------------------  ---------------------------
+    Total                                      1.371ns (0.339ns logic, 1.032ns route)
+                                                       (24.7% logic, 75.3% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "CLK_BUFGP/IBUFG" PERIOD = 31.25 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 28.074ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 31.250ns
+  Low pulse: 15.625ns
+  Low pulse limit: 1.588ns (Tbpwl)
+  Physical resource: rom_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram/CLKA
+  Logical resource: rom_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram.A/CLKA
+  Location pin: RAMB16_X0Y9.CLKA
+  Clock network: CLK_BUFGP
+--------------------------------------------------------------------------------
+Slack: 28.074ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 31.250ns
+  High pulse: 15.625ns
+  High pulse limit: 1.588ns (Tbpwh)
+  Physical resource: rom_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram/CLKA
+  Logical resource: rom_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram.A/CLKA
+  Location pin: RAMB16_X0Y9.CLKA
+  Clock network: CLK_BUFGP
+--------------------------------------------------------------------------------
+Slack: 28.074ns (period - min period limit)
+  Period: 31.250ns
+  Min period limit: 3.176ns (314.861MHz) (Tbp)
+  Physical resource: rom_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram/CLKA
+  Logical resource: rom_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram.A/CLKA
+  Location pin: RAMB16_X0Y9.CLKA
+  Clock network: CLK_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    3.658|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 65 paths, 0 nets, and 31 connections
+
+Design statistics:
+   Minimum period:   3.658ns{1}   (Maximum frequency: 273.373MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Fri Oct 26 17:18:46 2018 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 344 MB
+
+
+

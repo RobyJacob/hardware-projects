@@ -1,0 +1,4 @@
+MO counter30 NULL ipcore_dir/counter30.v vlg3F/counter30.bin 1540554488
+AR flashylights behavioral /home/roby-jacob/hardware-projects/flashylights/FlashyLights.vhd sub00/vhpl01 1540554489
+MO memory NULL ipcore_dir/memory.v vlg69/memory.bin 1540554488
+EN flashylights NULL /home/roby-jacob/hardware-projects/flashylights/FlashyLights.vhd sub00/vhpl00 1540554488

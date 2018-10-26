@@ -1,0 +1,13 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Oct 18 15:48:27 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "LED" LOCATE = SITE "P4" LEVEL 1;
+COMP "SWITCH<0>" LOCATE = SITE "P17" LEVEL 1;
+COMP "SWITCH<1>" LOCATE = SITE "P16" LEVEL 1;
+COMP "CLK" LOCATE = SITE "P89" LEVEL 1;
+NET "CLK_BUFGP/IBUFG" BEL "CLK_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+NET "CLK_BUFGP/IBUFG" PERIOD = 31.25 ns HIGH 50%;
+SCHEMATIC END;
+

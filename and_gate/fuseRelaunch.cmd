@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/roby/and_gate/and_gate_test_isim_beh.exe" -prj "/home/roby/and_gate/and_gate_test_beh.prj" "work.and_gate_test" 

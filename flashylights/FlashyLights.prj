@@ -1,0 +1,3 @@
+verilog work "ipcore_dir/memory.v"
+verilog work "ipcore_dir/counter30.v"
+vhdl work "FlashyLights.vhd"

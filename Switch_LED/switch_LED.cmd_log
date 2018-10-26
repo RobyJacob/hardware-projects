@@ -1,0 +1,400 @@
+xst -intstyle ise -ifn "/home/roby/Downloads/Papilio-Loader-master/Switch_LED/switch_LED.xst" -ofn "/home/roby/Downloads/Papilio-Loader-master/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s250e-vq100-5 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s250e-vq100-5 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s250e-vq100-5 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s250e-vq100-5 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s250e-vq100-5 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s250e-vq100-5 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s250e-vq100-5 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s250e-vq100-5 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s250e-vq100-5 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s250e-vq100-5 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s250e-vq100-5 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s250e-vq100-5 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s250e-vq100-5 switch_LED.ngc switch_LED.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s250e-vq100-5 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s250e-vq100-5 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s250e-vq100-5 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s250e-vq100-5 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s250e-vq100-5 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s250e-vq100-5 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-5 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-5 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-5 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-5 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+xst -intstyle ise -ifn "/home/roby-jacob/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby-jacob/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 
+xst -intstyle ise -ifn "/home/roby-jacob/hardware-projects/Switch_LED/switch_LED.xst" -ofn "/home/roby-jacob/hardware-projects/Switch_LED/switch_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-4 switch_LED.ngc switch_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o switch_LED_map.ncd switch_LED.ngd switch_LED.pcf 
+par -w -intstyle ise -ol high -t 1 switch_LED_map.ncd switch_LED.ncd switch_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml switch_LED.twx switch_LED.ncd -o switch_LED.twr switch_LED.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f switch_LED.ut switch_LED.ncd 

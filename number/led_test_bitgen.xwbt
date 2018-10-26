@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/roby-jacob/hardware-projects/number/led_test.ncd
+OUTFILE=/home/roby-jacob/hardware-projects/number/led_test.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4vq100
+WORKINGDIR=/home/roby-jacob/hardware-projects/number
+LICENSE=WebPack
+USER_INFO=211569678_0_0_458
