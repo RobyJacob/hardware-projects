@@ -1,2 +1,4 @@
-EN full_adder NULL /home/roby-jacob/hardware-projects/full_adder/full_adder.vhd sub00/vhpl00 1540557730
-AR full_adder behavioral /home/roby-jacob/hardware-projects/full_adder/full_adder.vhd sub00/vhpl01 1540557731
+EN memory NULL /home/roby-jacob/hardware-projects/full_adder/ipcore_dir/memory.vhd sub00/vhpl02 1540625107
+AR memory memory_a /home/roby-jacob/hardware-projects/full_adder/ipcore_dir/memory.vhd sub00/vhpl03 1540625108
+EN full_adder NULL /home/roby-jacob/hardware-projects/full_adder/full_adder.vhd sub00/vhpl00 1540625109
+AR full_adder behavioral /home/roby-jacob/hardware-projects/full_adder/full_adder.vhd sub00/vhpl01 1540625110

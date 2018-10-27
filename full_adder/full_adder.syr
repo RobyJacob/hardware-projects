@@ -101,12 +101,17 @@ Verilog 2001                       : YES
 Auto BRAM Packing                  : NO
 Slice Utilization Ratio Delta      : 5
 
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
 =========================================================================
 
 
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
+Compiling vhdl file "/home/roby-jacob/hardware-projects/full_adder/ipcore_dir/memory.vhd" in Library work.
+Architecture memory_a of Entity memory is up to date.
 Compiling vhdl file "/home/roby-jacob/hardware-projects/full_adder/full_adder.vhd" in Library work.
 Entity <full_adder> compiled.
 Entity <full_adder> (Architecture <behavioral>) compiled.
@@ -121,8 +126,9 @@ Analyzing hierarchy for entity <full_adder> in library <work> (architecture <beh
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <full_adder> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "/home/roby-jacob/hardware-projects/full_adder/full_adder.vhd" line 99: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <SWITCH>, <carry>, <sum>
+WARNING:Xst:2211 - "/home/roby-jacob/hardware-projects/full_adder/full_adder.vhd" line 68: Instantiating black box module <memory>.
+WARNING:Xst:819 - "/home/roby-jacob/hardware-projects/full_adder/full_adder.vhd" line 119: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <carry>, <sum>
 Entity <full_adder> analyzed. Unit <full_adder> generated.
 
 
@@ -134,15 +140,17 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <full_adder>.
     Related source file is "/home/roby-jacob/hardware-projects/full_adder/full_adder.vhd".
-WARNING:Xst:1780 - Signal <switch_enable> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1306 - Output <LED> is never assigned.
     Found 4x4-bit ROM for signal <anode>.
-    Found 1-bit xor2 for signal <carry$xor0000> created at line 59.
+    Found 3-bit up counter for signal <addr>.
+    Found 25-bit up counter for signal <addr_counter>.
+    Found 1-bit xor2 for signal <carry$xor0000> created at line 179.
     Found 2-bit up counter for signal <digit_sel>.
     Found 16-bit up counter for signal <prescaler_counter>.
     Found 1-bit xor2 for signal <sum>.
     Summary:
 	inferred   1 ROM(s).
-	inferred   2 Counter(s).
+	inferred   4 Counter(s).
 Unit <full_adder> synthesized.
 
 
@@ -152,9 +160,11 @@ HDL Synthesis Report
 Macro Statistics
 # ROMs                                                 : 1
  4x4-bit ROM                                           : 1
-# Counters                                             : 2
+# Counters                                             : 4
  16-bit up counter                                     : 1
  2-bit up counter                                      : 1
+ 25-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
 # Xors                                                 : 2
  1-bit xor2                                            : 2
 
@@ -164,6 +174,8 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+Reading core <ipcore_dir/memory.ngc>.
+Loading core <memory> for timing and area information for instance <RAM>.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -171,9 +183,11 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # ROMs                                                 : 1
  4x4-bit ROM                                           : 1
-# Counters                                             : 2
+# Counters                                             : 4
  16-bit up counter                                     : 1
  2-bit up counter                                      : 1
+ 25-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
 # Xors                                                 : 2
  1-bit xor2                                            : 2
 
@@ -195,8 +209,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 18
- Flip-Flops                                            : 18
+# Registers                                            : 46
+ Flip-Flops                                            : 46
 
 =========================================================================
 
@@ -222,28 +236,30 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 19
+# IOs                              : 15
 
 Cell Usage :
-# BELS                             : 63
-#      GND                         : 1
-#      INV                         : 2
-#      LUT1                        : 15
-#      LUT2                        : 4
-#      LUT3                        : 1
-#      LUT4                        : 7
+# BELS                             : 157
+#      GND                         : 2
+#      INV                         : 4
+#      LUT1                        : 40
+#      LUT2                        : 5
+#      LUT3                        : 2
+#      LUT4                        : 13
 #      LUT4_L                      : 1
-#      MUXCY                       : 15
-#      VCC                         : 1
-#      XORCY                       : 16
-# FlipFlops/Latches                : 18
-#      FDR                         : 16
-#      FDRE                        : 2
+#      MUXCY                       : 46
+#      MUXF5                       : 1
+#      VCC                         : 2
+#      XORCY                       : 41
+# FlipFlops/Latches                : 46
+#      FDR                         : 41
+#      FDRE                        : 5
+# RAMS                             : 1
+#      RAMB16_S36_S36              : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 18
-#      IBUF                        : 4
-#      OBUF                        : 14
+# IO Buffers                       : 11
+#      OBUF                        : 11
 =========================================================================
 
 Device utilization summary:
@@ -251,11 +267,12 @@ Device utilization summary:
 
 Selected Device : 3s500evq100-4 
 
- Number of Slices:                       15  out of   4656     0%  
- Number of Slice Flip Flops:             18  out of   9312     0%  
- Number of 4 input LUTs:                 30  out of   9312     0%  
- Number of IOs:                          19
- Number of bonded IOBs:                  19  out of     66    28%  
+ Number of Slices:                       33  out of   4656     0%  
+ Number of Slice Flip Flops:             46  out of   9312     0%  
+ Number of 4 input LUTs:                 65  out of   9312     0%  
+ Number of IOs:                          15
+ Number of bonded IOBs:                  12  out of     66    18%  
+ Number of BRAMs:                         1  out of     20     5%  
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -279,7 +296,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 18    |
+CLK                                | BUFGP                  | 47    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -290,10 +307,10 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 6.302ns (Maximum Frequency: 158.680MHz)
+   Minimum period: 6.418ns (Maximum Frequency: 155.805MHz)
    Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: 5.998ns
-   Maximum combinational path delay: 7.690ns
+   Maximum output required time after clock: 8.306ns
+   Maximum combinational path delay: No path found
 
 Timing Detail:
 --------------
@@ -301,80 +318,68 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 6.302ns (frequency: 158.680MHz)
-  Total number of paths / destination ports: 463 / 38
+  Clock period: 6.418ns (frequency: 155.805MHz)
+  Total number of paths / destination ports: 1584 / 103
 -------------------------------------------------------------------------
-Delay:               6.302ns (Levels of Logic = 3)
-  Source:            prescaler_counter_3 (FF)
-  Destination:       digit_sel_0 (FF)
+Delay:               6.418ns (Levels of Logic = 9)
+  Source:            addr_counter_17 (FF)
+  Destination:       addr_0 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: prescaler_counter_3 to digit_sel_0
+  Data Path: addr_counter_17 to addr_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.591   0.622  prescaler_counter_3 (prescaler_counter_3)
-     LUT4:I0->O            1   0.704   0.499  prescaler_counter_cmp_eq000019 (prescaler_counter_cmp_eq000019)
-     LUT4:I1->O           19   0.704   1.120  prescaler_counter_cmp_eq000067 (prescaler_counter_cmp_eq0000)
-     LUT3:I2->O            2   0.704   0.447  digit_sel_and00001 (digit_sel_and0000)
-     FDRE:R                    0.911          digit_sel_0
+     FDR:C->Q              2   0.591   0.622  addr_counter_17 (addr_counter_17)
+     LUT1:I0->O            1   0.704   0.000  addr_and00001_wg_cy<0>_rt (addr_and00001_wg_cy<0>_rt)
+     MUXCY:S->O            1   0.464   0.000  addr_and00001_wg_cy<0> (addr_and00001_wg_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  addr_and00001_wg_cy<1> (addr_and00001_wg_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  addr_and00001_wg_cy<2> (addr_and00001_wg_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  addr_and00001_wg_cy<3> (addr_and00001_wg_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  addr_and00001_wg_cy<4> (addr_and00001_wg_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  addr_and00001_wg_cy<5> (addr_and00001_wg_cy<5>)
+     MUXCY:CI->O          29   0.331   1.265  addr_and00001_wg_cy<6> (addr_and00001_wg_cy<6>)
+     LUT4:I3->O            3   0.704   0.531  addr_and00001 (addr_and0000)
+     FDRE:R                    0.911          addr_0
     ----------------------------------------
-    Total                      6.302ns (3.614ns logic, 2.688ns route)
-                                       (57.3% logic, 42.7% route)
+    Total                      6.418ns (4.000ns logic, 2.418ns route)
+                                       (62.3% logic, 37.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 16 / 8
+  Total number of paths / destination ports: 44 / 8
 -------------------------------------------------------------------------
-Offset:              5.998ns (Levels of Logic = 2)
-  Source:            digit_sel_1 (FF)
+Offset:              8.306ns (Levels of Logic = 4)
+  Source:            RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram (RAM)
   Destination:       Seg7<5> (PAD)
   Source Clock:      CLK rising
 
-  Data Path: digit_sel_1 to Seg7<5>
+  Data Path: RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram to Seg7<5>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             6   0.591   0.844  digit_sel_1 (digit_sel_1)
-     LUT4:I0->O            4   0.704   0.587  Seg7<3>1 (Seg7_3_OBUF)
+     RAMB16_S36_S36:CLKB->DOB0    2   2.800   0.622  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram (douta<2>)
+     end scope: 'RAM'
+     LUT4:I0->O            1   0.704   0.000  Seg7<3>_G (N4)
+     MUXF5:I1->O           4   0.321   0.587  Seg7<3> (Seg7_3_OBUF)
      OBUF:I->O                 3.272          Seg7_5_OBUF (Seg7<5>)
     ----------------------------------------
-    Total                      5.998ns (4.567ns logic, 1.431ns route)
-                                       (76.1% logic, 23.9% route)
-
-=========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 35 / 7
--------------------------------------------------------------------------
-Delay:               7.690ns (Levels of Logic = 4)
-  Source:            SWITCH<2> (PAD)
-  Destination:       Seg7<5> (PAD)
-
-  Data Path: SWITCH<2> to Seg7<5>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             3   1.218   0.706  SWITCH_2_IBUF (LED_2_OBUF)
-     LUT4:I0->O            1   0.704   0.499  Seg7<3>1_SW1 (N1)
-     LUT4:I1->O            4   0.704   0.587  Seg7<3>1 (Seg7_3_OBUF)
-     OBUF:I->O                 3.272          Seg7_5_OBUF (Seg7<5>)
-    ----------------------------------------
-    Total                      7.690ns (5.898ns logic, 1.792ns route)
-                                       (76.7% logic, 23.3% route)
+    Total                      8.306ns (7.097ns logic, 1.209ns route)
+                                       (85.4% logic, 14.6% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.51 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.14 secs
  
 --> 
 
 
-Total memory usage is 502252 kilobytes
+Total memory usage is 521608 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    2 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

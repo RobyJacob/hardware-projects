@@ -71,17 +71,17 @@ NET Seg_AN(3)   LOC="P67"  | IOSTANDARD=LVTTL;                                # 
 #NET LED(5)    LOC="P94"  | IOSTANDARD=LVTTL;                                # C2
 #NET LED(4)    LOC="P95"  | IOSTANDARD=LVTTL;                                # C3
 #NET LED(3)    LOC="P98"  | IOSTANDARD=LVTTL;                                # C4
-NET LED(2)    LOC="P2"   | IOSTANDARD=LVTTL;                                # C5
-NET LED(1)    LOC="P3"   | IOSTANDARD=LVTTL;                                # C6
-NET LED(0)    LOC="P4"   | IOSTANDARD=LVTTL;                                # C7
+#NET LED(2)    LOC="P2"   | IOSTANDARD=LVTTL;                                # C5
+#NET LED(1)    LOC="P3"   | IOSTANDARD=LVTTL;                                # C6
+#NET LED(0)    LOC="P4"   | IOSTANDARD=LVTTL;                                # C7
 #NET SWITCH(7)       LOC="P5"   | IOSTANDARD=LVTTL;                                # C8
 #NET SWITCH(6)       LOC="P9"   | IOSTANDARD=LVTTL;                                # C9
 #NET SWITCH(5)       LOC="P10"  | IOSTANDARD=LVTTL;                                # C10
 #NET SWITCH(4)       LOC="P11"  | IOSTANDARD=LVTTL;                                # C11
-NET SWITCH(3)       LOC="P12"  | IOSTANDARD=LVTTL;                                # C12
-NET SWITCH(2)       LOC="P15"  | IOSTANDARD=LVTTL;                                # C13
-NET SWITCH(1)       LOC="P16"  | IOSTANDARD=LVTTL;                                # C14
-NET SWITCH(0)       LOC="P17"  | IOSTANDARD=LVTTL;                                # C15
+#NET SWITCH(3)       LOC="P12"  | IOSTANDARD=LVTTL;                                # C12
+#NET SWITCH(2)       LOC="P15"  | IOSTANDARD=LVTTL;                                # C13
+#NET SWITCH(1)       LOC="P16"  | IOSTANDARD=LVTTL;                                # C14
+#NET SWITCH(0)       LOC="P17"  | IOSTANDARD=LVTTL;                                # C15
 #NET JTAG_TMS     LOC="P75"  | IOSTANDARD=LVTTL | DRIVE=8 | SLEW=FAST;          # JTAG_TMS
 #NET JTAG_TCK     LOC="P77"  | IOSTANDARD=LVTTL | DRIVE=8 | SLEW=FAST;          # JTAG_TCK
 #NET JTAG_TDI     LOC="P100" | IOSTANDARD=LVTTL | DRIVE=8 | SLEW=FAST;          # JTAG_TDI

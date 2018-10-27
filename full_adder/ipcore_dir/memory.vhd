@@ -44,7 +44,7 @@ ENTITY memory IS
   PORT (
     clka : IN STD_LOGIC;
     wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    addra : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    addra : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     dina : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     douta : OUT STD_LOGIC_VECTOR(2 DOWNTO 0)
   );
@@ -56,7 +56,7 @@ COMPONENT wrapped_memory
   PORT (
     clka : IN STD_LOGIC;
     wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    addra : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    addra : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     dina : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     douta : OUT STD_LOGIC_VECTOR(2 DOWNTO 0)
   );
@@ -65,8 +65,8 @@ END COMPONENT;
 -- Configuration specification
   FOR ALL : wrapped_memory USE ENTITY XilinxCoreLib.blk_mem_gen_v7_3(behavioral)
     GENERIC MAP (
-      c_addra_width => 2,
-      c_addrb_width => 2,
+      c_addra_width => 3,
+      c_addrb_width => 3,
       c_algorithm => 1,
       c_axi_id_width => 4,
       c_axi_slave_type => 0,
@@ -101,8 +101,8 @@ END COMPONENT;
       c_mem_type => 0,
       c_mux_pipeline_stages => 0,
       c_prim_type => 1,
-      c_read_depth_a => 4,
-      c_read_depth_b => 4,
+      c_read_depth_a => 8,
+      c_read_depth_b => 8,
       c_read_width_a => 3,
       c_read_width_b => 3,
       c_rst_priority_a => "CE",
@@ -119,8 +119,8 @@ END COMPONENT;
       c_use_softecc => 0,
       c_wea_width => 1,
       c_web_width => 1,
-      c_write_depth_a => 4,
-      c_write_depth_b => 4,
+      c_write_depth_a => 8,
+      c_write_depth_b => 8,
       c_write_mode_a => "WRITE_FIRST",
       c_write_mode_b => "WRITE_FIRST",
       c_write_width_a => 3,

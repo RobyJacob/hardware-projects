@@ -8,5 +8,17 @@
 <msg type="info" file="ConstraintSystem" num="0" >The Period constraint &lt;PERIOD=31.25ns;&gt; [pins.ucf(34)], is specified using the Net Period method which is not recommended. Please use the Timespec PERIOD method.
 </msg>
 
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">RAM/wea&lt;0&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">RAM/dina&lt;2&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">RAM/dina&lt;1&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">RAM/dina&lt;0&gt;</arg>&apos; has no driver
+</msg>
+
 </messages>
 
