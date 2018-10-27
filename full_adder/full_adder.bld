@@ -21,10 +21,6 @@ INFO:ConstraintSystem - The Period constraint <PERIOD=31.25ns;> [pins.ucf(34)],
 Done...
 
 Checking expanded design ...
-WARNING:NgdBuild:452 - logical net 'RAM/wea<0>' has no driver
-WARNING:NgdBuild:452 - logical net 'RAM/dina<2>' has no driver
-WARNING:NgdBuild:452 - logical net 'RAM/dina<1>' has no driver
-WARNING:NgdBuild:452 - logical net 'RAM/dina<0>' has no driver
 
 Partition Implementation Status
 -------------------------------
@@ -35,9 +31,9 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings:   4
+  Number of warnings:   0
 
-Total memory usage is 381752 kilobytes
+Total memory usage is 381488 kilobytes
 
 Writing NGD file "full_adder.ngd" ...
 Total REAL time to NGDBUILD completion:  2 sec

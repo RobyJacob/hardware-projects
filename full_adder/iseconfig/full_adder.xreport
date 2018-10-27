@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-10-27T12:32:25</DateModified>
+  <DateModified>2018-10-27T17:30:16</DateModified>
   <ModuleName>full_adder</ModuleName>
   <SummaryTimeStamp>2018-10-27T11:18:39</SummaryTimeStamp>
   <SavedFilePath>/home/roby-jacob/hardware-projects/full_adder/iseconfig/full_adder.xreport</SavedFilePath>

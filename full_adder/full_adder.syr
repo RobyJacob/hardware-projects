@@ -126,8 +126,8 @@ Analyzing hierarchy for entity <full_adder> in library <work> (architecture <beh
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <full_adder> in library <work> (Architecture <behavioral>).
-WARNING:Xst:2211 - "/home/roby-jacob/hardware-projects/full_adder/full_adder.vhd" line 68: Instantiating black box module <memory>.
-WARNING:Xst:819 - "/home/roby-jacob/hardware-projects/full_adder/full_adder.vhd" line 119: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:2211 - "/home/roby-jacob/hardware-projects/full_adder/full_adder.vhd" line 71: Instantiating black box module <memory>.
+WARNING:Xst:819 - "/home/roby-jacob/hardware-projects/full_adder/full_adder.vhd" line 122: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <carry>, <sum>
 Entity <full_adder> analyzed. Unit <full_adder> generated.
 
@@ -141,16 +141,20 @@ Performing bidirectional port resolution...
 Synthesizing Unit <full_adder>.
     Related source file is "/home/roby-jacob/hardware-projects/full_adder/full_adder.vhd".
 WARNING:Xst:1306 - Output <LED> is never assigned.
+WARNING:Xst:1780 - Signal <wea> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Found 4x4-bit ROM for signal <anode>.
     Found 3-bit up counter for signal <addr>.
     Found 25-bit up counter for signal <addr_counter>.
-    Found 1-bit xor2 for signal <carry$xor0000> created at line 179.
+    Found 1-bit xor2 for signal <carry$xor0000> created at line 197.
+    Found 3-bit up counter for signal <data_in>.
     Found 2-bit up counter for signal <digit_sel>.
     Found 16-bit up counter for signal <prescaler_counter>.
     Found 1-bit xor2 for signal <sum>.
+    Found 1-bit register for signal <we_toggle>.
     Summary:
 	inferred   1 ROM(s).
-	inferred   4 Counter(s).
+	inferred   5 Counter(s).
+	inferred   1 D-type flip-flop(s).
 Unit <full_adder> synthesized.
 
 
@@ -160,11 +164,13 @@ HDL Synthesis Report
 Macro Statistics
 # ROMs                                                 : 1
  4x4-bit ROM                                           : 1
-# Counters                                             : 4
+# Counters                                             : 5
  16-bit up counter                                     : 1
  2-bit up counter                                      : 1
  25-bit up counter                                     : 1
- 3-bit up counter                                      : 1
+ 3-bit up counter                                      : 2
+# Registers                                            : 1
+ 1-bit register                                        : 1
 # Xors                                                 : 2
  1-bit xor2                                            : 2
 
@@ -183,11 +189,13 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # ROMs                                                 : 1
  4x4-bit ROM                                           : 1
-# Counters                                             : 4
+# Counters                                             : 5
  16-bit up counter                                     : 1
  2-bit up counter                                      : 1
  25-bit up counter                                     : 1
- 3-bit up counter                                      : 1
+ 3-bit up counter                                      : 2
+# Registers                                            : 1
+ Flip-Flops                                            : 1
 # Xors                                                 : 2
  1-bit xor2                                            : 2
 
@@ -209,8 +217,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 46
- Flip-Flops                                            : 46
+# Registers                                            : 50
+ Flip-Flops                                            : 50
 
 =========================================================================
 
@@ -239,19 +247,20 @@ Design Statistics
 # IOs                              : 15
 
 Cell Usage :
-# BELS                             : 157
+# BELS                             : 162
 #      GND                         : 2
-#      INV                         : 4
+#      INV                         : 6
 #      LUT1                        : 40
-#      LUT2                        : 5
-#      LUT3                        : 2
-#      LUT4                        : 13
+#      LUT2                        : 6
+#      LUT3                        : 3
+#      LUT4                        : 14
 #      LUT4_L                      : 1
 #      MUXCY                       : 46
 #      MUXF5                       : 1
 #      VCC                         : 2
 #      XORCY                       : 41
-# FlipFlops/Latches                : 46
+# FlipFlops/Latches                : 50
+#      FDE                         : 4
 #      FDR                         : 41
 #      FDRE                        : 5
 # RAMS                             : 1
@@ -267,9 +276,9 @@ Device utilization summary:
 
 Selected Device : 3s500evq100-4 
 
- Number of Slices:                       33  out of   4656     0%  
- Number of Slice Flip Flops:             46  out of   9312     0%  
- Number of 4 input LUTs:                 65  out of   9312     0%  
+ Number of Slices:                       35  out of   4656     0%  
+ Number of Slice Flip Flops:             50  out of   9312     0%  
+ Number of 4 input LUTs:                 70  out of   9312     0%  
  Number of IOs:                          15
  Number of bonded IOBs:                  12  out of     66    18%  
  Number of BRAMs:                         1  out of     20     5%  
@@ -296,7 +305,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 47    |
+CLK                                | BUFGP                  | 51    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -307,7 +316,7 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 6.418ns (Maximum Frequency: 155.805MHz)
+   Minimum period: 6.419ns (Maximum Frequency: 155.798MHz)
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: 8.306ns
    Maximum combinational path delay: No path found
@@ -318,32 +327,32 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 6.418ns (frequency: 155.805MHz)
-  Total number of paths / destination ports: 1584 / 103
+  Clock period: 6.419ns (frequency: 155.798MHz)
+  Total number of paths / destination ports: 1627 / 116
 -------------------------------------------------------------------------
-Delay:               6.418ns (Levels of Logic = 9)
-  Source:            addr_counter_17 (FF)
+Delay:               6.419ns (Levels of Logic = 9)
+  Source:            addr_counter_5 (FF)
   Destination:       addr_0 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: addr_counter_17 to addr_0
+  Data Path: addr_counter_5 to addr_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.591   0.622  addr_counter_17 (addr_counter_17)
-     LUT1:I0->O            1   0.704   0.000  addr_and00001_wg_cy<0>_rt (addr_and00001_wg_cy<0>_rt)
-     MUXCY:S->O            1   0.464   0.000  addr_and00001_wg_cy<0> (addr_and00001_wg_cy<0>)
-     MUXCY:CI->O           1   0.059   0.000  addr_and00001_wg_cy<1> (addr_and00001_wg_cy<1>)
-     MUXCY:CI->O           1   0.059   0.000  addr_and00001_wg_cy<2> (addr_and00001_wg_cy<2>)
-     MUXCY:CI->O           1   0.059   0.000  addr_and00001_wg_cy<3> (addr_and00001_wg_cy<3>)
-     MUXCY:CI->O           1   0.059   0.000  addr_and00001_wg_cy<4> (addr_and00001_wg_cy<4>)
-     MUXCY:CI->O           1   0.059   0.000  addr_and00001_wg_cy<5> (addr_and00001_wg_cy<5>)
-     MUXCY:CI->O          29   0.331   1.265  addr_and00001_wg_cy<6> (addr_and00001_wg_cy<6>)
+     FDR:C->Q              2   0.591   0.622  addr_counter_5 (addr_counter_5)
+     LUT1:I0->O            1   0.704   0.000  addr_counter_cmp_eq0000_wg_cy<0>_rt (addr_counter_cmp_eq0000_wg_cy<0>_rt)
+     MUXCY:S->O            1   0.464   0.000  addr_counter_cmp_eq0000_wg_cy<0> (addr_counter_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  addr_counter_cmp_eq0000_wg_cy<1> (addr_counter_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  addr_counter_cmp_eq0000_wg_cy<2> (addr_counter_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  addr_counter_cmp_eq0000_wg_cy<3> (addr_counter_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  addr_counter_cmp_eq0000_wg_cy<4> (addr_counter_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  addr_counter_cmp_eq0000_wg_cy<5> (addr_counter_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O          30   0.331   1.266  addr_counter_cmp_eq0000_wg_cy<6> (addr_counter_cmp_eq0000)
      LUT4:I3->O            3   0.704   0.531  addr_and00001 (addr_and0000)
      FDRE:R                    0.911          addr_0
     ----------------------------------------
-    Total                      6.418ns (4.000ns logic, 2.418ns route)
+    Total                      6.419ns (4.000ns logic, 2.419ns route)
                                        (62.3% logic, 37.7% route)
 
 =========================================================================
@@ -351,17 +360,17 @@ Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
   Total number of paths / destination ports: 44 / 8
 -------------------------------------------------------------------------
 Offset:              8.306ns (Levels of Logic = 4)
-  Source:            RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram (RAM)
+  Source:            RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram (RAM)
   Destination:       Seg7<5> (PAD)
   Source Clock:      CLK rising
 
-  Data Path: RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram to Seg7<5>
+  Data Path: RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram to Seg7<5>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAMB16_S36_S36:CLKB->DOB0    2   2.800   0.622  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram (douta<2>)
+     RAMB16_S36_S36:CLKB->DOB0    2   2.800   0.622  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram (douta<2>)
      end scope: 'RAM'
-     LUT4:I0->O            1   0.704   0.000  Seg7<3>_G (N4)
+     LUT4:I0->O            1   0.704   0.000  Seg7<3>_G (N10)
      MUXF5:I1->O           4   0.321   0.587  Seg7<3> (Seg7_3_OBUF)
      OBUF:I->O                 3.272          Seg7_5_OBUF (Seg7<5>)
     ----------------------------------------
@@ -371,15 +380,15 @@ Offset:              8.306ns (Levels of Logic = 4)
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.14 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.82 secs
  
 --> 
 
 
-Total memory usage is 521608 kilobytes
+Total memory usage is 521728 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    3 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

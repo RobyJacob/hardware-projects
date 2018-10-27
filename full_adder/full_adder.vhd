@@ -53,14 +53,17 @@ architecture Behavioral of full_adder is
 	signal sum	:std_logic;
 	signal carry	:std_logic;
 	signal data_out	:std_logic_vector(2 downto 0);
-	signal addr	:std_logic_vector(2 downto 0);
+	signal data_in	:std_logic_vector(2 downto 0);
+	signal wea	:std_logic_vector(0 downto 0);
+	signal we_toggle	:std_logic := '0';
+	signal addr	:std_logic_vector(2 downto 0) := "000";
 	
 	COMPONENT memory
 		PORT (
 			 clka : IN STD_LOGIC;
---			 wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+			 wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
 			 addra : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
---			 dina : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+			 dina : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
 			 douta : OUT STD_LOGIC_VECTOR(2 DOWNTO 0)
 		);	
 	END COMPONENT;
@@ -68,9 +71,9 @@ begin
 	RAM: memory
 		PORT MAP (
 		 clka => CLK,
---		 wea => wea,
+		 wea(0) => we_toggle,
 		 addra => addr,
---		 dina => dina,
+		 dina => data_in,
 		 douta => data_out
 		);
 
@@ -150,15 +153,30 @@ begin
 		end case;
 	end process;
 	
+--	process(we_toggle)
+--	begin
+--		if we_toggle = '1' then
+--			data_in <= std_logic_vector(unsigned(data_in) + 1);
+--		else
+--			sum <= data_out(0) xor data_out(1) xor data_out(2);
+--			carry <= ((data_out(0) xor data_out(1)) and data_out(2)) or (data_out(0) and data_out(1));
+--		end if;
+--	end process;
+	
 	process(CLK)
 	begin
 		if rising_edge(CLK) then
+--			we_toggle <= not we_toggle;
+			if we_toggle = '1' then
+				data_in <= std_logic_vector(unsigned(data_in) + 1);			
+			end if;
 			addr_counter <= addr_counter + 1;
 			if addr_counter = addr_count then
 				if addr = "111" then
 					addr <= "000";
 				else
 					addr <= std_logic_vector(unsigned(addr) + 1);
+					we_toggle <= not we_toggle;
 				end if;
 				addr_counter <= 0;
 			end if;
