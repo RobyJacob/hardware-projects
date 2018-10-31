@@ -32,8 +32,8 @@
 #CONFIG PART=XC3S500E-VQ100-4;
 #
 NET CLK          LOC="P89"  | IOSTANDARD=LVTTL | PERIOD=31.25ns;               # CLK
-#NET RX           LOC="P90"  | IOSTANDARD=LVTTL | DRIVE=8 | SLEW=FAST;          # RX
-#NET TX           LOC="P88"  | IOSTANDARD=LVTTL | DRIVE=8 | SLEW=FAST | PULLUP; # TX
+NET RX           LOC="P90"  | IOSTANDARD=LVTTL | DRIVE=8 | SLEW=FAST;          # RX
+NET TX           LOC="P88"  | IOSTANDARD=LVTTL | DRIVE=8 | SLEW=FAST | PULLUP; # TX
 NET Seg_AN(0)  LOC="P18"  | IOSTANDARD=LVTTL;                                # A0
 NET Seg7_DP      LOC="P23"  | IOSTANDARD=LVTTL;                                # A1
 NET Seg_AN(1)   LOC="P26"  | IOSTANDARD=LVTTL;                                # A2

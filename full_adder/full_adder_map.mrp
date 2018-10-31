@@ -9,7 +9,7 @@ Target Device  : xc3s500e
 Target Package : vq100
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Sat Oct 27 18:37:51 2018
+Mapped Date    : Sun Oct 28 11:17:35 2018
 
 Design Summary
 --------------
@@ -30,14 +30,14 @@ Logic Distribution:
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 12 out of      66   18%
+  Number of bonded IOBs:                 13 out of      66   19%
   Number of RAMB16s:                      1 out of      20    5%
   Number of BUFGMUXs:                     1 out of      24    4%
 
 Average Fanout of Non-Clock Nets:                2.55
 
 Peak Memory Usage:  596 MB
-Total REAL time to MAP completion:  2 secs 
+Total REAL time to MAP completion:  4 secs 
 Total CPU time to MAP completion:   2 secs 
 
 NOTES:
@@ -310,6 +310,7 @@ Section 6 - IOB Properties
 | Seg7<4>                            | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
 | Seg7<5>                            | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
 | Seg7<6>                            | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| Seg7_DP                            | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
 | Seg_AN<0>                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
 | Seg_AN<1>                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
 | Seg_AN<2>                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |

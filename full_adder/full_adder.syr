@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 Reading design: full_adder.prj
@@ -126,8 +126,8 @@ Analyzing hierarchy for entity <full_adder> in library <work> (architecture <beh
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <full_adder> in library <work> (Architecture <behavioral>).
-WARNING:Xst:2211 - "/home/roby-jacob/hardware-projects/full_adder/full_adder.vhd" line 71: Instantiating black box module <memory>.
-WARNING:Xst:819 - "/home/roby-jacob/hardware-projects/full_adder/full_adder.vhd" line 122: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:2211 - "/home/roby-jacob/hardware-projects/full_adder/full_adder.vhd" line 72: Instantiating black box module <memory>.
+WARNING:Xst:819 - "/home/roby-jacob/hardware-projects/full_adder/full_adder.vhd" line 124: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <carry>, <sum>
 Entity <full_adder> analyzed. Unit <full_adder> generated.
 
@@ -145,7 +145,7 @@ WARNING:Xst:1780 - Signal <wea> is never used or assigned. This unconnected sign
     Found 4x4-bit ROM for signal <anode>.
     Found 3-bit up counter for signal <addr>.
     Found 25-bit up counter for signal <addr_counter>.
-    Found 1-bit xor2 for signal <carry$xor0000> created at line 197.
+    Found 1-bit xor2 for signal <carry$xor0000> created at line 199.
     Found 3-bit up counter for signal <data_in>.
     Found 2-bit up counter for signal <digit_sel>.
     Found 16-bit up counter for signal <prescaler_counter>.
@@ -244,7 +244,7 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 15
+# IOs                              : 16
 
 Cell Usage :
 # BELS                             : 162
@@ -267,8 +267,8 @@ Cell Usage :
 #      RAMB16_S36_S36              : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 11
-#      OBUF                        : 11
+# IO Buffers                       : 12
+#      OBUF                        : 12
 =========================================================================
 
 Device utilization summary:
@@ -279,8 +279,8 @@ Selected Device : 3s500evq100-4
  Number of Slices:                       35  out of   4656     0%  
  Number of Slice Flip Flops:             50  out of   9312     0%  
  Number of 4 input LUTs:                 70  out of   9312     0%  
- Number of IOs:                          15
- Number of bonded IOBs:                  12  out of     66    18%  
+ Number of IOs:                          16
+ Number of bonded IOBs:                  13  out of     66    19%  
  Number of BRAMs:                         1  out of     20     5%  
  Number of GCLKs:                         1  out of     24     4%  
 
@@ -381,12 +381,12 @@ Offset:              8.306ns (Levels of Logic = 4)
 
 
 Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.82 secs
+Total CPU time to Xst completion: 5.15 secs
  
 --> 
 
 
-Total memory usage is 521728 kilobytes
+Total memory usage is 521864 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    4 (   0 filtered)

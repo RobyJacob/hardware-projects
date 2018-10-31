@@ -33,6 +33,7 @@ entity full_adder is
 	Port(
 		Seg_AN	:out std_logic_vector(3 downto 0);
 		Seg7	:out std_logic_vector(6 downto 0);
+		Seg7_DP	:out std_logic;
 		CLK	:in std_logic;
 --		SWITCH	:in std_logic_vector(3 downto 0);
 		LED	:out	std_logic_vector(2 downto 0)
@@ -77,6 +78,7 @@ begin
 		 douta => data_out
 		);
 
+	Seg7_DP <= '1';
 	Seg_AN <= anode;
 	Seg7 <= segment;
 --	LED <= SWITCH(2 downto 0);

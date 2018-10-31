@@ -1,10 +1,11 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sat Oct 27 18:37:53 2018
+// Written by: Map P.20131013 on Sun Oct 28 11:17:39 2018
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "Seg7<3>" LOCATE = SITE "P53" LEVEL 1;
 COMP "Seg_AN<0>" LOCATE = SITE "P18" LEVEL 1;
+COMP "Seg7_DP" LOCATE = SITE "P23" LEVEL 1;
 COMP "Seg_AN<1>" LOCATE = SITE "P26" LEVEL 1;
 COMP "Seg_AN<2>" LOCATE = SITE "P60" LEVEL 1;
 COMP "Seg7<0>" LOCATE = SITE "P57" LEVEL 1;

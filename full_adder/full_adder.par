@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-roby-host::  Sat Oct 27 18:37:56 2018
+roby-host::  Sun Oct 28 11:17:42 2018
 
 par -w -intstyle ise -ol high -t 1 full_adder_map.ncd full_adder.ncd
 full_adder.pcf 
@@ -20,7 +20,7 @@ Device speed data version:  "PRODUCTION 1.27 2013-10-13".
 
 Design Summary Report:
 
- Number of External IOBs                          12 out of 66     18%
+ Number of External IOBs                          13 out of 66     19%
 
    Number of External Input IOBs                  1
 
@@ -28,10 +28,10 @@ Design Summary Report:
         Number of LOCed External Input IBUFs      1 out of 1     100%
 
 
-   Number of External Output IOBs                11
+   Number of External Output IOBs                12
 
-      Number of External Output IOBs             11
-        Number of LOCed External Output IOBs     11 out of 11    100%
+      Number of External Output IOBs             12
+        Number of LOCed External Output IOBs     12 out of 12    100%
 
 
    Number of External Bidir IOBs                  0
@@ -58,39 +58,39 @@ Total REAL time at the beginning of Placer: 1 secs
 Total CPU  time at the beginning of Placer: 1 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:431482f9) REAL time: 1 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:5ad12106) REAL time: 2 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:431482f9) REAL time: 1 secs 
+Phase 2.7  Design Feasibility Check (Checksum:5ad12106) REAL time: 2 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:431482f9) REAL time: 1 secs 
+Phase 3.31  Local Placement Optimization (Checksum:5ad12106) REAL time: 2 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:68a46db9) REAL time: 1 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:8164ef86) REAL time: 3 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:68a46db9) REAL time: 1 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:8164ef86) REAL time: 3 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:68a46db9) REAL time: 1 secs 
+Phase 6.36  Local Placement Optimization (Checksum:8164ef86) REAL time: 3 secs 
 
 Phase 7.8  Global Placement
 ....
 ..
-Phase 7.8  Global Placement (Checksum:e61714c0) REAL time: 3 secs 
+Phase 7.8  Global Placement (Checksum:1b212e52) REAL time: 4 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:e61714c0) REAL time: 3 secs 
+Phase 8.5  Local Placement Optimization (Checksum:1b212e52) REAL time: 4 secs 
 
 Phase 9.18  Placement Optimization
-Phase 9.18  Placement Optimization (Checksum:a4209136) REAL time: 3 secs 
+Phase 9.18  Placement Optimization (Checksum:d8ec69ba) REAL time: 4 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:a4209136) REAL time: 3 secs 
+Phase 10.5  Local Placement Optimization (Checksum:d8ec69ba) REAL time: 4 secs 
 
-Total REAL time to Placer completion: 3 secs 
+Total REAL time to Placer completion: 4 secs 
 Total CPU  time to Placer completion: 3 secs 
 Writing design to file full_adder.ncd
 
@@ -99,25 +99,25 @@ Writing design to file full_adder.ncd
 Starting Router
 
 
-Phase  1  : 321 unrouted;      REAL time: 7 secs 
+Phase  1  : 322 unrouted;      REAL time: 8 secs 
 
-Phase  2  : 255 unrouted;      REAL time: 7 secs 
+Phase  2  : 255 unrouted;      REAL time: 8 secs 
 
-Phase  3  : 19 unrouted;      REAL time: 7 secs 
+Phase  3  : 19 unrouted;      REAL time: 8 secs 
 
-Phase  4  : 19 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
+Phase  4  : 19 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 8 secs 
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 8 secs 
 
 Updating file: full_adder.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 8 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 8 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 8 secs 
 
-Total REAL time to Router completion: 7 secs 
+Total REAL time to Router completion: 8 secs 
 Total CPU time to Router completion: 7 secs 
 
 Partition Implementation Status
@@ -168,7 +168,7 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 7 secs 
+Total REAL time to PAR completion: 9 secs 
 Total CPU time to PAR completion: 7 secs 
 
 Peak Memory Usage:  586 MB
