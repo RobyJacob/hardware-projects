@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/roby-jacob/hardware-projects/serial-communication/uart_tb_isim_beh.exe" -prj "/home/roby-jacob/hardware-projects/serial-communication/uart_tb_beh.prj" "work.uart_tb" 

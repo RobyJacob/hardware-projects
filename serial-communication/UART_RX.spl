@@ -1,0 +1,10 @@
+[Inputs]
+CLK
+RST
+UART_CLK_EN
+UART_RXD
+[Outputs]
+DATA_VLD
+FRAME_ERROR
+=DATA_OUT[7:0]=
+[BiDir]

@@ -1,0 +1,17 @@
+V3 9
+FL /home/roby-jacob/hardware-projects/full_adder/serial-communication/UART_PARITY.vhd 2018/11/01.11:23:02 P.20131013
+EN work/UART_PARITY 1541051775 \
+      FL /home/roby-jacob/hardware-projects/full_adder/serial-communication/UART_PARITY.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/UART_PARITY/Behavioral 1541051776 \
+      FL /home/roby-jacob/hardware-projects/full_adder/serial-communication/UART_PARITY.vhd \
+      EN work/UART_PARITY 1541051775
+FL /home/roby-jacob/hardware-projects/full_adder/serial-communication/UART_RX.vhd 2018/11/01.11:26:09 P.20131013
+FL /home/roby-jacob/hardware-projects/serial-communication/UART_RX.vhd 2018/11/01.18:10:01 P.20131013
+EN work/UART_RX 1541076025 \
+      FL /home/roby-jacob/hardware-projects/serial-communication/UART_RX.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/UART_RX/Behavioral 1541076026 \
+      FL /home/roby-jacob/hardware-projects/serial-communication/UART_RX.vhd \
+      EN work/UART_RX 1541076025

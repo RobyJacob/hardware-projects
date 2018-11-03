@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/roby-jacob/hardware-projects/data_communication/simulate_isim_beh.exe" -prj "/home/roby-jacob/hardware-projects/data_communication/simulate_beh.prj" "work.simulate" 

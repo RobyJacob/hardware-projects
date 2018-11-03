@@ -1,0 +1,5 @@
+set -tmpdir "/home/roby-jacob/hardware-projects/data_communication/xst/projnav.tmp"
+set -xsthdpdir "/home/roby-jacob/hardware-projects/data_communication/xst"
+elaborate
+-ifn UART.prj
+-ifmt mixed

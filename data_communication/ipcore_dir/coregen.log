@@ -1,0 +1,8 @@
+Welcome to Xilinx CORE Generator.
+Help system initialized.
+The IP Catalog has been reloaded.
+INFO:coreutil:993 - Unzipped file '/home/roby-jacob/Downloads/KCPSM3.zip' into
+   '/home/roby-jacob/hardware-projects/data_communication/ipcore_dir/KCPSM3'.
+ERROR:coreutil:992 - Unzipped IP from metadata file
+   '/home/roby-jacob/Downloads/KCPSM3.zip' does not contain the required
+   component.xml file.

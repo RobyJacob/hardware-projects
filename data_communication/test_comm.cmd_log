@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/roby-jacob/hardware-projects/data_communication/test_comm.xst" -ofn "/home/roby-jacob/hardware-projects/data_communication/test_comm.syr" 

@@ -1,0 +1,361 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /home/roby-jacob/hardware-projects/data_communication/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Parameter xsthdpdir set to /home/roby-jacob/hardware-projects/data_communication/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" in Library work.
+Entity <UART_PARITY> compiled.
+Entity <UART_PARITY> (Architecture <FULL>) compiled.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 101. Undefined symbol 'std_logic'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 101. std_logic: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 107. Undefined symbol 'std_logic_vector'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 107. std_logic_vector: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3010 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 113. Entity UART_TX does not exist.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 115. Undefined symbol 'std_logic'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 115. std_logic: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 117. Undefined symbol 'unsigned'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 117. unsigned: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 118. Undefined symbol 'std_logic_vector'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 118. std_logic_vector: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 131. Undefined symbol 'BUSY'.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 131. Undefined symbol 'tx_busy'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 131. tx_busy: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 137. Undefined symbol 'CLK'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 137. CLK: Undefined symbol (last report in this block)
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 140. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 141. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 142. = can not have such operands in this context.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 143. Undefined symbol 'tx_ticks'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 145. tx_ticks: Undefined symbol (last report in this block)
+WARNING:HDLParsers:1406 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 137. No sensitivity list and no wait in the process
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 156. Undefined symbol 'CLK'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 156. CLK: Undefined symbol (last report in this block)
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 159. = can not have such operands in this context.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 160. Undefined symbol 'tx_clk_en'.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 161. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 161. = can not have such operands in this context.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 162. tx_clk_en: Undefined symbol (last report in this block)
+WARNING:HDLParsers:1406 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 156. No sensitivity list and no wait in the process
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 173. Undefined symbol 'CLK'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 173. CLK: Undefined symbol (last report in this block)
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 176. = can not have such operands in this context.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 177. Undefined symbol 'tx_data'.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 178. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 178. = can not have such operands in this context.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 179. tx_data: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 179. Undefined symbol 'DATA_IN'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 179. DATA_IN: Undefined symbol (last report in this block)
+WARNING:HDLParsers:1406 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 173. No sensitivity list and no wait in the process
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 188. Undefined symbol 'CLK'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 188. CLK: Undefined symbol (last report in this block)
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 191. = can not have such operands in this context.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 192. Undefined symbol 'tx_bit_count'.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 193. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 193. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 194. = can not have such operands in this context.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 195. tx_bit_count: Undefined symbol (last report in this block)
+WARNING:HDLParsers:1406 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 188. No sensitivity list and no wait in the process
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 207. /= can not have such operands in this context.
+ERROR:HDLParsers:3313 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 212. Undefined symbol 'PARITY_BIT'.  Should it be: PARITYBIT?
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 212. PARITY_BIT: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 214. Undefined symbol 'tx_data'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 214. tx_data: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 216. Undefined symbol 'tx_parity_bit'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 216. tx_parity_bit: Undefined symbol (last report in this block)
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 219. = can not have such operands in this context.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 227. Undefined symbol 'CLK'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 227. CLK: Undefined symbol (last report in this block)
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 230. = can not have such operands in this context.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 231. Undefined symbol 'UART_TXD'.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 233. Undefined symbol 'tx_data_out_sel'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 233. tx_data_out_sel: Undefined symbol (last report in this block)
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 235. UART_TXD: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 237. Undefined symbol 'tx_bit_count'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 237. tx_bit_count: Undefined symbol (last report in this block)
+WARNING:HDLParsers:1406 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 227. No sensitivity list and no wait in the process
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 252. Undefined symbol 'CLK'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 252. CLK: Undefined symbol (last report in this block)
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 255. = can not have such operands in this context.
+WARNING:HDLParsers:1406 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 252. No sensitivity list and no wait in the process
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 264. Undefined symbol 'DATA_SEND'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 264. DATA_SEND: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 264. Undefined symbol 'tx_clk_en'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 264. tx_clk_en: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 264. Undefined symbol 'tx_bit_count'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 264. tx_bit_count: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 270. Undefined symbol 'tx_busy'.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 271. Undefined symbol 'tx_data_out_sel'.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 272. Undefined symbol 'tx_bit_count_en'.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 273. Undefined symbol 'tx_clk_divider_en'.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 275. = can not have such operands in this context.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 282. tx_busy: Undefined symbol (last report in this block)
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 283. tx_data_out_sel: Undefined symbol (last report in this block)
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 284. tx_bit_count_en: Undefined symbol (last report in this block)
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 285. tx_clk_divider_en: Undefined symbol (last report in this block)
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 287. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 299. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 311. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 311. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 312. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 327. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 339. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 341. = can not have such operands in this context.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 367. Undefined symbol 'std_logic'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 367. std_logic: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 373. Undefined symbol 'std_logic_vector'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 373. std_logic_vector: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3010 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 379. Entity UART_RX does not exist.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 381. Undefined symbol 'std_logic'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 381. std_logic: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 382. Undefined symbol 'unsigned'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 382. unsigned: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 384. Undefined symbol 'std_logic_vector'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 384. std_logic_vector: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 402. Undefined symbol 'CLK'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 402. CLK: Undefined symbol (last report in this block)
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 405. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 406. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 407. = can not have such operands in this context.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 408. Undefined symbol 'rx_ticks'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 410. rx_ticks: Undefined symbol (last report in this block)
+WARNING:HDLParsers:1406 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 402. No sensitivity list and no wait in the process
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 421. Undefined symbol 'CLK'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 421. CLK: Undefined symbol (last report in this block)
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 424. = can not have such operands in this context.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 425. Undefined symbol 'rx_clk_en'.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 426. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 426. = can not have such operands in this context.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 427. rx_clk_en: Undefined symbol (last report in this block)
+WARNING:HDLParsers:1406 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 421. No sensitivity list and no wait in the process
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 438. Undefined symbol 'CLK'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 438. CLK: Undefined symbol (last report in this block)
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 441. = can not have such operands in this context.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 442. Undefined symbol 'rx_bit_count'.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 443. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 443. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 444. = can not have such operands in this context.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 445. rx_bit_count: Undefined symbol (last report in this block)
+WARNING:HDLParsers:1406 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 438. No sensitivity list and no wait in the process
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 457. Undefined symbol 'CLK'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 457. CLK: Undefined symbol (last report in this block)
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 460. = can not have such operands in this context.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 461. Undefined symbol 'rx_data'.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 462. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 462. = can not have such operands in this context.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 463. rx_data: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 463. Undefined symbol 'UART_RXD'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 463. UART_RXD: Undefined symbol (last report in this block)
+WARNING:HDLParsers:1406 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 457. No sensitivity list and no wait in the process
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 468. Undefined symbol 'DATA_OUT'.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 468. Undefined symbol 'rx_data'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 468. rx_data: Undefined symbol (last report in this block)
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 474. /= can not have such operands in this context.
+ERROR:HDLParsers:3313 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 479. Undefined symbol 'PARITY_BIT'.  Should it be: PARITYBIT?
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 479. PARITY_BIT: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 483. Undefined symbol 'rx_parity_bit'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 483. rx_parity_bit: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 485. Undefined symbol 'CLK'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 485. CLK: Undefined symbol (last report in this block)
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 488. = can not have such operands in this context.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 489. Undefined symbol 'rx_parity_error'.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 490. = can not have such operands in this context.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 491. rx_parity_error: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 491. Undefined symbol 'UART_RXD'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 491. UART_RXD: Undefined symbol (last report in this block)
+WARNING:HDLParsers:1406 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 485. No sensitivity list and no wait in the process
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 497. = can not have such operands in this context.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 498. Undefined symbol 'rx_parity_error'.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 505. Undefined symbol 'CLK'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 505. CLK: Undefined symbol (last report in this block)
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 508. = can not have such operands in this context.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 509. Undefined symbol 'DATA_VLD'.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 510. Undefined symbol 'FRAME_ERROR'.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 512. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 512. = can not have such operands in this context.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 513. DATA_VLD: Undefined symbol (last report in this block)
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 513. rx_parity_error: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 513. Undefined symbol 'UART_RXD'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 513. UART_RXD: Undefined symbol (last report in this block)
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 514. FRAME_ERROR: Undefined symbol (last report in this block)
+WARNING:HDLParsers:1406 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 505. No sensitivity list and no wait in the process
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 528. Undefined symbol 'CLK'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 528. CLK: Undefined symbol (last report in this block)
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 531. = can not have such operands in this context.
+WARNING:HDLParsers:1406 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 528. No sensitivity list and no wait in the process
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 540. Undefined symbol 'UART_RXD'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 540. UART_RXD: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 540. Undefined symbol 'rx_clk_en'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 540. rx_clk_en: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 540. Undefined symbol 'rx_bit_count'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 540. rx_bit_count: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 545. Undefined symbol 'rx_output_reg_en'.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 546. Undefined symbol 'rx_receiving_data'.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 547. Undefined symbol 'rx_clk_divider_en'.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 548. Undefined symbol 'rx_parity_check_en'.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 550. = can not have such operands in this context.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 557. rx_output_reg_en: Undefined symbol (last report in this block)
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 558. rx_receiving_data: Undefined symbol (last report in this block)
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 559. rx_clk_divider_en: Undefined symbol (last report in this block)
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 560. rx_parity_check_en: Undefined symbol (last report in this block)
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 562. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 574. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 574. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 575. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 590. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 602. = can not have such operands in this context.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 630. Undefined symbol 'std_logic'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 630. std_logic: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 636. Undefined symbol 'std_logic_vector'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 636. std_logic_vector: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3010 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 646. Entity UART does not exist.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 648. Undefined symbol 'CLK_FREQ'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 648. CLK_FREQ: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 648. Undefined symbol 'BAUD_RATE'.
+ERROR:HDLParsers:532 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 648. Deferred constant are allowed only in packages.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 649. Undefined symbol 'ceil'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 649. ceil: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 649. Undefined symbol 'log2'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 649. log2: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 649. Undefined symbol 'DIVIDER_VALUE'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 649. DIVIDER_VALUE: Undefined symbol (last report in this block)
+ERROR:HDLParsers:532 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 649. Deferred constant are allowed only in packages.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 650. Undefined symbol 'unsigned'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 650. unsigned: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 650. Undefined symbol 'to_unsigned'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 650. to_unsigned: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 650. Undefined symbol 'CLK_CNT_WIDTH'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 650. CLK_CNT_WIDTH: Undefined symbol (last report in this block)
+ERROR:HDLParsers:532 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 650. Deferred constant are allowed only in packages.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 653. Undefined symbol 'std_logic'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 653. std_logic: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 654. Undefined symbol 'std_logic_vector'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 654. std_logic_vector: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 663. Undefined symbol 'CLK'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 663. CLK: Undefined symbol (last report in this block)
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 666. = can not have such operands in this context.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 667. Undefined symbol 'uart_clk_cnt'.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 669. Undefined symbol 'CLK_CNT_MAX'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 670. uart_clk_cnt: Undefined symbol (last report in this block)
+WARNING:HDLParsers:1406 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 663. No sensitivity list and no wait in the process
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 678. Undefined symbol 'CLK'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 678. CLK: Undefined symbol (last report in this block)
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 681. = can not have such operands in this context.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 682. Undefined symbol 'uart_clk_en'.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 683. Undefined symbol 'CLK_CNT_MAX'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 684. uart_clk_en: Undefined symbol (last report in this block)
+WARNING:HDLParsers:1406 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 678. No sensitivity list and no wait in the process
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 695. = can not have such operands in this context.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 696. Undefined symbol 'CLK'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 696. CLK: Undefined symbol (last report in this block)
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 699. = can not have such operands in this context.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 700. Undefined symbol 'uart_rxd_shreg'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 702. uart_rxd_shreg: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 702. Undefined symbol 'UART_RXD'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 702. UART_RXD: Undefined symbol (last report in this block)
+WARNING:HDLParsers:1406 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 696. No sensitivity list and no wait in the process
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 707. Undefined symbol 'CLK'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 707. CLK: Undefined symbol (last report in this block)
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 710. = can not have such operands in this context.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 711. Undefined symbol 'uart_rxd_debounced'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 713. uart_rxd_debounced: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 713. Undefined symbol 'uart_rxd_shreg'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 713. uart_rxd_shreg: Undefined symbol (last report in this block)
+WARNING:HDLParsers:1406 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 707. No sensitivity list and no wait in the process
+ERROR:HDLParsers:808 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 722. = can not have such operands in this context.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 723. Undefined symbol 'uart_rxd_debounced'.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 723. Undefined symbol 'UART_RXD'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 723. UART_RXD: Undefined symbol (last report in this block)
+ERROR:HDLParsers:709 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 730. UART_TX is not an entity name
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 733. Undefined symbol 'PARITY_BIT'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 733. PARITY_BIT: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 735. Undefined symbol 'CLK'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 735. CLK: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 736. Undefined symbol 'RST'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 736. RST: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 738. Undefined symbol 'uart_clk_en'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 738. uart_clk_en: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 739. Undefined symbol 'UART_TXD'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 739. UART_TXD: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 741. Undefined symbol 'DATA_IN'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 741. DATA_IN: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 742. Undefined symbol 'DATA_SEND'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 742. DATA_SEND: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 744. Undefined symbol 'BUSY'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 744. BUSY: Undefined symbol (last report in this block)
+ERROR:HDLParsers:709 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 750. UART_RX is not an entity name
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 759. uart_rxd_debounced: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 761. Undefined symbol 'DATA_OUT'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 761. DATA_OUT: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 762. Undefined symbol 'DATA_VLD'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 762. DATA_VLD: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 764. Undefined symbol 'FRAME_ERROR'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 764. FRAME_ERROR: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 776. Undefined symbol 'std_logic_vector'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 776. std_logic_vector: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 778. Undefined symbol 'std_logic'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 778. std_logic: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3010 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 783. Entity test_comm does not exist.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 784. Undefined symbol 'std_logic_vector'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 784. std_logic_vector: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 790. Undefined symbol 'std_logic'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 790. std_logic: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 808. Undefined symbol 'clk'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 808. clk: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 809. Undefined symbol 'RST'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 809. RST: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 810. Undefined symbol 'UART_TXD'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 810. UART_TXD: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 811. Undefined symbol 'RX'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 811. RX: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 812. Undefined symbol 'DATA_IN'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 812. DATA_IN: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 813. Undefined symbol 'DATA_SEND'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 813. DATA_SEND: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 814. Undefined symbol 'BUSY'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 814. BUSY: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3313 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 815. Undefined symbol 'do'.  Should it be: to or so?
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 815. do: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 816. Undefined symbol 'DATA_VLD'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 816. DATA_VLD: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 818. Undefined symbol 'FRAME_ERROR'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 818. FRAME_ERROR: Undefined symbol (last report in this block)
+ERROR:HDLParsers:1202 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 818. Redeclaration of symbol uart.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 820. Undefined symbol 'Seg7'.
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 820. Undefined symbol 'seg'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 820. seg: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 821. Undefined symbol 'Seg_AN'.
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 821. Seg_AN: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3313 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 831. Undefined symbol 'do'.  Should it be: to or so?
+ERROR:HDLParsers:1209 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 831. do: Undefined symbol (last report in this block)
+WARNING:HDLParsers:1406 - "/home/roby-jacob/hardware-projects/data_communication/test_comm.vhd" Line 831. No sensitivity list and no wait in the process
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> 
+
+
+Total memory usage is 461040 kilobytes
+
+Number of errors   :  304 (   0 filtered)
+Number of warnings :   19 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

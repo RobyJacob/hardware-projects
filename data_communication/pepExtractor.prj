@@ -1,0 +1,2 @@
+work	"../serial-communication/UART_RX.vhd"
+work	"test_receiver.vhd"

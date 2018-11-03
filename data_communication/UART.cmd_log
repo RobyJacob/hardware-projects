@@ -1,0 +1,1 @@
+vhdtdtfi -prj data_communication -o /home/roby-jacob/hardware-projects/data_communication/UART.vhi -module UART -template /opt/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work test_comm.vhd 

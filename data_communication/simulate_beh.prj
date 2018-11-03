@@ -1,0 +1,3 @@
+vhdl work "../serial-communication/UART_RX.vhd"
+vhdl work "test_receiver.vhd"
+vhdl work "simulate.vhd"
