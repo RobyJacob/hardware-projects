@@ -1,20 +1,20 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date:    11:28:50 11/01/2018 
--- Design Name: 
--- Module Name:    test_receiver - Behavioral 
--- Project Name: 
--- Target Devices: 
--- Tool versions: 
--- Description: 
+-- Company:
+-- Engineer:
 --
--- Dependencies: 
+-- Create Date:    11:28:50 11/01/2018
+-- Design Name:
+-- Module Name:    test_receiver - Behavioral
+-- Project Name:
+-- Target Devices:
+-- Tool versions:
+-- Description:
 --
--- Revision: 
+-- Dependencies:
+--
+-- Revision:
 -- Revision 0.01 - File Created
--- Additional Comments: 
+-- Additional Comments:
 --
 ----------------------------------------------------------------------------------
 library IEEE;
@@ -59,16 +59,16 @@ architecture Behavioral of test_receiver is
 --	signal write_data_count	:std_logic_vector(1 downto 0);
 	signal read_clk	:std_logic;
 	signal read_clk_count	:natural;
-		
+
 	COMPONENT UART_RX
 		PORT(
 			i_Clk : IN std_logic;
-			i_RX_Serial : IN std_logic;          
+			i_RX_Serial : IN std_logic;
 			o_RX_DV : OUT std_logic;
 			o_RX_Byte : OUT std_logic_vector(7 downto 0)
 			);
 	END COMPONENT;
-	
+
 	COMPONENT memory
 	  PORT (
 --		 rst : IN STD_LOGIC;
@@ -86,16 +86,16 @@ architecture Behavioral of test_receiver is
 --		 wr_data_count : OUT STD_LOGIC_VECTOR(1 DOWNTO 0)
 	  );
 	END COMPONENT;
-	
+
 begin
-	uartrx: UART_RX 
+	uartrx: UART_RX
 		PORT MAP(
 			i_Clk => CLK,
 			i_RX_Serial => RX,
 			o_RX_DV => o_rx_dv,
 			o_RX_Byte => data_out
 		);
-	
+
 	fifo : memory
 	  PORT MAP (
 --		 rst => rst,
@@ -112,11 +112,11 @@ begin
 --		 rd_data_count => read_data_count,
 --		 wr_data_count => write_data_count
 	  );
-	
+
 	Seg_AN <= anode;
 	Seg7 <= seg;
 --	Seg7 <= "1000000";
-	
+
 --	process(o_rx_dv)
 --	begin
 --		if o_rx_dv = '1' and count_byte = 1 then
@@ -125,7 +125,7 @@ begin
 --			byte_select <= '1';
 --		end if;
 --	end process;
-	
+
 --	process(CLK)
 --	begin
 --		if rising_edge(CLK) then
@@ -136,7 +136,7 @@ begin
 --			read_clk <= '0';
 --		end if;
 --	end process;
-	
+
 	process(CLK)
 	begin
 		if rising_edge(CLK) then
@@ -158,7 +158,7 @@ begin
 			end if;
 		end if;
 	end process;
-	
+
 	process(anode_count)
 	begin
 		case anode_count is
@@ -176,7 +176,7 @@ begin
 			when others => anode <= "0111";
 		end case;
 	end process;
-	
+
 	process(CLK)
 	begin
 		if rising_edge(CLK) then
@@ -191,7 +191,7 @@ begin
 			end if;
 		end if;
 	end process;
-	
+
 	process(number)
 	begin
 		if number(1 downto 0) = "01" then
@@ -216,7 +216,7 @@ begin
 			decode <= 0;
 		end if;
 	end process;
-	
+
 	process(decode)
 	begin
 		if o_rx_dv = '1' then
@@ -244,4 +244,3 @@ begin
 		end if;
 	end process;
 end Behavioral;
-
