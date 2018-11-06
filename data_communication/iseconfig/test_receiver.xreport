@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-11-03T20:16:07</DateModified>
+  <DateModified>2018-11-06T10:55:24</DateModified>
   <ModuleName>test_receiver</ModuleName>
-  <SummaryTimeStamp>2018-11-03T17:48:46</SummaryTimeStamp>
+  <SummaryTimeStamp>2018-11-03T21:54:27</SummaryTimeStamp>
   <SavedFilePath>/home/roby-jacob/hardware-projects/data_communication/iseconfig/test_receiver.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/home/roby-jacob/hardware-projects/data_communication/</ImplementationReportsDirectory>
   <DateInitialized>2018-11-01T11:33:08</DateInitialized>

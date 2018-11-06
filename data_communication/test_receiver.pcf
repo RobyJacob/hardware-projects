@@ -1,9 +1,8 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sat Nov 03 17:48:26 2018
+// Written by: Map P.20131013 on Tue Nov 06 11:39:03 2018
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "clk" LOCATE = SITE "P89" LEVEL 1;
 COMP "Seg_AN<0>" LOCATE = SITE "P18" LEVEL 1;
 COMP "Seg_AN<1>" LOCATE = SITE "P26" LEVEL 1;
 COMP "Seg_AN<2>" LOCATE = SITE "P60" LEVEL 1;
@@ -15,8 +14,8 @@ COMP "Seg7<3>" LOCATE = SITE "P53" LEVEL 1;
 COMP "Seg7<4>" LOCATE = SITE "P33" LEVEL 1;
 COMP "Seg7<5>" LOCATE = SITE "P35" LEVEL 1;
 COMP "Seg7<6>" LOCATE = SITE "P62" LEVEL 1;
-COMP "RX" LOCATE = SITE "P88" LEVEL 1;
-NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
-NET "clk_BUFGP/IBUFG" PERIOD = 31.25 ns HIGH 50%;
+COMP "CLK" LOCATE = SITE "P89" LEVEL 1;
+NET "CLK_BUFGP/IBUFG" BEL "CLK_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+NET "CLK_BUFGP/IBUFG" PERIOD = 31.25 ns HIGH 50%;
 SCHEMATIC END;
 

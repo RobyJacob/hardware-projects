@@ -1,7 +1,9 @@
-AR uart_rx behavioral /home/roby-jacob/hardware-projects/serial-communication/UART_RX.vhd sub00/vhpl04 1541247494
+AR uart_rx behavioral /home/roby-jacob/hardware-projects/serial-communication/UART_RX.vhd sub00/vhpl04 1541484520
 AR uart_parity behavioral /home/roby-jacob/hardware-projects/serial-communication/UART_PARITY.vhd sub00/vhpl02 1541075655
-AR test_receiver behavioral /home/roby-jacob/hardware-projects/data_communication/test_receiver.vhd sub00/vhpl06 1541247496
-EN test_receiver NULL /home/roby-jacob/hardware-projects/data_communication/test_receiver.vhd sub00/vhpl05 1541247495
+EN memory NULL /home/roby-jacob/hardware-projects/data_communication/ipcore_dir/memory.vhd sub00/vhpl07 1541484521
+AR test_receiver behavioral /home/roby-jacob/hardware-projects/data_communication/test_receiver.vhd sub00/vhpl06 1541484524
+AR memory memory_a /home/roby-jacob/hardware-projects/data_communication/ipcore_dir/memory.vhd sub00/vhpl08 1541484522
+EN test_receiver NULL /home/roby-jacob/hardware-projects/data_communication/test_receiver.vhd sub00/vhpl05 1541484523
 AR uart_parity full /home/roby-jacob/hardware-projects/data_communication/test_comm.vhd sub00/vhpl01 1541049979
 EN uart_parity NULL /home/roby-jacob/hardware-projects/serial-communication/UART_PARITY.vhd sub00/vhpl00 1541075654
-EN uart_rx NULL /home/roby-jacob/hardware-projects/serial-communication/UART_RX.vhd sub00/vhpl03 1541247493
+EN uart_rx NULL /home/roby-jacob/hardware-projects/serial-communication/UART_RX.vhd sub00/vhpl03 1541484519

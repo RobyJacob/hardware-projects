@@ -1,0 +1,16 @@
+# Output products list for <memory>
+_xmsgs/pn_parser.xmsgs
+memory/doc/fifo_generator_v9_3_readme.txt
+memory/doc/fifo_generator_v9_3_vinfo.html
+memory/doc/pg057-fifo-generator.pdf
+memory/fifo_generator_v9_3_readme.txt
+memory.asy
+memory.gise
+memory.ngc
+memory.sym
+memory.vhd
+memory.vho
+memory.xco
+memory.xise
+memory_flist.txt
+memory_xmdf.tcl

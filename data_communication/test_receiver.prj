@@ -1,2 +1,3 @@
+vhdl work "ipcore_dir/memory.vhd"
 vhdl work "../serial-communication/UART_RX.vhd"
 vhdl work "test_receiver.vhd"
