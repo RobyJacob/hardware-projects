@@ -67,9 +67,7 @@ COMPONENT memory
     full : OUT STD_LOGIC;
     wr_ack : OUT STD_LOGIC;
     overflow : OUT STD_LOGIC;
-    empty : OUT STD_LOGIC;
-    rd_data_count : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
-    wr_data_count : OUT STD_LOGIC_VECTOR(1 DOWNTO 0)
+    empty : OUT STD_LOGIC
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -90,9 +88,7 @@ your_instance_name : memory
     full => full,
     wr_ack => wr_ack,
     overflow => overflow,
-    empty => empty,
-    rd_data_count => rd_data_count,
-    wr_data_count => wr_data_count
+    empty => empty
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ------------
 

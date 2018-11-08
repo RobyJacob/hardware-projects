@@ -6,7 +6,7 @@ ise -dd _ngo -sd ../serial-communication -sd ipcore_dir -nt timestamp -uc
 pin.ucf -p xc3s500e-vq100-4 test_receiver.ngc test_receiver.ngd
 
 Reading NGO file
-"/home/roby-jacob/hardware-projects/data_communication/test_receiver.ngc" ...
+"/home/roby/hardware-projects/data_communication/test_receiver.ngc" ...
 Loading design module "ipcore_dir/memory.ngc"...
 Gathering constraint information from source properties...
 Done.
@@ -21,7 +21,6 @@ INFO:ConstraintSystem - The Period constraint <PERIOD=31.25ns;> [pin.ucf(34)],
 Done...
 
 Checking expanded design ...
-WARNING:NgdBuild:452 - logical net 'fifo/rst' has no driver
 
 Partition Implementation Status
 -------------------------------
@@ -32,12 +31,12 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings:   1
+  Number of warnings:   0
 
-Total memory usage is 382872 kilobytes
+Total memory usage is 399980 kilobytes
 
 Writing NGD file "test_receiver.ngd" ...
-Total REAL time to NGDBUILD completion:  4 sec
-Total CPU time to NGDBUILD completion:   3 sec
+Total REAL time to NGDBUILD completion:  2 sec
+Total CPU time to NGDBUILD completion:   2 sec
 
 Writing NGDBUILD log file "test_receiver.bld"...
