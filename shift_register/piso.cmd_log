@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "/home/roby/hardware-projects/shift_register/piso.xst" -ofn "/home/roby/hardware-projects/shift_register/piso.syr" 
+xst -intstyle ise -ifn "/home/roby/hardware-projects/shift_register/piso.xst" -ofn "/home/roby/hardware-projects/shift_register/piso.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-vq100-5 piso.ngc piso.ngd  
+map -intstyle ise -p xc3s500e-vq100-5 -cm area -ir off -pr off -c 100 -o piso_map.ncd piso.ngd piso.pcf 
+par -w -intstyle ise -ol high -t 1 piso_map.ncd piso.ncd piso.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml piso.twx piso.ncd -o piso.twr piso.pcf 
+vhdtdtfi -prj shift_register -o /home/roby/hardware-projects/shift_register/piso.vhi -module piso -template /opt/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work piso.vhd 

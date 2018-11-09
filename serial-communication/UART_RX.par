@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-roby-host::  Sat Nov 03 13:42:26 2018
+roby-Lenovo-G50-70::  Fri Nov 09 01:07:18 2018
 
 par -w -intstyle ise -ol high -t 1 UART_RX_map.ncd UART_RX.ncd UART_RX.pcf 
 
@@ -77,10 +77,10 @@ Phase 6.36  Local Placement Optimization (Checksum:16df4b46) REAL time: 1 secs
 
 Phase 7.3  Local Placement Optimization
 .............
-Phase 7.3  Local Placement Optimization (Checksum:deb79f07) REAL time: 2 secs 
+Phase 7.3  Local Placement Optimization (Checksum:deb79f07) REAL time: 1 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:deb79f07) REAL time: 2 secs 
+Phase 8.5  Local Placement Optimization (Checksum:deb79f07) REAL time: 1 secs 
 
 Phase 9.8  Global Placement
 .......
@@ -94,9 +94,9 @@ Phase 11.18  Placement Optimization
 Phase 11.18  Placement Optimization (Checksum:a23ad6a5) REAL time: 3 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:a23ad6a5) REAL time: 4 secs 
+Phase 12.5  Local Placement Optimization (Checksum:a23ad6a5) REAL time: 3 secs 
 
-Total REAL time to Placer completion: 4 secs 
+Total REAL time to Placer completion: 3 secs 
 Total CPU  time to Placer completion: 3 secs 
 Writing design to file UART_RX.ncd
 
@@ -109,7 +109,7 @@ Phase  1  : 292 unrouted;      REAL time: 6 secs
 
 Phase  2  : 263 unrouted;      REAL time: 6 secs 
 
-Phase  3  : 68 unrouted;      REAL time: 7 secs 
+Phase  3  : 68 unrouted;      REAL time: 6 secs 
 
 Phase  4  : 82 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
 
@@ -192,7 +192,7 @@ All signals are completely routed.
 Total REAL time to PAR completion: 10 secs 
 Total CPU time to PAR completion: 10 secs 
 
-Peak Memory Usage:  589 MB
+Peak Memory Usage:  630 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.

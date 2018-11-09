@@ -10,13 +10,13 @@
          <ClosedNode>/UART_RX - Behavioral |home|roby-jacob|hardware-projects|full_adder|serial-communication|UART_RX.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>UART_RX - Behavioral (/home/roby-jacob/hardware-projects/serial-communication/UART_RX.vhd)</SelectedItem>
+         <SelectedItem>UART_RX - Behavioral (/home/roby/hardware-projects/serial-communication/UART_RX.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000149000000020000000000000000000000000200000064ffffffff000000810000000300000002000001490000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>UART_RX - Behavioral (/home/roby-jacob/hardware-projects/serial-communication/UART_RX.vhd)</CurrentItem>
+      <CurrentItem>UART_RX - Behavioral (/home/roby/hardware-projects/serial-communication/UART_RX.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -28,13 +28,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f4000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f40000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -43,7 +43,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000028a000000040101000100000000000000000000000064ffffffff0000008100000000000000040000005100000001000000000000002900000001000000000000008400000001000000000000018c0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000028c000000040101000100000000000000000000000064ffffffff0000008100000000000000040000005100000001000000000000002900000001000000000000008400000001000000000000018e0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>UART_RX.vhd</CurrentItem>
    </ItemView>
@@ -55,7 +55,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000128000000010001000100000000000000000000000064ffffffff000000810000000000000001000001280000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000012a000000010001000100000000000000000000000064ffffffff0000008100000000000000010000012a0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>work</CurrentItem>
    </ItemView>
@@ -68,13 +68,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>View HDL Instantiation Template</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e5000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e50000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e6000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e60000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>View HDL Instantiation Template</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff00000000000000020000014c0000011d01000000060100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>

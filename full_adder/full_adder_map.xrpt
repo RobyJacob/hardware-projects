@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Map" timeStamp="Sun Oct 28 11:17:40 2018">
+  <application stringID="Map" timeStamp="Fri Nov  9 12:53:02 2018">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="PATH"/>
-          <item stringID="value" value="/opt/Xilinx/14.7/ISE_DS/ISE//bin/lin64:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"/>
+          <item stringID="value" value="/opt/Xilinx/14.7/ISE_DS/ISE//bin/lin64:/home/roby/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/jdk-10.0.2/jdk-10.0.2/bin:/usr/lib/jvm/jdk-10.0.2/jdk-10.0.2/db/bin:/usr/lib/jvm/jdk-10.0.2/jdk-10.0.2/jre/bin"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="XILINX"/>
@@ -24,16 +24,16 @@
         </row>
       </table>
       <item stringID="User_EnvOs" value="OS Information">
-        <item stringID="User_EnvOsname" value="Arch"/>
-        <item stringID="User_EnvOsrelease" value="Arch Linux"/>
+        <item stringID="User_EnvOsname" value="Ubuntu"/>
+        <item stringID="User_EnvOsrelease" value="Ubuntu 18.04.1 LTS"/>
       </item>
-      <item stringID="User_EnvHost" value="roby-host"/>
+      <item stringID="User_EnvHost" value="roby-Lenovo-G50-70"/>
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>
         <row stringID="row" value="0">
           <item stringID="arch" value="Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz"/>
-          <item stringID="speed" value="1382.674 MHz"/>
+          <item stringID="speed" value="1540.341 MHz"/>
         </row>
       </table>
     </section>
@@ -57,8 +57,8 @@
         <item dataType="int" stringID="MAP_NUM_ERRORS" value="0"/>
         <item dataType="int" stringID="MAP_FILTERED_WARNINGS" value="0"/>
         <item dataType="int" stringID="MAP_NUM_WARNINGS" value="61"/>
-        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="610304"/>
-        <item stringID="MAP_TOTAL_REAL_TIME" value="4 secs "/>
+        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="649868"/>
+        <item stringID="MAP_TOTAL_REAL_TIME" value="5 secs "/>
         <item stringID="MAP_TOTAL_CPU_TIME" value="2 secs "/>
       </section>
       <section stringID="MAP_SLICE_REPORTING">

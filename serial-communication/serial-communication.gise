@@ -55,7 +55,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="UART_RX_pad.csv" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="UART_RX_pad.txt" xil_pn:subbranch="Par"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="UART_RX_par.xrpt"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="UART_RX_stx_beh.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="UART_RX_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="UART_RX_summary.html"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="UART_RX_summary.xml"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="UART_RX_usage.xml"/>
@@ -88,6 +88,10 @@
     <transform xil_pn:end_ts="1541232714" xil_pn:in_ck="133319991694216405" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1541232714">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="UART_RX.vhd"/>
     </transform>
     <transform xil_pn:end_ts="1541169727" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="4793526712818293639" xil_pn:start_ts="1541169727">
@@ -111,6 +115,7 @@
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputRemoved"/>
     </transform>
@@ -121,6 +126,7 @@
       <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
       <status xil_pn:value="OutputRemoved"/>
@@ -165,9 +171,8 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1541076029" xil_pn:in_ck="133319991694216405" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-7855242873882092509" xil_pn:start_ts="1541076021">
+    <transform xil_pn:end_ts="1541705824" xil_pn:in_ck="133319991694216405" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-7855242873882092509" xil_pn:start_ts="1541705817">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
@@ -178,6 +183,7 @@
       <outfile xil_pn:name="UART_RX.stx"/>
       <outfile xil_pn:name="UART_RX.syr"/>
       <outfile xil_pn:name="UART_RX.xst"/>
+      <outfile xil_pn:name="UART_RX_stx_beh.prj"/>
       <outfile xil_pn:name="UART_RX_xst.xrpt"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
@@ -187,7 +193,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1541232739" xil_pn:in_ck="133319991694207659" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-86248829947388269" xil_pn:start_ts="1541232734">
+    <transform xil_pn:end_ts="1541705830" xil_pn:in_ck="133319991694207659" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-86248829947388269" xil_pn:start_ts="1541705824">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="UART_RX.bld"/>
@@ -196,7 +202,7 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1541232744" xil_pn:in_ck="133319991694207660" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-1697458369411087007" xil_pn:start_ts="1541232739">
+    <transform xil_pn:end_ts="1541705836" xil_pn:in_ck="133319991694207660" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-1697458369411087007" xil_pn:start_ts="1541705830">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="UART_RX.pcf"/>
@@ -209,7 +215,7 @@
       <outfile xil_pn:name="UART_RX_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1541232760" xil_pn:in_ck="-65583691331113019" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1541232744">
+    <transform xil_pn:end_ts="1541705851" xil_pn:in_ck="-65583691331113019" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1541705836">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="UART_RX.ncd"/>
@@ -223,7 +229,7 @@
       <outfile xil_pn:name="UART_RX_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1541232760" xil_pn:in_ck="133319991694207528" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1541232757">
+    <transform xil_pn:end_ts="1541705851" xil_pn:in_ck="133319991694207528" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1541705848">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="UART_RX.twr"/>

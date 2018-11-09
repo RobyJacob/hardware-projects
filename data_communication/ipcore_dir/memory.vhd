@@ -50,11 +50,7 @@ ENTITY memory IS
     rd_en : IN STD_LOGIC;
     dout : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
     full : OUT STD_LOGIC;
-    wr_ack : OUT STD_LOGIC;
-    overflow : OUT STD_LOGIC;
-    empty : OUT STD_LOGIC;
-    rd_data_count : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
-    wr_data_count : OUT STD_LOGIC_VECTOR(1 DOWNTO 0)
+    empty : OUT STD_LOGIC
   );
 END memory;
 
@@ -70,11 +66,7 @@ COMPONENT wrapped_memory
     rd_en : IN STD_LOGIC;
     dout : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
     full : OUT STD_LOGIC;
-    wr_ack : OUT STD_LOGIC;
-    overflow : OUT STD_LOGIC;
-    empty : OUT STD_LOGIC;
-    rd_data_count : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
-    wr_data_count : OUT STD_LOGIC_VECTOR(1 DOWNTO 0)
+    empty : OUT STD_LOGIC
   );
 END COMPONENT;
 
@@ -156,22 +148,22 @@ END COMPONENT;
       c_has_int_clk => 0,
       c_has_master_ce => 0,
       c_has_meminit_file => 0,
-      c_has_overflow => 1,
+      c_has_overflow => 0,
       c_has_prog_flags_axis => 0,
       c_has_prog_flags_rach => 0,
       c_has_prog_flags_rdch => 0,
       c_has_prog_flags_wach => 0,
       c_has_prog_flags_wdch => 0,
       c_has_prog_flags_wrch => 0,
-      c_has_rd_data_count => 1,
+      c_has_rd_data_count => 0,
       c_has_rd_rst => 0,
       c_has_rst => 1,
       c_has_slave_ce => 0,
       c_has_srst => 0,
       c_has_underflow => 0,
       c_has_valid => 0,
-      c_has_wr_ack => 1,
-      c_has_wr_data_count => 1,
+      c_has_wr_ack => 0,
+      c_has_wr_data_count => 0,
       c_has_wr_rst => 0,
       c_implementation_type => 2,
       c_implementation_type_axis => 1,
@@ -221,7 +213,7 @@ END COMPONENT;
       c_prog_full_type_wdch => 0,
       c_prog_full_type_wrch => 0,
       c_rach_type => 0,
-      c_rd_data_count_width => 2,
+      c_rd_data_count_width => 4,
       c_rd_depth => 16,
       c_rd_freq => 1,
       c_rd_pntr_width => 4,
@@ -252,7 +244,7 @@ END COMPONENT;
       c_wach_type => 0,
       c_wdch_type => 0,
       c_wr_ack_low => 0,
-      c_wr_data_count_width => 2,
+      c_wr_data_count_width => 5,
       c_wr_depth => 32,
       c_wr_depth_axis => 1024,
       c_wr_depth_rach => 16,
@@ -284,11 +276,7 @@ U0 : wrapped_memory
     rd_en => rd_en,
     dout => dout,
     full => full,
-    wr_ack => wr_ack,
-    overflow => overflow,
-    empty => empty,
-    rd_data_count => rd_data_count,
-    wr_data_count => wr_data_count
+    empty => empty
   );
 -- synthesis translate_on
 
