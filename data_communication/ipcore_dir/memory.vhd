@@ -50,8 +50,6 @@ ENTITY memory IS
     rd_en : IN STD_LOGIC;
     dout : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
     full : OUT STD_LOGIC;
-    wr_ack : OUT STD_LOGIC;
-    overflow : OUT STD_LOGIC;
     empty : OUT STD_LOGIC
   );
 END memory;
@@ -68,8 +66,6 @@ COMPONENT wrapped_memory
     rd_en : IN STD_LOGIC;
     dout : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
     full : OUT STD_LOGIC;
-    wr_ack : OUT STD_LOGIC;
-    overflow : OUT STD_LOGIC;
     empty : OUT STD_LOGIC
   );
 END COMPONENT;
@@ -123,7 +119,7 @@ END COMPONENT;
       c_error_injection_type_wdch => 0,
       c_error_injection_type_wrch => 0,
       c_family => "spartan3",
-      c_full_flags_rst_val => 0,
+      c_full_flags_rst_val => 1,
       c_has_almost_empty => 0,
       c_has_almost_full => 0,
       c_has_axi_aruser => 0,
@@ -152,7 +148,7 @@ END COMPONENT;
       c_has_int_clk => 0,
       c_has_master_ce => 0,
       c_has_meminit_file => 0,
-      c_has_overflow => 1,
+      c_has_overflow => 0,
       c_has_prog_flags_axis => 0,
       c_has_prog_flags_rach => 0,
       c_has_prog_flags_rdch => 0,
@@ -166,7 +162,7 @@ END COMPONENT;
       c_has_srst => 0,
       c_has_underflow => 0,
       c_has_valid => 0,
-      c_has_wr_ack => 1,
+      c_has_wr_ack => 0,
       c_has_wr_data_count => 0,
       c_has_wr_rst => 0,
       c_implementation_type => 2,
@@ -280,8 +276,6 @@ U0 : wrapped_memory
     rd_en => rd_en,
     dout => dout,
     full => full,
-    wr_ack => wr_ack,
-    overflow => overflow,
     empty => empty
   );
 -- synthesis translate_on

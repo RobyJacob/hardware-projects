@@ -65,8 +65,6 @@ COMPONENT memory
     rd_en : IN STD_LOGIC;
     dout : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
     full : OUT STD_LOGIC;
-    wr_ack : OUT STD_LOGIC;
-    overflow : OUT STD_LOGIC;
     empty : OUT STD_LOGIC
   );
 END COMPONENT;
@@ -86,8 +84,6 @@ your_instance_name : memory
     rd_en => rd_en,
     dout => dout,
     full => full,
-    wr_ack => wr_ack,
-    overflow => overflow,
     empty => empty
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ------------

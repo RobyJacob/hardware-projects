@@ -11,5 +11,11 @@
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/roby/hardware-projects/data_communication/test_receiver.vhd&quot; into library work</arg>
 </msg>
 
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/roby/hardware-projects/serial-communication/UART_RX.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/roby/hardware-projects/shift_register/piso.vhd&quot; into library work</arg>
+</msg>
+
 </messages>
 

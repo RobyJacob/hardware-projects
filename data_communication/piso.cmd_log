@@ -1,0 +1,1 @@
+vhdtdtfi -prj data_communication -o /home/roby/hardware-projects/data_communication/piso.vhi -module piso -template /opt/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../shift_register/piso.vhd 

@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-roby-host::  Sun Oct 28 11:17:42 2018
+roby-Lenovo-G50-70::  Fri Nov 09 12:53:05 2018
 
 par -w -intstyle ise -ol high -t 1 full_adder_map.ncd full_adder.ncd
 full_adder.pcf 
@@ -68,13 +68,13 @@ Phase 3.31  Local Placement Optimization (Checksum:5ad12106) REAL time: 2 secs
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:8164ef86) REAL time: 3 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:8164ef86) REAL time: 2 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:8164ef86) REAL time: 3 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:8164ef86) REAL time: 2 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:8164ef86) REAL time: 3 secs 
+Phase 6.36  Local Placement Optimization (Checksum:8164ef86) REAL time: 2 secs 
 
 Phase 7.8  Global Placement
 ....
@@ -99,11 +99,11 @@ Writing design to file full_adder.ncd
 Starting Router
 
 
-Phase  1  : 322 unrouted;      REAL time: 8 secs 
+Phase  1  : 322 unrouted;      REAL time: 7 secs 
 
-Phase  2  : 255 unrouted;      REAL time: 8 secs 
+Phase  2  : 255 unrouted;      REAL time: 7 secs 
 
-Phase  3  : 19 unrouted;      REAL time: 8 secs 
+Phase  3  : 19 unrouted;      REAL time: 7 secs 
 
 Phase  4  : 19 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 8 secs 
 
@@ -168,10 +168,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 9 secs 
+Total REAL time to PAR completion: 8 secs 
 Total CPU time to PAR completion: 7 secs 
 
-Peak Memory Usage:  586 MB
+Peak Memory Usage:  625 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.

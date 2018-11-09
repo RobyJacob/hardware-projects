@@ -1,0 +1,6 @@
+V3 3
+FL /home/roby/hardware-projects/shift_register/piso.vhd 2018/11/08.22:31:40 P.20131013
+EN work/piso 1541696506 FL /home/roby/hardware-projects/shift_register/piso.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/piso/Behavioral 1541696507 \
+      FL /home/roby/hardware-projects/shift_register/piso.vhd EN work/piso 1541696506

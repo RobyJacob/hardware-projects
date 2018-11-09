@@ -37,427 +37,436 @@ INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and
 Timing constraint: NET "CLK_BUFGP/IBUFG" PERIOD = 31.25 ns HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 2423 paths analyzed, 177 endpoints analyzed, 0 failing endpoints
+ 3499 paths analyzed, 346 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   8.073ns.
+ Minimum period is   8.007ns.
 --------------------------------------------------------------------------------
 
-Paths for end point anode_count_30 (SLICE_X19Y72.SR), 43 paths
+Paths for end point uartrx/r_RX_Byte_6 (SLICE_X42Y51.CE), 20 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     23.177ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               anode_count_7 (FF)
-  Destination:          anode_count_30 (FF)
+Slack (setup path):     23.243ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               uartrx/r_Clk_Count_8 (FF)
+  Destination:          uartrx/r_RX_Byte_6 (FF)
   Requirement:          31.250ns
-  Data Path Delay:      8.073ns (Levels of Logic = 2)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      7.991ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.016ns (0.085 - 0.101)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 31.250ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: anode_count_7 to anode_count_30
+  Maximum Data Path: uartrx/r_Clk_Count_8 to uartrx/r_RX_Byte_6
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X19Y60.YQ      Tcko                  0.587   anode_count<6>
-                                                       anode_count_7
-    SLICE_X17Y67.F2      net (fanout=2)        1.557   anode_count<7>
-    SLICE_X17Y67.COUT    Topcyf                1.162   N0
-                                                       anode_count_and00001_wg_lut<6>
-                                                       anode_count_and00001_wg_cy<6>
-                                                       anode_count_and00001_wg_cy<7>
-    SLICE_X18Y57.G4      net (fanout=3)        1.495   N0
-    SLICE_X18Y57.Y       Tilo                  0.759   anode_count_and0000
-                                                       anode_count_and00001
-    SLICE_X19Y72.SR      net (fanout=16)       1.603   anode_count_and0000
-    SLICE_X19Y72.CLK     Tsrck                 0.910   anode_count<30>
-                                                       anode_count_30
+    SLICE_X38Y73.YQ      Tcko                  0.652   uartrx/r_Clk_Count<9>
+                                                       uartrx/r_Clk_Count_8
+    SLICE_X38Y68.F2      net (fanout=8)        1.415   uartrx/r_Clk_Count<8>
+    SLICE_X38Y68.X       Tif5x                 1.152   N33
+                                                       uartrx/r_SM_Main_cmp_lt00002_SW0_SW1_G
+                                                       uartrx/r_SM_Main_cmp_lt00002_SW0_SW1
+    SLICE_X39Y66.G3      net (fanout=1)        0.343   N33
+    SLICE_X39Y66.Y       Tilo                  0.704   uartrx/r_RX_Byte_7_not0001
+                                                       uartrx/r_SM_Main_cmp_lt00002
+    SLICE_X41Y56.F1      net (fanout=11)       1.635   uartrx/r_SM_Main_cmp_lt0000
+    SLICE_X41Y56.X       Tilo                  0.704   uartrx/r_RX_Byte_6_not0001
+                                                       uartrx/r_RX_Byte_6_not00011
+    SLICE_X42Y51.CE      net (fanout=1)        0.831   uartrx/r_RX_Byte_6_not0001
+    SLICE_X42Y51.CLK     Tceck                 0.555   uartrx/r_RX_Byte<6>
+                                                       uartrx/r_RX_Byte_6
     -------------------------------------------------  ---------------------------
-    Total                                      8.073ns (3.418ns logic, 4.655ns route)
-                                                       (42.3% logic, 57.7% route)
+    Total                                      7.991ns (3.767ns logic, 4.224ns route)
+                                                       (47.1% logic, 52.9% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     23.302ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               prescale_counter_0 (FF)
-  Destination:          anode_count_30 (FF)
+Slack (setup path):     23.645ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               uartrx/r_Clk_Count_11 (FF)
+  Destination:          uartrx/r_RX_Byte_6 (FF)
   Requirement:          31.250ns
-  Data Path Delay:      7.947ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.001ns (0.072 - 0.073)
+  Data Path Delay:      7.588ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.017ns (0.085 - 0.102)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 31.250ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: prescale_counter_0 to anode_count_30
+  Maximum Data Path: uartrx/r_Clk_Count_11 to uartrx/r_RX_Byte_6
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X25Y68.XQ      Tcko                  0.591   prescale_counter<0>
-                                                       prescale_counter_0
-    SLICE_X24Y68.F1      net (fanout=2)        0.834   prescale_counter<0>
-    SLICE_X24Y68.X       Tilo                  0.759   anode_count_cmp_eq000028
-                                                       anode_count_cmp_eq000028
-    SLICE_X24Y71.F1      net (fanout=2)        0.439   anode_count_cmp_eq000028
-    SLICE_X24Y71.X       Tilo                  0.759   anode_count_cmp_eq0000
-                                                       anode_count_cmp_eq000041
-    SLICE_X18Y57.G2      net (fanout=1)        1.293   anode_count_cmp_eq0000
-    SLICE_X18Y57.Y       Tilo                  0.759   anode_count_and0000
-                                                       anode_count_and00001
-    SLICE_X19Y72.SR      net (fanout=16)       1.603   anode_count_and0000
-    SLICE_X19Y72.CLK     Tsrck                 0.910   anode_count<30>
-                                                       anode_count_30
+    SLICE_X37Y75.XQ      Tcko                  0.591   uartrx/r_Clk_Count<11>
+                                                       uartrx/r_Clk_Count_11
+    SLICE_X38Y68.F1      net (fanout=8)        1.073   uartrx/r_Clk_Count<11>
+    SLICE_X38Y68.X       Tif5x                 1.152   N33
+                                                       uartrx/r_SM_Main_cmp_lt00002_SW0_SW1_G
+                                                       uartrx/r_SM_Main_cmp_lt00002_SW0_SW1
+    SLICE_X39Y66.G3      net (fanout=1)        0.343   N33
+    SLICE_X39Y66.Y       Tilo                  0.704   uartrx/r_RX_Byte_7_not0001
+                                                       uartrx/r_SM_Main_cmp_lt00002
+    SLICE_X41Y56.F1      net (fanout=11)       1.635   uartrx/r_SM_Main_cmp_lt0000
+    SLICE_X41Y56.X       Tilo                  0.704   uartrx/r_RX_Byte_6_not0001
+                                                       uartrx/r_RX_Byte_6_not00011
+    SLICE_X42Y51.CE      net (fanout=1)        0.831   uartrx/r_RX_Byte_6_not0001
+    SLICE_X42Y51.CLK     Tceck                 0.555   uartrx/r_RX_Byte<6>
+                                                       uartrx/r_RX_Byte_6
     -------------------------------------------------  ---------------------------
-    Total                                      7.947ns (3.778ns logic, 4.169ns route)
-                                                       (47.5% logic, 52.5% route)
+    Total                                      7.588ns (3.706ns logic, 3.882ns route)
+                                                       (48.8% logic, 51.2% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     23.380ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               anode_count_3 (FF)
-  Destination:          anode_count_30 (FF)
+Slack (setup path):     23.875ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               uartrx/r_Clk_Count_6 (FF)
+  Destination:          uartrx/r_RX_Byte_6 (FF)
   Requirement:          31.250ns
-  Data Path Delay:      7.870ns (Levels of Logic = 2)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      7.359ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.016ns (0.085 - 0.101)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 31.250ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: anode_count_3 to anode_count_30
+  Maximum Data Path: uartrx/r_Clk_Count_6 to uartrx/r_RX_Byte_6
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X19Y58.YQ      Tcko                  0.587   anode_count<2>
-                                                       anode_count_3
-    SLICE_X17Y67.F1      net (fanout=2)        1.354   anode_count<3>
-    SLICE_X17Y67.COUT    Topcyf                1.162   N0
-                                                       anode_count_and00001_wg_lut<6>
-                                                       anode_count_and00001_wg_cy<6>
-                                                       anode_count_and00001_wg_cy<7>
-    SLICE_X18Y57.G4      net (fanout=3)        1.495   N0
-    SLICE_X18Y57.Y       Tilo                  0.759   anode_count_and0000
-                                                       anode_count_and00001
-    SLICE_X19Y72.SR      net (fanout=16)       1.603   anode_count_and0000
-    SLICE_X19Y72.CLK     Tsrck                 0.910   anode_count<30>
-                                                       anode_count_30
+    SLICE_X38Y72.YQ      Tcko                  0.652   uartrx/r_Clk_Count<7>
+                                                       uartrx/r_Clk_Count_6
+    SLICE_X38Y68.F3      net (fanout=6)        0.783   uartrx/r_Clk_Count<6>
+    SLICE_X38Y68.X       Tif5x                 1.152   N33
+                                                       uartrx/r_SM_Main_cmp_lt00002_SW0_SW1_G
+                                                       uartrx/r_SM_Main_cmp_lt00002_SW0_SW1
+    SLICE_X39Y66.G3      net (fanout=1)        0.343   N33
+    SLICE_X39Y66.Y       Tilo                  0.704   uartrx/r_RX_Byte_7_not0001
+                                                       uartrx/r_SM_Main_cmp_lt00002
+    SLICE_X41Y56.F1      net (fanout=11)       1.635   uartrx/r_SM_Main_cmp_lt0000
+    SLICE_X41Y56.X       Tilo                  0.704   uartrx/r_RX_Byte_6_not0001
+                                                       uartrx/r_RX_Byte_6_not00011
+    SLICE_X42Y51.CE      net (fanout=1)        0.831   uartrx/r_RX_Byte_6_not0001
+    SLICE_X42Y51.CLK     Tceck                 0.555   uartrx/r_RX_Byte<6>
+                                                       uartrx/r_RX_Byte_6
     -------------------------------------------------  ---------------------------
-    Total                                      7.870ns (3.418ns logic, 4.452ns route)
-                                                       (43.4% logic, 56.6% route)
+    Total                                      7.359ns (3.767ns logic, 3.592ns route)
+                                                       (51.2% logic, 48.8% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point anode_count_22 (SLICE_X19Y68.SR), 43 paths
+Paths for end point uartrx/r_RX_Byte_4 (SLICE_X42Y50.CE), 20 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     23.466ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               anode_count_7 (FF)
-  Destination:          anode_count_22 (FF)
+Slack (setup path):     23.507ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               uartrx/r_Clk_Count_8 (FF)
+  Destination:          uartrx/r_RX_Byte_4 (FF)
   Requirement:          31.250ns
-  Data Path Delay:      7.784ns (Levels of Logic = 2)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      7.727ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.016ns (0.085 - 0.101)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 31.250ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: anode_count_7 to anode_count_22
+  Maximum Data Path: uartrx/r_Clk_Count_8 to uartrx/r_RX_Byte_4
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X19Y60.YQ      Tcko                  0.587   anode_count<6>
-                                                       anode_count_7
-    SLICE_X17Y67.F2      net (fanout=2)        1.557   anode_count<7>
-    SLICE_X17Y67.COUT    Topcyf                1.162   N0
-                                                       anode_count_and00001_wg_lut<6>
-                                                       anode_count_and00001_wg_cy<6>
-                                                       anode_count_and00001_wg_cy<7>
-    SLICE_X18Y57.G4      net (fanout=3)        1.495   N0
-    SLICE_X18Y57.Y       Tilo                  0.759   anode_count_and0000
-                                                       anode_count_and00001
-    SLICE_X19Y68.SR      net (fanout=16)       1.314   anode_count_and0000
-    SLICE_X19Y68.CLK     Tsrck                 0.910   anode_count<22>
-                                                       anode_count_22
+    SLICE_X38Y73.YQ      Tcko                  0.652   uartrx/r_Clk_Count<9>
+                                                       uartrx/r_Clk_Count_8
+    SLICE_X38Y68.F2      net (fanout=8)        1.415   uartrx/r_Clk_Count<8>
+    SLICE_X38Y68.X       Tif5x                 1.152   N33
+                                                       uartrx/r_SM_Main_cmp_lt00002_SW0_SW1_G
+                                                       uartrx/r_SM_Main_cmp_lt00002_SW0_SW1
+    SLICE_X39Y66.G3      net (fanout=1)        0.343   N33
+    SLICE_X39Y66.Y       Tilo                  0.704   uartrx/r_RX_Byte_7_not0001
+                                                       uartrx/r_SM_Main_cmp_lt00002
+    SLICE_X40Y57.F4      net (fanout=11)       1.502   uartrx/r_SM_Main_cmp_lt0000
+    SLICE_X40Y57.X       Tilo                  0.759   uartrx/r_RX_Byte_4_not0001
+                                                       uartrx/r_RX_Byte_4_not00011
+    SLICE_X42Y50.CE      net (fanout=1)        0.645   uartrx/r_RX_Byte_4_not0001
+    SLICE_X42Y50.CLK     Tceck                 0.555   uartrx/r_RX_Byte<4>
+                                                       uartrx/r_RX_Byte_4
     -------------------------------------------------  ---------------------------
-    Total                                      7.784ns (3.418ns logic, 4.366ns route)
-                                                       (43.9% logic, 56.1% route)
+    Total                                      7.727ns (3.822ns logic, 3.905ns route)
+                                                       (49.5% logic, 50.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     23.574ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               prescale_counter_0 (FF)
-  Destination:          anode_count_22 (FF)
+Slack (setup path):     23.909ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               uartrx/r_Clk_Count_11 (FF)
+  Destination:          uartrx/r_RX_Byte_4 (FF)
   Requirement:          31.250ns
-  Data Path Delay:      7.658ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.018ns (0.011 - 0.029)
+  Data Path Delay:      7.324ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.017ns (0.085 - 0.102)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 31.250ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: prescale_counter_0 to anode_count_22
+  Maximum Data Path: uartrx/r_Clk_Count_11 to uartrx/r_RX_Byte_4
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X25Y68.XQ      Tcko                  0.591   prescale_counter<0>
-                                                       prescale_counter_0
-    SLICE_X24Y68.F1      net (fanout=2)        0.834   prescale_counter<0>
-    SLICE_X24Y68.X       Tilo                  0.759   anode_count_cmp_eq000028
-                                                       anode_count_cmp_eq000028
-    SLICE_X24Y71.F1      net (fanout=2)        0.439   anode_count_cmp_eq000028
-    SLICE_X24Y71.X       Tilo                  0.759   anode_count_cmp_eq0000
-                                                       anode_count_cmp_eq000041
-    SLICE_X18Y57.G2      net (fanout=1)        1.293   anode_count_cmp_eq0000
-    SLICE_X18Y57.Y       Tilo                  0.759   anode_count_and0000
-                                                       anode_count_and00001
-    SLICE_X19Y68.SR      net (fanout=16)       1.314   anode_count_and0000
-    SLICE_X19Y68.CLK     Tsrck                 0.910   anode_count<22>
-                                                       anode_count_22
+    SLICE_X37Y75.XQ      Tcko                  0.591   uartrx/r_Clk_Count<11>
+                                                       uartrx/r_Clk_Count_11
+    SLICE_X38Y68.F1      net (fanout=8)        1.073   uartrx/r_Clk_Count<11>
+    SLICE_X38Y68.X       Tif5x                 1.152   N33
+                                                       uartrx/r_SM_Main_cmp_lt00002_SW0_SW1_G
+                                                       uartrx/r_SM_Main_cmp_lt00002_SW0_SW1
+    SLICE_X39Y66.G3      net (fanout=1)        0.343   N33
+    SLICE_X39Y66.Y       Tilo                  0.704   uartrx/r_RX_Byte_7_not0001
+                                                       uartrx/r_SM_Main_cmp_lt00002
+    SLICE_X40Y57.F4      net (fanout=11)       1.502   uartrx/r_SM_Main_cmp_lt0000
+    SLICE_X40Y57.X       Tilo                  0.759   uartrx/r_RX_Byte_4_not0001
+                                                       uartrx/r_RX_Byte_4_not00011
+    SLICE_X42Y50.CE      net (fanout=1)        0.645   uartrx/r_RX_Byte_4_not0001
+    SLICE_X42Y50.CLK     Tceck                 0.555   uartrx/r_RX_Byte<4>
+                                                       uartrx/r_RX_Byte_4
     -------------------------------------------------  ---------------------------
-    Total                                      7.658ns (3.778ns logic, 3.880ns route)
-                                                       (49.3% logic, 50.7% route)
+    Total                                      7.324ns (3.761ns logic, 3.563ns route)
+                                                       (51.4% logic, 48.6% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     23.669ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               anode_count_3 (FF)
-  Destination:          anode_count_22 (FF)
+Slack (setup path):     24.139ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               uartrx/r_Clk_Count_6 (FF)
+  Destination:          uartrx/r_RX_Byte_4 (FF)
   Requirement:          31.250ns
-  Data Path Delay:      7.581ns (Levels of Logic = 2)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      7.095ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.016ns (0.085 - 0.101)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 31.250ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: anode_count_3 to anode_count_22
+  Maximum Data Path: uartrx/r_Clk_Count_6 to uartrx/r_RX_Byte_4
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X19Y58.YQ      Tcko                  0.587   anode_count<2>
-                                                       anode_count_3
-    SLICE_X17Y67.F1      net (fanout=2)        1.354   anode_count<3>
-    SLICE_X17Y67.COUT    Topcyf                1.162   N0
-                                                       anode_count_and00001_wg_lut<6>
-                                                       anode_count_and00001_wg_cy<6>
-                                                       anode_count_and00001_wg_cy<7>
-    SLICE_X18Y57.G4      net (fanout=3)        1.495   N0
-    SLICE_X18Y57.Y       Tilo                  0.759   anode_count_and0000
-                                                       anode_count_and00001
-    SLICE_X19Y68.SR      net (fanout=16)       1.314   anode_count_and0000
-    SLICE_X19Y68.CLK     Tsrck                 0.910   anode_count<22>
-                                                       anode_count_22
+    SLICE_X38Y72.YQ      Tcko                  0.652   uartrx/r_Clk_Count<7>
+                                                       uartrx/r_Clk_Count_6
+    SLICE_X38Y68.F3      net (fanout=6)        0.783   uartrx/r_Clk_Count<6>
+    SLICE_X38Y68.X       Tif5x                 1.152   N33
+                                                       uartrx/r_SM_Main_cmp_lt00002_SW0_SW1_G
+                                                       uartrx/r_SM_Main_cmp_lt00002_SW0_SW1
+    SLICE_X39Y66.G3      net (fanout=1)        0.343   N33
+    SLICE_X39Y66.Y       Tilo                  0.704   uartrx/r_RX_Byte_7_not0001
+                                                       uartrx/r_SM_Main_cmp_lt00002
+    SLICE_X40Y57.F4      net (fanout=11)       1.502   uartrx/r_SM_Main_cmp_lt0000
+    SLICE_X40Y57.X       Tilo                  0.759   uartrx/r_RX_Byte_4_not0001
+                                                       uartrx/r_RX_Byte_4_not00011
+    SLICE_X42Y50.CE      net (fanout=1)        0.645   uartrx/r_RX_Byte_4_not0001
+    SLICE_X42Y50.CLK     Tceck                 0.555   uartrx/r_RX_Byte<4>
+                                                       uartrx/r_RX_Byte_4
     -------------------------------------------------  ---------------------------
-    Total                                      7.581ns (3.418ns logic, 4.163ns route)
-                                                       (45.1% logic, 54.9% route)
+    Total                                      7.095ns (3.822ns logic, 3.273ns route)
+                                                       (53.9% logic, 46.1% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point anode_count_23 (SLICE_X19Y68.SR), 43 paths
+Paths for end point uartrx/r_RX_Byte_2 (SLICE_X42Y52.CE), 20 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     23.466ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               anode_count_7 (FF)
-  Destination:          anode_count_23 (FF)
+Slack (setup path):     23.633ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               uartrx/r_Clk_Count_8 (FF)
+  Destination:          uartrx/r_RX_Byte_2 (FF)
   Requirement:          31.250ns
-  Data Path Delay:      7.784ns (Levels of Logic = 2)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      7.599ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.018ns (0.083 - 0.101)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 31.250ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: anode_count_7 to anode_count_23
+  Maximum Data Path: uartrx/r_Clk_Count_8 to uartrx/r_RX_Byte_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X19Y60.YQ      Tcko                  0.587   anode_count<6>
-                                                       anode_count_7
-    SLICE_X17Y67.F2      net (fanout=2)        1.557   anode_count<7>
-    SLICE_X17Y67.COUT    Topcyf                1.162   N0
-                                                       anode_count_and00001_wg_lut<6>
-                                                       anode_count_and00001_wg_cy<6>
-                                                       anode_count_and00001_wg_cy<7>
-    SLICE_X18Y57.G4      net (fanout=3)        1.495   N0
-    SLICE_X18Y57.Y       Tilo                  0.759   anode_count_and0000
-                                                       anode_count_and00001
-    SLICE_X19Y68.SR      net (fanout=16)       1.314   anode_count_and0000
-    SLICE_X19Y68.CLK     Tsrck                 0.910   anode_count<22>
-                                                       anode_count_23
+    SLICE_X38Y73.YQ      Tcko                  0.652   uartrx/r_Clk_Count<9>
+                                                       uartrx/r_Clk_Count_8
+    SLICE_X38Y68.F2      net (fanout=8)        1.415   uartrx/r_Clk_Count<8>
+    SLICE_X38Y68.X       Tif5x                 1.152   N33
+                                                       uartrx/r_SM_Main_cmp_lt00002_SW0_SW1_G
+                                                       uartrx/r_SM_Main_cmp_lt00002_SW0_SW1
+    SLICE_X39Y66.G3      net (fanout=1)        0.343   N33
+    SLICE_X39Y66.Y       Tilo                  0.704   uartrx/r_RX_Byte_7_not0001
+                                                       uartrx/r_SM_Main_cmp_lt00002
+    SLICE_X41Y58.F1      net (fanout=11)       1.429   uartrx/r_SM_Main_cmp_lt0000
+    SLICE_X41Y58.X       Tilo                  0.704   uartrx/r_RX_Byte_2_not0001
+                                                       uartrx/r_RX_Byte_2_not00011
+    SLICE_X42Y52.CE      net (fanout=1)        0.645   uartrx/r_RX_Byte_2_not0001
+    SLICE_X42Y52.CLK     Tceck                 0.555   uartrx/r_RX_Byte<2>
+                                                       uartrx/r_RX_Byte_2
     -------------------------------------------------  ---------------------------
-    Total                                      7.784ns (3.418ns logic, 4.366ns route)
-                                                       (43.9% logic, 56.1% route)
+    Total                                      7.599ns (3.767ns logic, 3.832ns route)
+                                                       (49.6% logic, 50.4% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     23.574ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               prescale_counter_0 (FF)
-  Destination:          anode_count_23 (FF)
+Slack (setup path):     24.035ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               uartrx/r_Clk_Count_11 (FF)
+  Destination:          uartrx/r_RX_Byte_2 (FF)
   Requirement:          31.250ns
-  Data Path Delay:      7.658ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.018ns (0.011 - 0.029)
+  Data Path Delay:      7.196ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.019ns (0.083 - 0.102)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 31.250ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: prescale_counter_0 to anode_count_23
+  Maximum Data Path: uartrx/r_Clk_Count_11 to uartrx/r_RX_Byte_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X25Y68.XQ      Tcko                  0.591   prescale_counter<0>
-                                                       prescale_counter_0
-    SLICE_X24Y68.F1      net (fanout=2)        0.834   prescale_counter<0>
-    SLICE_X24Y68.X       Tilo                  0.759   anode_count_cmp_eq000028
-                                                       anode_count_cmp_eq000028
-    SLICE_X24Y71.F1      net (fanout=2)        0.439   anode_count_cmp_eq000028
-    SLICE_X24Y71.X       Tilo                  0.759   anode_count_cmp_eq0000
-                                                       anode_count_cmp_eq000041
-    SLICE_X18Y57.G2      net (fanout=1)        1.293   anode_count_cmp_eq0000
-    SLICE_X18Y57.Y       Tilo                  0.759   anode_count_and0000
-                                                       anode_count_and00001
-    SLICE_X19Y68.SR      net (fanout=16)       1.314   anode_count_and0000
-    SLICE_X19Y68.CLK     Tsrck                 0.910   anode_count<22>
-                                                       anode_count_23
+    SLICE_X37Y75.XQ      Tcko                  0.591   uartrx/r_Clk_Count<11>
+                                                       uartrx/r_Clk_Count_11
+    SLICE_X38Y68.F1      net (fanout=8)        1.073   uartrx/r_Clk_Count<11>
+    SLICE_X38Y68.X       Tif5x                 1.152   N33
+                                                       uartrx/r_SM_Main_cmp_lt00002_SW0_SW1_G
+                                                       uartrx/r_SM_Main_cmp_lt00002_SW0_SW1
+    SLICE_X39Y66.G3      net (fanout=1)        0.343   N33
+    SLICE_X39Y66.Y       Tilo                  0.704   uartrx/r_RX_Byte_7_not0001
+                                                       uartrx/r_SM_Main_cmp_lt00002
+    SLICE_X41Y58.F1      net (fanout=11)       1.429   uartrx/r_SM_Main_cmp_lt0000
+    SLICE_X41Y58.X       Tilo                  0.704   uartrx/r_RX_Byte_2_not0001
+                                                       uartrx/r_RX_Byte_2_not00011
+    SLICE_X42Y52.CE      net (fanout=1)        0.645   uartrx/r_RX_Byte_2_not0001
+    SLICE_X42Y52.CLK     Tceck                 0.555   uartrx/r_RX_Byte<2>
+                                                       uartrx/r_RX_Byte_2
     -------------------------------------------------  ---------------------------
-    Total                                      7.658ns (3.778ns logic, 3.880ns route)
-                                                       (49.3% logic, 50.7% route)
+    Total                                      7.196ns (3.706ns logic, 3.490ns route)
+                                                       (51.5% logic, 48.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     23.669ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               anode_count_3 (FF)
-  Destination:          anode_count_23 (FF)
+Slack (setup path):     24.265ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               uartrx/r_Clk_Count_6 (FF)
+  Destination:          uartrx/r_RX_Byte_2 (FF)
   Requirement:          31.250ns
-  Data Path Delay:      7.581ns (Levels of Logic = 2)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      6.967ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.018ns (0.083 - 0.101)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 31.250ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: anode_count_3 to anode_count_23
+  Maximum Data Path: uartrx/r_Clk_Count_6 to uartrx/r_RX_Byte_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X19Y58.YQ      Tcko                  0.587   anode_count<2>
-                                                       anode_count_3
-    SLICE_X17Y67.F1      net (fanout=2)        1.354   anode_count<3>
-    SLICE_X17Y67.COUT    Topcyf                1.162   N0
-                                                       anode_count_and00001_wg_lut<6>
-                                                       anode_count_and00001_wg_cy<6>
-                                                       anode_count_and00001_wg_cy<7>
-    SLICE_X18Y57.G4      net (fanout=3)        1.495   N0
-    SLICE_X18Y57.Y       Tilo                  0.759   anode_count_and0000
-                                                       anode_count_and00001
-    SLICE_X19Y68.SR      net (fanout=16)       1.314   anode_count_and0000
-    SLICE_X19Y68.CLK     Tsrck                 0.910   anode_count<22>
-                                                       anode_count_23
+    SLICE_X38Y72.YQ      Tcko                  0.652   uartrx/r_Clk_Count<7>
+                                                       uartrx/r_Clk_Count_6
+    SLICE_X38Y68.F3      net (fanout=6)        0.783   uartrx/r_Clk_Count<6>
+    SLICE_X38Y68.X       Tif5x                 1.152   N33
+                                                       uartrx/r_SM_Main_cmp_lt00002_SW0_SW1_G
+                                                       uartrx/r_SM_Main_cmp_lt00002_SW0_SW1
+    SLICE_X39Y66.G3      net (fanout=1)        0.343   N33
+    SLICE_X39Y66.Y       Tilo                  0.704   uartrx/r_RX_Byte_7_not0001
+                                                       uartrx/r_SM_Main_cmp_lt00002
+    SLICE_X41Y58.F1      net (fanout=11)       1.429   uartrx/r_SM_Main_cmp_lt0000
+    SLICE_X41Y58.X       Tilo                  0.704   uartrx/r_RX_Byte_2_not0001
+                                                       uartrx/r_RX_Byte_2_not00011
+    SLICE_X42Y52.CE      net (fanout=1)        0.645   uartrx/r_RX_Byte_2_not0001
+    SLICE_X42Y52.CLK     Tceck                 0.555   uartrx/r_RX_Byte<2>
+                                                       uartrx/r_RX_Byte_2
     -------------------------------------------------  ---------------------------
-    Total                                      7.581ns (3.418ns logic, 4.163ns route)
-                                                       (45.1% logic, 54.9% route)
+    Total                                      6.967ns (3.767ns logic, 3.200ns route)
+                                                       (54.1% logic, 45.9% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: NET "CLK_BUFGP/IBUFG" PERIOD = 31.25 ns HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point anode_count_4 (SLICE_X19Y59.F4), 1 path
+Paths for end point fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg_d2 (SLICE_X49Y44.BX), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      1.607ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               anode_count_4 (FF)
-  Destination:          anode_count_4 (FF)
+Slack (hold path):      0.978ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg_d1 (FF)
+  Destination:          fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg_d2 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      1.607ns (Levels of Logic = 1)
+  Data Path Delay:      0.978ns (Levels of Logic = 0)
   Clock Path Skew:      0.000ns
   Source Clock:         CLK_BUFGP rising at 31.250ns
   Destination Clock:    CLK_BUFGP rising at 31.250ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: anode_count_4 to anode_count_4
+  Minimum Data Path: fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg_d1 to fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg_d2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X19Y59.XQ      Tcko                  0.473   anode_count<4>
-                                                       anode_count_4
-    SLICE_X19Y59.F4      net (fanout=2)        0.333   anode_count<4>
-    SLICE_X19Y59.CLK     Tckf        (-Th)    -0.801   anode_count<4>
-                                                       anode_count<4>_rt
-                                                       Mcount_anode_count_xor<4>
-                                                       anode_count_4
+    SLICE_X49Y44.YQ      Tcko                  0.470   fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg_d2
+                                                       fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg_d1
+    SLICE_X49Y44.BX      net (fanout=2)        0.415   fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg_d1
+    SLICE_X49Y44.CLK     Tckdi       (-Th)    -0.093   fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg_d2
+                                                       fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg_d2
     -------------------------------------------------  ---------------------------
-    Total                                      1.607ns (1.274ns logic, 0.333ns route)
-                                                       (79.3% logic, 20.7% route)
+    Total                                      0.978ns (0.563ns logic, 0.415ns route)
+                                                       (57.6% logic, 42.4% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point anode_count_6 (SLICE_X19Y60.F4), 1 path
+Paths for end point fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/count_d1_3 (SLICE_X47Y43.BX), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      1.607ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               anode_count_6 (FF)
-  Destination:          anode_count_6 (FF)
+Slack (hold path):      1.025ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/count_3 (FF)
+  Destination:          fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/count_d1_3 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      1.607ns (Levels of Logic = 1)
+  Data Path Delay:      1.025ns (Levels of Logic = 0)
   Clock Path Skew:      0.000ns
   Source Clock:         CLK_BUFGP rising at 31.250ns
   Destination Clock:    CLK_BUFGP rising at 31.250ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: anode_count_6 to anode_count_6
+  Minimum Data Path: fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/count_3 to fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/count_d1_3
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X19Y60.XQ      Tcko                  0.473   anode_count<6>
-                                                       anode_count_6
-    SLICE_X19Y60.F4      net (fanout=2)        0.333   anode_count<6>
-    SLICE_X19Y60.CLK     Tckf        (-Th)    -0.801   anode_count<6>
-                                                       anode_count<6>_rt
-                                                       Mcount_anode_count_xor<6>
-                                                       anode_count_6
+    SLICE_X46Y43.XQ      Tcko                  0.474   fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/count<3>
+                                                       fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/count_3
+    SLICE_X47Y43.BX      net (fanout=3)        0.458   fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/count<3>
+    SLICE_X47Y43.CLK     Tckdi       (-Th)    -0.093   fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/count_d1<3>
+                                                       fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/count_d1_3
     -------------------------------------------------  ---------------------------
-    Total                                      1.607ns (1.274ns logic, 0.333ns route)
-                                                       (79.3% logic, 20.7% route)
+    Total                                      1.025ns (0.567ns logic, 0.458ns route)
+                                                       (55.3% logic, 44.7% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point anode_count_26 (SLICE_X19Y70.F4), 1 path
+Paths for end point fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_asreg_d1 (SLICE_X44Y48.BY), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      1.607ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               anode_count_26 (FF)
-  Destination:          anode_count_26 (FF)
+Slack (hold path):      1.050ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_asreg (FF)
+  Destination:          fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_asreg_d1 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      1.607ns (Levels of Logic = 1)
+  Data Path Delay:      1.050ns (Levels of Logic = 0)
   Clock Path Skew:      0.000ns
   Source Clock:         CLK_BUFGP rising at 31.250ns
   Destination Clock:    CLK_BUFGP rising at 31.250ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: anode_count_26 to anode_count_26
+  Minimum Data Path: fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_asreg to fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_asreg_d1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X19Y70.XQ      Tcko                  0.473   anode_count<26>
-                                                       anode_count_26
-    SLICE_X19Y70.F4      net (fanout=2)        0.333   anode_count<26>
-    SLICE_X19Y70.CLK     Tckf        (-Th)    -0.801   anode_count<26>
-                                                       anode_count<26>_rt
-                                                       Mcount_anode_count_xor<26>
-                                                       anode_count_26
+    SLICE_X45Y48.YQ      Tcko                  0.470   fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_asreg
+                                                       fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_asreg
+    SLICE_X44Y48.BY      net (fanout=2)        0.428   fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_asreg
+    SLICE_X44Y48.CLK     Tckdi       (-Th)    -0.152   fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_asreg_d2
+                                                       fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_asreg_d1
     -------------------------------------------------  ---------------------------
-    Total                                      1.607ns (1.274ns logic, 0.333ns route)
-                                                       (79.3% logic, 20.7% route)
+    Total                                      1.050ns (0.622ns logic, 0.428ns route)
+                                                       (59.2% logic, 40.8% route)
 
 --------------------------------------------------------------------------------
 
 Component Switching Limit Checks: NET "CLK_BUFGP/IBUFG" PERIOD = 31.25 ns HIGH 50%;
 --------------------------------------------------------------------------------
-Slack: 29.654ns (period - (min low pulse limit / (low pulse / period)))
+Slack: 28.074ns (period - (min low pulse limit / (low pulse / period)))
   Period: 31.250ns
   Low pulse: 15.625ns
-  Low pulse limit: 0.798ns (Tcl)
-  Physical resource: anode_count<0>/CLK
-  Logical resource: anode_count_0/CK
-  Location pin: SLICE_X19Y57.CLK
+  Low pulse limit: 1.588ns (Tbpwl)
+  Physical resource: fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/dpram.dp36x36.ram/CLKA
+  Logical resource: fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/dpram.dp36x36.ram.A/CLKA
+  Location pin: RAMB16_X1Y6.CLKA
   Clock network: CLK_BUFGP
 --------------------------------------------------------------------------------
-Slack: 29.654ns (period - (min high pulse limit / (high pulse / period)))
+Slack: 28.074ns (period - (min high pulse limit / (high pulse / period)))
   Period: 31.250ns
   High pulse: 15.625ns
-  High pulse limit: 0.798ns (Tch)
-  Physical resource: anode_count<0>/CLK
-  Logical resource: anode_count_0/CK
-  Location pin: SLICE_X19Y57.CLK
+  High pulse limit: 1.588ns (Tbpwh)
+  Physical resource: fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/dpram.dp36x36.ram/CLKA
+  Logical resource: fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/dpram.dp36x36.ram.A/CLKA
+  Location pin: RAMB16_X1Y6.CLKA
   Clock network: CLK_BUFGP
 --------------------------------------------------------------------------------
-Slack: 29.654ns (period - min period limit)
+Slack: 28.074ns (period - min period limit)
   Period: 31.250ns
-  Min period limit: 1.596ns (626.566MHz) (Tcp)
-  Physical resource: anode_count<0>/CLK
-  Logical resource: anode_count_0/CK
-  Location pin: SLICE_X19Y57.CLK
+  Min period limit: 3.176ns (314.861MHz) (Tbp)
+  Physical resource: fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/dpram.dp36x36.ram/CLKA
+  Logical resource: fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/dpram.dp36x36.ram.A/CLKA
+  Location pin: RAMB16_X1Y6.CLKA
   Clock network: CLK_BUFGP
 --------------------------------------------------------------------------------
 
@@ -474,7 +483,7 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    8.073|         |         |         |
+CLK            |    8.007|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -483,16 +492,16 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 2423 paths, 0 nets, and 178 connections
+Constraints cover 3499 paths, 0 nets, and 580 connections
 
 Design statistics:
-   Minimum period:   8.073ns{1}   (Maximum frequency: 123.870MHz)
+   Minimum period:   8.007ns{1}   (Maximum frequency: 124.891MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Thu Nov  8 12:54:55 2018 
+Analysis completed Fri Nov  9 01:28:41 2018 
 --------------------------------------------------------------------------------
 
 Trace Settings:
