@@ -5,7 +5,7 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to xst
@@ -110,12 +110,11 @@ Cores Search Directories           : {"../serial-communication" "../shift_regist
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "/home/roby/hardware-projects/serial-communication/UART_RX.vhd" in Library work.
+Compiling vhdl file "/home/roby-jacob/hardware-projects/serial-communication/UART_RX.vhd" in Library work.
 Architecture behavioral of Entity uart_rx is up to date.
-Compiling vhdl file "/home/roby/hardware-projects/data_communication/ipcore_dir/memory.vhd" in Library work.
-Entity <memory> compiled.
-Entity <memory> (Architecture <memory_a>) compiled.
-Compiling vhdl file "/home/roby/hardware-projects/data_communication/test_receiver.vhd" in Library work.
+Compiling vhdl file "/home/roby-jacob/hardware-projects/data_communication/ipcore_dir/memory.vhd" in Library work.
+Architecture memory_a of Entity memory is up to date.
+Compiling vhdl file "/home/roby-jacob/hardware-projects/data_communication/test_receiver.vhd" in Library work.
 Entity <test_receiver> compiled.
 Entity <test_receiver> (Architecture <behavioral>) compiled.
 
@@ -132,9 +131,11 @@ Analyzing hierarchy for entity <UART_RX> in library <work> (architecture <behavi
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <test_receiver> in library <work> (Architecture <behavioral>).
-WARNING:Xst:2211 - "/home/roby/hardware-projects/data_communication/test_receiver.vhd" line 100: Instantiating black box module <memory>.
-WARNING:Xst:1610 - "/home/roby/hardware-projects/data_communication/test_receiver.vhd" line 178: Width mismatch. <data_out> has a width of 16 bits but assigned expression is 8-bit wide.
-INFO:Xst:2679 - Register <data_out> in unit <test_receiver> has a constant value of 0000000000000000 during circuit operation. The register is replaced by logic.
+WARNING:Xst:2211 - "/home/roby-jacob/hardware-projects/data_communication/test_receiver.vhd" line 103: Instantiating black box module <memory>.
+WARNING:Xst:819 - "/home/roby-jacob/hardware-projects/data_communication/test_receiver.vhd" line 164: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <data_count>, <do>
+WARNING:Xst:819 - "/home/roby-jacob/hardware-projects/data_communication/test_receiver.vhd" line 193: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <data_out>
 Entity <test_receiver> analyzed. Unit <test_receiver> generated.
 
 Analyzing generic Entity <UART_RX> in library <work> (Architecture <behavioral>).
@@ -149,7 +150,7 @@ Entity <UART_RX> analyzed. Unit <UART_RX> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <UART_RX>.
-    Related source file is "/home/roby/hardware-projects/serial-communication/UART_RX.vhd".
+    Related source file is "/home/roby-jacob/hardware-projects/serial-communication/UART_RX.vhd".
     Found finite state machine <FSM_0> for signal <r_SM_Main>.
     -----------------------------------------------------------------------
     | States             | 5                                              |
@@ -180,20 +181,21 @@ Unit <UART_RX> synthesized.
 
 
 Synthesizing Unit <test_receiver>.
-    Related source file is "/home/roby/hardware-projects/data_communication/test_receiver.vhd".
-WARNING:Xst:1780 - Signal <rst> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Related source file is "/home/roby-jacob/hardware-projects/data_communication/test_receiver.vhd".
+WARNING:Xst:646 - Signal <o_rx_dv> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <number<7:4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <load> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <do> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <byte_select> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 16-bit latch for signal <do>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 7-bit latch for signal <seg>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 8-bit latch for signal <number>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
     Found 31-bit up counter for signal <anode_count>.
     Found 12-bit up counter for signal <prescale_counter>.
+    Found 1-bit register for signal <read_en>.
     Found 1-bit register for signal <write_en>.
     Summary:
 	inferred   2 Counter(s).
-	inferred   1 D-type flip-flop(s).
+	inferred   2 D-type flip-flop(s).
 Unit <test_receiver> synthesized.
 
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -208,12 +210,14 @@ Macro Statistics
 # Counters                                             : 2
  12-bit up counter                                     : 1
  31-bit up counter                                     : 1
-# Registers                                            : 14
- 1-bit register                                        : 12
+# Registers                                            : 15
+ 1-bit register                                        : 13
  12-bit register                                       : 1
  3-bit register                                        : 1
-# Latches                                              : 1
+# Latches                                              : 3
+ 16-bit latch                                          : 1
  7-bit latch                                           : 1
+ 8-bit latch                                           : 1
 # Comparators                                          : 2
  12-bit comparator less                                : 1
  3-bit comparator less                                 : 1
@@ -249,10 +253,12 @@ Macro Statistics
 # Counters                                             : 2
  12-bit up counter                                     : 1
  31-bit up counter                                     : 1
-# Registers                                            : 27
- Flip-Flops                                            : 27
-# Latches                                              : 1
+# Registers                                            : 28
+ Flip-Flops                                            : 28
+# Latches                                              : 3
+ 16-bit latch                                          : 1
  7-bit latch                                           : 1
+ 8-bit latch                                           : 1
 # Comparators                                          : 2
  12-bit comparator less                                : 1
  3-bit comparator less                                 : 1
@@ -262,57 +268,318 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:2677 - Node <number_4> of sequential type is unconnected in block <test_receiver>.
+WARNING:Xst:2677 - Node <number_5> of sequential type is unconnected in block <test_receiver>.
+WARNING:Xst:2677 - Node <number_6> of sequential type is unconnected in block <test_receiver>.
+WARNING:Xst:2677 - Node <number_7> of sequential type is unconnected in block <test_receiver>.
+WARNING:Xst:2677 - Node <do_4> of sequential type is unconnected in block <test_receiver>.
+WARNING:Xst:2677 - Node <do_5> of sequential type is unconnected in block <test_receiver>.
+WARNING:Xst:2677 - Node <do_6> of sequential type is unconnected in block <test_receiver>.
+WARNING:Xst:2677 - Node <do_7> of sequential type is unconnected in block <test_receiver>.
+WARNING:Xst:2677 - Node <do_12> of sequential type is unconnected in block <test_receiver>.
+WARNING:Xst:2677 - Node <do_13> of sequential type is unconnected in block <test_receiver>.
+WARNING:Xst:2677 - Node <do_14> of sequential type is unconnected in block <test_receiver>.
+WARNING:Xst:2677 - Node <do_15> of sequential type is unconnected in block <test_receiver>.
 
-ERROR:Xst:528 - Multi-source in Unit <test_receiver> on signal <data_out<11>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Output port RAMB16_S18_S36:DOB3 of instance <fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/dpram.dp18x36.ram>
-   Signal <data_out<11>> in Unit <test_receiver> is assigned to GND
+Optimizing unit <test_receiver> ...
 
-ERROR:Xst:528 - Multi-source in Unit <test_receiver> on signal <data_out<10>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Output port RAMB16_S18_S36:DOB2 of instance <fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/dpram.dp18x36.ram>
-   Signal <data_out<10>> in Unit <test_receiver> is assigned to GND
+Optimizing unit <UART_RX> ...
+WARNING:Xst:2677 - Node <uartrx/r_RX_DV> of sequential type is unconnected in block <test_receiver>.
 
-ERROR:Xst:528 - Multi-source in Unit <test_receiver> on signal <data_out<9>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Output port RAMB16_S18_S36:DOB1 of instance <fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/dpram.dp18x36.ram>
-   Signal <data_out<9>> in Unit <test_receiver> is assigned to GND
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block test_receiver, actual ratio is 2.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> in Unit <fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_1> in Unit <fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_2> in Unit <fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> in Unit <fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_1> in Unit <fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_2> in Unit <fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
 
-ERROR:Xst:528 - Multi-source in Unit <test_receiver> on signal <data_out<8>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Output port RAMB16_S18_S36:DOB0 of instance <fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/dpram.dp18x36.ram>
-   Signal <data_out<8>> in Unit <test_receiver> is assigned to GND
+Final Macro Processing ...
 
-ERROR:Xst:528 - Multi-source in Unit <test_receiver> on signal <data_out<3>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Output port RAMB16_S18_S36:DOB19 of instance <fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/dpram.dp18x36.ram>
-   Signal <data_out<3>> in Unit <test_receiver> is assigned to GND
+Processing Unit <test_receiver> :
+	Found 2-bit shift register for signal <uartrx/r_RX_Data>.
+Unit <test_receiver> processed.
 
-ERROR:Xst:528 - Multi-source in Unit <test_receiver> on signal <data_out<2>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Output port RAMB16_S18_S36:DOB18 of instance <fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/dpram.dp18x36.ram>
-   Signal <data_out<2>> in Unit <test_receiver> is assigned to GND
+=========================================================================
+Final Register Report
 
-ERROR:Xst:528 - Multi-source in Unit <test_receiver> on signal <data_out<1>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Output port RAMB16_S18_S36:DOB17 of instance <fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/dpram.dp18x36.ram>
-   Signal <data_out<1>> in Unit <test_receiver> is assigned to GND
+Macro Statistics
+# Registers                                            : 71
+ Flip-Flops                                            : 71
+# Shift Registers                                      : 1
+ 2-bit shift register                                  : 1
 
-ERROR:Xst:528 - Multi-source in Unit <test_receiver> on signal <data_out<0>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Output port RAMB16_S18_S36:DOB16 of instance <fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/dpram.dp18x36.ram>
-   Signal <data_out<0>> in Unit <test_receiver> is assigned to GND
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : test_receiver.ngr
+Top Level Output File Name         : test_receiver
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 13
+
+Cell Usage :
+# BELS                             : 298
+#      GND                         : 2
+#      INV                         : 7
+#      LUT1                        : 52
+#      LUT2                        : 13
+#      LUT2_D                      : 2
+#      LUT2_L                      : 2
+#      LUT3                        : 19
+#      LUT3_D                      : 1
+#      LUT3_L                      : 2
+#      LUT4                        : 68
+#      LUT4_D                      : 8
+#      LUT4_L                      : 2
+#      MUXCY                       : 60
+#      MUXF5                       : 4
+#      VCC                         : 1
+#      XORCY                       : 55
+# FlipFlops/Latches                : 126
+#      FD                          : 21
+#      FDC                         : 3
+#      FDCE                        : 18
+#      FDE                         : 8
+#      FDP                         : 6
+#      FDPE                        : 4
+#      FDR                         : 15
+#      FDRE                        : 31
+#      FDS                         : 1
+#      LD                          : 19
+# RAMS                             : 1
+#      RAMB16_S36_S36              : 1
+# Shift Registers                  : 1
+#      SRL16                       : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 12
+#      IBUF                        : 1
+#      OBUF                        : 11
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500evq100-4 
+
+ Number of Slices:                      101  out of   4656     2%  
+ Number of Slice Flip Flops:            119  out of   9312     1%  
+ Number of 4 input LUTs:                177  out of   9312     1%  
+    Number used as logic:               176
+    Number used as Shift registers:       1
+ Number of IOs:                          13
+ Number of bonded IOBs:                  13  out of     66    19%  
+    IOB Flip Flops:                       7
+ Number of BRAMs:                         1  out of     20     5%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.04 secs
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------+------------------------+-------+
+Clock Signal                           | Clock buffer(FF name)  | Load  |
+---------------------------------------+------------------------+-------+
+CLK                                    | BUFGP                  | 109   |
+seg_not0001(seg_not000111:O)           | NONE(*)(seg_0)         | 7     |
+number_cmp_eq0001(number_cmp_eq00011:O)| NONE(*)(number_0)      | 4     |
+fifo/wr_ack                            | NONE(do_0)             | 8     |
+---------------------------------------+------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                           | Buffer(FF name)                                                                                      | Load  |
+-----------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+-------+
+fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg<2>(fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_2:Q)| NONE(fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.gdc.dc/dc/count_0) | 14    |
+fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg<1>(fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_1:Q)| NONE(fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/WR_ACK)        | 9     |
+fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_comb(fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_comb1:O)  | NONE(fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_0)                             | 2     |
+fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_comb(fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_comb1:O)  | NONE(fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_0)                             | 2     |
+fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg<0>(fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_0:Q)| NONE(fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i)| 2     |
+-----------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.578ns (Maximum Frequency: 152.024MHz)
+   Minimum input arrival time before clock: 2.059ns
+   Maximum output required time after clock: 8.450ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 6.578ns (frequency: 152.024MHz)
+  Total number of paths / destination ports: 3586 / 227
+-------------------------------------------------------------------------
+Delay:               6.578ns (Levels of Logic = 9)
+  Source:            anode_count_21 (FF)
+  Destination:       anode_count_0 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: anode_count_21 to anode_count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.591   0.622  anode_count_21 (anode_count_21)
+     LUT4:I0->O            1   0.704   0.000  anode_count_and00001_wg_lut<1> (anode_count_and00001_wg_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  anode_count_and00001_wg_cy<1> (anode_count_and00001_wg_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  anode_count_and00001_wg_cy<2> (anode_count_and00001_wg_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  anode_count_and00001_wg_cy<3> (anode_count_and00001_wg_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  anode_count_and00001_wg_cy<4> (anode_count_and00001_wg_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  anode_count_and00001_wg_cy<5> (anode_count_and00001_wg_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  anode_count_and00001_wg_cy<6> (anode_count_and00001_wg_cy<6>)
+     MUXCY:CI->O           3   0.459   0.566  anode_count_and00001_wg_cy<7> (N1)
+     LUT4:I2->O           31   0.704   1.262  anode_count_and00001 (anode_count_and0000)
+     FDRE:R                    0.911          anode_count_0
+    ----------------------------------------
+    Total                      6.578ns (4.128ns logic, 2.450ns route)
+                                       (62.8% logic, 37.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'fifo/wr_ack'
+  Clock period: 1.431ns (frequency: 698.812MHz)
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Delay:               1.431ns (Levels of Logic = 0)
+  Source:            do_0 (LATCH)
+  Destination:       do_8 (LATCH)
+  Source Clock:      fifo/wr_ack falling
+  Destination Clock: fifo/wr_ack falling
+
+  Data Path: do_0 to do_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.676   0.447  do_0 (do_0)
+     LD:D                      0.308          do_8
+    ----------------------------------------
+    Total                      1.431ns (0.984ns logic, 0.447ns route)
+                                       (68.8% logic, 31.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.059ns (Levels of Logic = 1)
+  Source:            RX (PAD)
+  Destination:       uartrx/Mshreg_r_RX_Data (FF)
+  Destination Clock: CLK rising
+
+  Data Path: RX to uartrx/Mshreg_r_RX_Data
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.420  RX_IBUF (RX_IBUF)
+     SRL16:D                   0.421          uartrx/Mshreg_r_RX_Data
+    ----------------------------------------
+    Total                      2.059ns (1.639ns logic, 0.420ns route)
+                                       (79.6% logic, 20.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 62 / 2
+-------------------------------------------------------------------------
+Offset:              8.450ns (Levels of Logic = 10)
+  Source:            anode_count_21 (FF)
+  Destination:       Seg_AN<1> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: anode_count_21 to Seg_AN<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.591   0.622  anode_count_21 (anode_count_21)
+     LUT4:I0->O            1   0.704   0.000  anode_count_and00001_wg_lut<1> (anode_count_and00001_wg_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  anode_count_and00001_wg_cy<1> (anode_count_and00001_wg_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  anode_count_and00001_wg_cy<2> (anode_count_and00001_wg_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  anode_count_and00001_wg_cy<3> (anode_count_and00001_wg_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  anode_count_and00001_wg_cy<4> (anode_count_and00001_wg_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  anode_count_and00001_wg_cy<5> (anode_count_and00001_wg_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  anode_count_and00001_wg_cy<6> (anode_count_and00001_wg_cy<6>)
+     MUXCY:CI->O           3   0.459   0.706  anode_count_and00001_wg_cy<7> (N1)
+     LUT3:I0->O            5   0.704   0.633  byte_select_cmp_eq00001 (Seg_AN_1_OBUF)
+     OBUF:I->O                 3.272          Seg_AN_1_OBUF (Seg_AN<1>)
+    ----------------------------------------
+    Total                      8.450ns (6.489ns logic, 1.961ns route)
+                                       (76.8% logic, 23.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'seg_not0001'
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Offset:              4.368ns (Levels of Logic = 1)
+  Source:            seg_6 (LATCH)
+  Destination:       Seg7<6> (PAD)
+  Source Clock:      seg_not0001 falling
+
+  Data Path: seg_6 to Seg7<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.676   0.420  seg_6 (seg_6)
+     OBUF:I->O                 3.272          Seg7_6_OBUF (Seg7<6>)
+    ----------------------------------------
+    Total                      4.368ns (3.948ns logic, 0.420ns route)
+                                       (90.4% logic, 9.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.06 secs
  
 --> 
 
 
-Total memory usage is 534592 kilobytes
+Total memory usage is 527712 kilobytes
 
-Number of errors   :    8 (   0 filtered)
-Number of warnings :    8 (   0 filtered)
-Number of infos    :    3 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   21 (   0 filtered)
+Number of infos    :   12 (   0 filtered)
 

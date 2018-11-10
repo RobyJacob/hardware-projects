@@ -62,9 +62,9 @@ architecture Behavioral of full_adder is
 	COMPONENT memory
 		PORT (
 			 clka : IN STD_LOGIC;
-			 wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+--			 wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
 			 addra : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
-			 dina : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+--			 dina : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
 			 douta : OUT STD_LOGIC_VECTOR(2 DOWNTO 0)
 		);	
 	END COMPONENT;
@@ -72,9 +72,9 @@ begin
 	RAM: memory
 		PORT MAP (
 		 clka => CLK,
-		 wea(0) => we_toggle,
+--		 wea(0) => we_toggle,
 		 addra => addr,
-		 dina => data_in,
+--		 dina => data_in,
 		 douta => data_out
 		);
 
@@ -107,63 +107,25 @@ begin
 --		sum <= SWITCH(0) xor SWITCH(1) xor SWITCH(2);
 --		carry <= ((SWITCH(0) xor SWITCH(1)) and SWITCH(2)) or (SWITCH(0) and SWITCH(1));
 	end process;
---	
---	process(SWITCH(3),sel)
---	begin
---		if SWITCH(3) = '1' then
---			case sel is
---				when 1 => anode <= "1110";
---				when 2 => anode <= "1101";
---				when others => anode <= "1111";
---			end case;
---		end if;
---		sum <= SWITCH(0) xor SWITCH(1) xor SWITCH(2);
---		carry <= ((SWITCH(0) xor SWITCH(1)) and SWITCH(2)) or (SWITCH(0) and SWITCH(1));	
---	end process;
 	
 	process(anode)
 	begin
 		case anode is
 			when "1110" =>	
-									if carry = '1' then
-										segment <= "1111001";
-									else 
-										segment <= "1000000";
-									end if;
---								  if SWITCH(0) = '1' then
---										segment <= "1111001";
---								  else
---										segment <= "1000000";
---								  end if;
+							if carry = '1' then
+								segment <= "1111001";
+							else 
+								segment <= "1000000";
+							end if;
 			when "1101" => 
-									if sum = '1' then
-										segment <= "1111001";
-									else 
-										segment <= "1000000";
-									end if;								
---								  if SWITCH(0) = '1' then
---										segment <= "1111001";
---								  else
---										segment <= "1000000";
---								  end if;
---			when "1011" => if SWITCH(2) = '1' then
---									segment <= "1111001";
---							  else
---									segment <= "1000000";
---							  end if;
+							if sum = '1' then
+								segment <= "1111001";
+							else 
+								segment <= "1000000";
+							end if;								
 			when others => segment <= "1111111";
 		end case;
 	end process;
-	
---	process(we_toggle)
---	begin
---		if we_toggle = '1' then
---			data_in <= std_logic_vector(unsigned(data_in) + 1);
---		else
---			sum <= data_out(0) xor data_out(1) xor data_out(2);
---			carry <= ((data_out(0) xor data_out(1)) and data_out(2)) or (data_out(0) and data_out(1));
---		end if;
---	end process;
 	
 	process(CLK)
 	begin

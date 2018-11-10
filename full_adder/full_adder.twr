@@ -37,422 +37,437 @@ INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and
 Timing constraint: NET "CLK_BUFGP/IBUFG" PERIOD = 31.25 ns HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 1627 paths analyzed, 180 endpoints analyzed, 0 failing endpoints
+ 1584 paths analyzed, 164 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is  10.009ns.
+ Minimum period is   9.565ns.
 --------------------------------------------------------------------------------
 
-Paths for end point addr_0 (SLICE_X53Y40.SR), 28 paths
+Paths for end point addr_0 (SLICE_X53Y42.SR), 28 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     21.241ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               addr_counter_15 (FF)
+Slack (setup path):     21.685ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addr_counter_16 (FF)
   Destination:          addr_0 (FF)
   Requirement:          31.250ns
-  Data Path Delay:      10.004ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.005ns (0.096 - 0.101)
+  Data Path Delay:      9.565ns (Levels of Logic = 5)
+  Clock Path Skew:      0.000ns
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 31.250ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: addr_counter_15 to addr_0
+  Maximum Data Path: addr_counter_16 to addr_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X53Y76.YQ      Tcko                  0.587   addr_counter<14>
-                                                       addr_counter_15
-    SLICE_X51Y74.G3      net (fanout=2)        1.267   addr_counter<15>
-    SLICE_X51Y74.COUT    Topcyg                1.001   addr_counter_cmp_eq0000_wg_cy<3>
-                                                       addr_counter_cmp_eq0000_wg_lut<3>
-                                                       addr_counter_cmp_eq0000_wg_cy<3>
-    SLICE_X51Y75.CIN     net (fanout=1)        0.000   addr_counter_cmp_eq0000_wg_cy<3>
-    SLICE_X51Y75.COUT    Tbyp                  0.118   addr_counter_cmp_eq0000_wg_cy<5>
-                                                       addr_counter_cmp_eq0000_wg_cy<4>
-                                                       addr_counter_cmp_eq0000_wg_cy<5>
-    SLICE_X51Y76.CIN     net (fanout=1)        0.000   addr_counter_cmp_eq0000_wg_cy<5>
-    SLICE_X51Y76.XB      Tcinxb                0.404   addr_counter_cmp_eq0000
-                                                       addr_counter_cmp_eq0000_wg_cy<6>
-    SLICE_X52Y40.F1      net (fanout=17)       3.805   addr_counter_cmp_eq0000
-    SLICE_X52Y40.X       Tilo                  0.759   addr<2>
+    SLICE_X51Y78.XQ      Tcko                  0.591   addr_counter<16>
+                                                       addr_counter_16
+    SLICE_X53Y76.G2      net (fanout=2)        1.293   addr_counter<16>
+    SLICE_X53Y76.COUT    Topcyg                1.001   addr_and00001_wg_cy<1>
+                                                       addr_and00001_wg_lut<1>
+                                                       addr_and00001_wg_cy<1>
+    SLICE_X53Y77.CIN     net (fanout=1)        0.000   addr_and00001_wg_cy<1>
+    SLICE_X53Y77.COUT    Tbyp                  0.118   addr_and00001_wg_cy<3>
+                                                       addr_and00001_wg_cy<2>
+                                                       addr_and00001_wg_cy<3>
+    SLICE_X53Y78.CIN     net (fanout=1)        0.000   addr_and00001_wg_cy<3>
+    SLICE_X53Y78.COUT    Tbyp                  0.118   addr_and00001_wg_cy<5>
+                                                       addr_and00001_wg_cy<4>
+                                                       addr_and00001_wg_cy<5>
+    SLICE_X53Y79.CIN     net (fanout=1)        0.000   addr_and00001_wg_cy<5>
+    SLICE_X53Y79.XB      Tcinxb                0.404   addr_and00001_wg_cy<6>
+                                                       addr_and00001_wg_cy<6>
+    SLICE_X52Y42.F1      net (fanout=16)       3.218   addr_and00001_wg_cy<6>
+    SLICE_X52Y42.X       Tilo                  0.759   addr<2>
                                                        addr_and00001
-    SLICE_X53Y40.SR      net (fanout=2)        1.153   addr_and0000
-    SLICE_X53Y40.CLK     Tsrck                 0.910   addr<0>
+    SLICE_X53Y42.SR      net (fanout=2)        1.153   addr_and0000
+    SLICE_X53Y42.CLK     Tsrck                 0.910   addr<0>
                                                        addr_0
     -------------------------------------------------  ---------------------------
-    Total                                     10.004ns (3.779ns logic, 6.225ns route)
-                                                       (37.8% logic, 62.2% route)
+    Total                                      9.565ns (3.901ns logic, 5.664ns route)
+                                                       (40.8% logic, 59.2% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     21.344ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               addr_counter_21 (FF)
+Slack (setup path):     21.836ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addr_counter_6 (FF)
   Destination:          addr_0 (FF)
   Requirement:          31.250ns
-  Data Path Delay:      9.900ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.006ns (0.096 - 0.102)
+  Data Path Delay:      9.414ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 31.250ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: addr_counter_21 to addr_0
+  Maximum Data Path: addr_counter_6 to addr_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X53Y79.YQ      Tcko                  0.587   addr_counter<20>
-                                                       addr_counter_21
-    SLICE_X51Y75.G2      net (fanout=2)        1.281   addr_counter<21>
-    SLICE_X51Y75.COUT    Topcyg                1.001   addr_counter_cmp_eq0000_wg_cy<5>
-                                                       addr_counter_cmp_eq0000_wg_lut<5>
-                                                       addr_counter_cmp_eq0000_wg_cy<5>
-    SLICE_X51Y76.CIN     net (fanout=1)        0.000   addr_counter_cmp_eq0000_wg_cy<5>
-    SLICE_X51Y76.XB      Tcinxb                0.404   addr_counter_cmp_eq0000
-                                                       addr_counter_cmp_eq0000_wg_cy<6>
-    SLICE_X52Y40.F1      net (fanout=17)       3.805   addr_counter_cmp_eq0000
-    SLICE_X52Y40.X       Tilo                  0.759   addr<2>
+    SLICE_X51Y73.XQ      Tcko                  0.591   addr_counter<6>
+                                                       addr_counter_6
+    SLICE_X53Y78.F4      net (fanout=2)        1.217   addr_counter<6>
+    SLICE_X53Y78.COUT    Topcyf                1.162   addr_and00001_wg_cy<5>
+                                                       addr_and00001_wg_lut<4>
+                                                       addr_and00001_wg_cy<4>
+                                                       addr_and00001_wg_cy<5>
+    SLICE_X53Y79.CIN     net (fanout=1)        0.000   addr_and00001_wg_cy<5>
+    SLICE_X53Y79.XB      Tcinxb                0.404   addr_and00001_wg_cy<6>
+                                                       addr_and00001_wg_cy<6>
+    SLICE_X52Y42.F1      net (fanout=16)       3.218   addr_and00001_wg_cy<6>
+    SLICE_X52Y42.X       Tilo                  0.759   addr<2>
                                                        addr_and00001
-    SLICE_X53Y40.SR      net (fanout=2)        1.153   addr_and0000
-    SLICE_X53Y40.CLK     Tsrck                 0.910   addr<0>
+    SLICE_X53Y42.SR      net (fanout=2)        1.153   addr_and0000
+    SLICE_X53Y42.CLK     Tsrck                 0.910   addr<0>
                                                        addr_0
     -------------------------------------------------  ---------------------------
-    Total                                      9.900ns (3.661ns logic, 6.239ns route)
-                                                       (37.0% logic, 63.0% route)
+    Total                                      9.414ns (3.826ns logic, 5.588ns route)
+                                                       (40.6% logic, 59.4% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     21.381ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               addr_counter_18 (FF)
+Slack (setup path):     21.956ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addr_counter_5 (FF)
   Destination:          addr_0 (FF)
   Requirement:          31.250ns
-  Data Path Delay:      9.863ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.006ns (0.096 - 0.102)
+  Data Path Delay:      9.294ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 31.250ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: addr_counter_18 to addr_0
+  Maximum Data Path: addr_counter_5 to addr_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X53Y78.XQ      Tcko                  0.591   addr_counter<18>
-                                                       addr_counter_18
-    SLICE_X51Y75.F1      net (fanout=2)        1.079   addr_counter<18>
-    SLICE_X51Y75.COUT    Topcyf                1.162   addr_counter_cmp_eq0000_wg_cy<5>
-                                                       addr_counter_cmp_eq0000_wg_lut<4>
-                                                       addr_counter_cmp_eq0000_wg_cy<4>
-                                                       addr_counter_cmp_eq0000_wg_cy<5>
-    SLICE_X51Y76.CIN     net (fanout=1)        0.000   addr_counter_cmp_eq0000_wg_cy<5>
-    SLICE_X51Y76.XB      Tcinxb                0.404   addr_counter_cmp_eq0000
-                                                       addr_counter_cmp_eq0000_wg_cy<6>
-    SLICE_X52Y40.F1      net (fanout=17)       3.805   addr_counter_cmp_eq0000
-    SLICE_X52Y40.X       Tilo                  0.759   addr<2>
+    SLICE_X51Y72.YQ      Tcko                  0.587   addr_counter<4>
+                                                       addr_counter_5
+    SLICE_X53Y78.F1      net (fanout=2)        1.101   addr_counter<5>
+    SLICE_X53Y78.COUT    Topcyf                1.162   addr_and00001_wg_cy<5>
+                                                       addr_and00001_wg_lut<4>
+                                                       addr_and00001_wg_cy<4>
+                                                       addr_and00001_wg_cy<5>
+    SLICE_X53Y79.CIN     net (fanout=1)        0.000   addr_and00001_wg_cy<5>
+    SLICE_X53Y79.XB      Tcinxb                0.404   addr_and00001_wg_cy<6>
+                                                       addr_and00001_wg_cy<6>
+    SLICE_X52Y42.F1      net (fanout=16)       3.218   addr_and00001_wg_cy<6>
+    SLICE_X52Y42.X       Tilo                  0.759   addr<2>
                                                        addr_and00001
-    SLICE_X53Y40.SR      net (fanout=2)        1.153   addr_and0000
-    SLICE_X53Y40.CLK     Tsrck                 0.910   addr<0>
+    SLICE_X53Y42.SR      net (fanout=2)        1.153   addr_and0000
+    SLICE_X53Y42.CLK     Tsrck                 0.910   addr<0>
                                                        addr_0
     -------------------------------------------------  ---------------------------
-    Total                                      9.863ns (3.826ns logic, 6.037ns route)
-                                                       (38.8% logic, 61.2% route)
+    Total                                      9.294ns (3.822ns logic, 5.472ns route)
+                                                       (41.1% logic, 58.9% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point addr_1 (SLICE_X53Y40.SR), 28 paths
+Paths for end point addr_1 (SLICE_X53Y42.SR), 28 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     21.241ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               addr_counter_15 (FF)
+Slack (setup path):     21.685ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addr_counter_16 (FF)
   Destination:          addr_1 (FF)
   Requirement:          31.250ns
-  Data Path Delay:      10.004ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.005ns (0.096 - 0.101)
+  Data Path Delay:      9.565ns (Levels of Logic = 5)
+  Clock Path Skew:      0.000ns
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 31.250ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: addr_counter_15 to addr_1
+  Maximum Data Path: addr_counter_16 to addr_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X53Y76.YQ      Tcko                  0.587   addr_counter<14>
-                                                       addr_counter_15
-    SLICE_X51Y74.G3      net (fanout=2)        1.267   addr_counter<15>
-    SLICE_X51Y74.COUT    Topcyg                1.001   addr_counter_cmp_eq0000_wg_cy<3>
-                                                       addr_counter_cmp_eq0000_wg_lut<3>
-                                                       addr_counter_cmp_eq0000_wg_cy<3>
-    SLICE_X51Y75.CIN     net (fanout=1)        0.000   addr_counter_cmp_eq0000_wg_cy<3>
-    SLICE_X51Y75.COUT    Tbyp                  0.118   addr_counter_cmp_eq0000_wg_cy<5>
-                                                       addr_counter_cmp_eq0000_wg_cy<4>
-                                                       addr_counter_cmp_eq0000_wg_cy<5>
-    SLICE_X51Y76.CIN     net (fanout=1)        0.000   addr_counter_cmp_eq0000_wg_cy<5>
-    SLICE_X51Y76.XB      Tcinxb                0.404   addr_counter_cmp_eq0000
-                                                       addr_counter_cmp_eq0000_wg_cy<6>
-    SLICE_X52Y40.F1      net (fanout=17)       3.805   addr_counter_cmp_eq0000
-    SLICE_X52Y40.X       Tilo                  0.759   addr<2>
+    SLICE_X51Y78.XQ      Tcko                  0.591   addr_counter<16>
+                                                       addr_counter_16
+    SLICE_X53Y76.G2      net (fanout=2)        1.293   addr_counter<16>
+    SLICE_X53Y76.COUT    Topcyg                1.001   addr_and00001_wg_cy<1>
+                                                       addr_and00001_wg_lut<1>
+                                                       addr_and00001_wg_cy<1>
+    SLICE_X53Y77.CIN     net (fanout=1)        0.000   addr_and00001_wg_cy<1>
+    SLICE_X53Y77.COUT    Tbyp                  0.118   addr_and00001_wg_cy<3>
+                                                       addr_and00001_wg_cy<2>
+                                                       addr_and00001_wg_cy<3>
+    SLICE_X53Y78.CIN     net (fanout=1)        0.000   addr_and00001_wg_cy<3>
+    SLICE_X53Y78.COUT    Tbyp                  0.118   addr_and00001_wg_cy<5>
+                                                       addr_and00001_wg_cy<4>
+                                                       addr_and00001_wg_cy<5>
+    SLICE_X53Y79.CIN     net (fanout=1)        0.000   addr_and00001_wg_cy<5>
+    SLICE_X53Y79.XB      Tcinxb                0.404   addr_and00001_wg_cy<6>
+                                                       addr_and00001_wg_cy<6>
+    SLICE_X52Y42.F1      net (fanout=16)       3.218   addr_and00001_wg_cy<6>
+    SLICE_X52Y42.X       Tilo                  0.759   addr<2>
                                                        addr_and00001
-    SLICE_X53Y40.SR      net (fanout=2)        1.153   addr_and0000
-    SLICE_X53Y40.CLK     Tsrck                 0.910   addr<0>
+    SLICE_X53Y42.SR      net (fanout=2)        1.153   addr_and0000
+    SLICE_X53Y42.CLK     Tsrck                 0.910   addr<0>
                                                        addr_1
     -------------------------------------------------  ---------------------------
-    Total                                     10.004ns (3.779ns logic, 6.225ns route)
-                                                       (37.8% logic, 62.2% route)
+    Total                                      9.565ns (3.901ns logic, 5.664ns route)
+                                                       (40.8% logic, 59.2% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     21.344ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               addr_counter_21 (FF)
+Slack (setup path):     21.836ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addr_counter_6 (FF)
   Destination:          addr_1 (FF)
   Requirement:          31.250ns
-  Data Path Delay:      9.900ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.006ns (0.096 - 0.102)
+  Data Path Delay:      9.414ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 31.250ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: addr_counter_21 to addr_1
+  Maximum Data Path: addr_counter_6 to addr_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X53Y79.YQ      Tcko                  0.587   addr_counter<20>
-                                                       addr_counter_21
-    SLICE_X51Y75.G2      net (fanout=2)        1.281   addr_counter<21>
-    SLICE_X51Y75.COUT    Topcyg                1.001   addr_counter_cmp_eq0000_wg_cy<5>
-                                                       addr_counter_cmp_eq0000_wg_lut<5>
-                                                       addr_counter_cmp_eq0000_wg_cy<5>
-    SLICE_X51Y76.CIN     net (fanout=1)        0.000   addr_counter_cmp_eq0000_wg_cy<5>
-    SLICE_X51Y76.XB      Tcinxb                0.404   addr_counter_cmp_eq0000
-                                                       addr_counter_cmp_eq0000_wg_cy<6>
-    SLICE_X52Y40.F1      net (fanout=17)       3.805   addr_counter_cmp_eq0000
-    SLICE_X52Y40.X       Tilo                  0.759   addr<2>
+    SLICE_X51Y73.XQ      Tcko                  0.591   addr_counter<6>
+                                                       addr_counter_6
+    SLICE_X53Y78.F4      net (fanout=2)        1.217   addr_counter<6>
+    SLICE_X53Y78.COUT    Topcyf                1.162   addr_and00001_wg_cy<5>
+                                                       addr_and00001_wg_lut<4>
+                                                       addr_and00001_wg_cy<4>
+                                                       addr_and00001_wg_cy<5>
+    SLICE_X53Y79.CIN     net (fanout=1)        0.000   addr_and00001_wg_cy<5>
+    SLICE_X53Y79.XB      Tcinxb                0.404   addr_and00001_wg_cy<6>
+                                                       addr_and00001_wg_cy<6>
+    SLICE_X52Y42.F1      net (fanout=16)       3.218   addr_and00001_wg_cy<6>
+    SLICE_X52Y42.X       Tilo                  0.759   addr<2>
                                                        addr_and00001
-    SLICE_X53Y40.SR      net (fanout=2)        1.153   addr_and0000
-    SLICE_X53Y40.CLK     Tsrck                 0.910   addr<0>
+    SLICE_X53Y42.SR      net (fanout=2)        1.153   addr_and0000
+    SLICE_X53Y42.CLK     Tsrck                 0.910   addr<0>
                                                        addr_1
     -------------------------------------------------  ---------------------------
-    Total                                      9.900ns (3.661ns logic, 6.239ns route)
-                                                       (37.0% logic, 63.0% route)
+    Total                                      9.414ns (3.826ns logic, 5.588ns route)
+                                                       (40.6% logic, 59.4% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     21.381ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               addr_counter_18 (FF)
+Slack (setup path):     21.956ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addr_counter_5 (FF)
   Destination:          addr_1 (FF)
   Requirement:          31.250ns
-  Data Path Delay:      9.863ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.006ns (0.096 - 0.102)
+  Data Path Delay:      9.294ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 31.250ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: addr_counter_18 to addr_1
+  Maximum Data Path: addr_counter_5 to addr_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X53Y78.XQ      Tcko                  0.591   addr_counter<18>
-                                                       addr_counter_18
-    SLICE_X51Y75.F1      net (fanout=2)        1.079   addr_counter<18>
-    SLICE_X51Y75.COUT    Topcyf                1.162   addr_counter_cmp_eq0000_wg_cy<5>
-                                                       addr_counter_cmp_eq0000_wg_lut<4>
-                                                       addr_counter_cmp_eq0000_wg_cy<4>
-                                                       addr_counter_cmp_eq0000_wg_cy<5>
-    SLICE_X51Y76.CIN     net (fanout=1)        0.000   addr_counter_cmp_eq0000_wg_cy<5>
-    SLICE_X51Y76.XB      Tcinxb                0.404   addr_counter_cmp_eq0000
-                                                       addr_counter_cmp_eq0000_wg_cy<6>
-    SLICE_X52Y40.F1      net (fanout=17)       3.805   addr_counter_cmp_eq0000
-    SLICE_X52Y40.X       Tilo                  0.759   addr<2>
+    SLICE_X51Y72.YQ      Tcko                  0.587   addr_counter<4>
+                                                       addr_counter_5
+    SLICE_X53Y78.F1      net (fanout=2)        1.101   addr_counter<5>
+    SLICE_X53Y78.COUT    Topcyf                1.162   addr_and00001_wg_cy<5>
+                                                       addr_and00001_wg_lut<4>
+                                                       addr_and00001_wg_cy<4>
+                                                       addr_and00001_wg_cy<5>
+    SLICE_X53Y79.CIN     net (fanout=1)        0.000   addr_and00001_wg_cy<5>
+    SLICE_X53Y79.XB      Tcinxb                0.404   addr_and00001_wg_cy<6>
+                                                       addr_and00001_wg_cy<6>
+    SLICE_X52Y42.F1      net (fanout=16)       3.218   addr_and00001_wg_cy<6>
+    SLICE_X52Y42.X       Tilo                  0.759   addr<2>
                                                        addr_and00001
-    SLICE_X53Y40.SR      net (fanout=2)        1.153   addr_and0000
-    SLICE_X53Y40.CLK     Tsrck                 0.910   addr<0>
+    SLICE_X53Y42.SR      net (fanout=2)        1.153   addr_and0000
+    SLICE_X53Y42.CLK     Tsrck                 0.910   addr<0>
                                                        addr_1
     -------------------------------------------------  ---------------------------
-    Total                                      9.863ns (3.826ns logic, 6.037ns route)
-                                                       (38.8% logic, 61.2% route)
+    Total                                      9.294ns (3.822ns logic, 5.472ns route)
+                                                       (41.1% logic, 58.9% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point addr_2 (SLICE_X52Y40.SR), 28 paths
+Paths for end point addr_2 (SLICE_X52Y42.SR), 28 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     21.268ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               addr_counter_15 (FF)
+Slack (setup path):     21.712ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addr_counter_16 (FF)
   Destination:          addr_2 (FF)
   Requirement:          31.250ns
-  Data Path Delay:      9.977ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.005ns (0.096 - 0.101)
+  Data Path Delay:      9.538ns (Levels of Logic = 5)
+  Clock Path Skew:      0.000ns
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 31.250ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: addr_counter_15 to addr_2
+  Maximum Data Path: addr_counter_16 to addr_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X53Y76.YQ      Tcko                  0.587   addr_counter<14>
-                                                       addr_counter_15
-    SLICE_X51Y74.G3      net (fanout=2)        1.267   addr_counter<15>
-    SLICE_X51Y74.COUT    Topcyg                1.001   addr_counter_cmp_eq0000_wg_cy<3>
-                                                       addr_counter_cmp_eq0000_wg_lut<3>
-                                                       addr_counter_cmp_eq0000_wg_cy<3>
-    SLICE_X51Y75.CIN     net (fanout=1)        0.000   addr_counter_cmp_eq0000_wg_cy<3>
-    SLICE_X51Y75.COUT    Tbyp                  0.118   addr_counter_cmp_eq0000_wg_cy<5>
-                                                       addr_counter_cmp_eq0000_wg_cy<4>
-                                                       addr_counter_cmp_eq0000_wg_cy<5>
-    SLICE_X51Y76.CIN     net (fanout=1)        0.000   addr_counter_cmp_eq0000_wg_cy<5>
-    SLICE_X51Y76.XB      Tcinxb                0.404   addr_counter_cmp_eq0000
-                                                       addr_counter_cmp_eq0000_wg_cy<6>
-    SLICE_X52Y40.F1      net (fanout=17)       3.805   addr_counter_cmp_eq0000
-    SLICE_X52Y40.X       Tilo                  0.759   addr<2>
+    SLICE_X51Y78.XQ      Tcko                  0.591   addr_counter<16>
+                                                       addr_counter_16
+    SLICE_X53Y76.G2      net (fanout=2)        1.293   addr_counter<16>
+    SLICE_X53Y76.COUT    Topcyg                1.001   addr_and00001_wg_cy<1>
+                                                       addr_and00001_wg_lut<1>
+                                                       addr_and00001_wg_cy<1>
+    SLICE_X53Y77.CIN     net (fanout=1)        0.000   addr_and00001_wg_cy<1>
+    SLICE_X53Y77.COUT    Tbyp                  0.118   addr_and00001_wg_cy<3>
+                                                       addr_and00001_wg_cy<2>
+                                                       addr_and00001_wg_cy<3>
+    SLICE_X53Y78.CIN     net (fanout=1)        0.000   addr_and00001_wg_cy<3>
+    SLICE_X53Y78.COUT    Tbyp                  0.118   addr_and00001_wg_cy<5>
+                                                       addr_and00001_wg_cy<4>
+                                                       addr_and00001_wg_cy<5>
+    SLICE_X53Y79.CIN     net (fanout=1)        0.000   addr_and00001_wg_cy<5>
+    SLICE_X53Y79.XB      Tcinxb                0.404   addr_and00001_wg_cy<6>
+                                                       addr_and00001_wg_cy<6>
+    SLICE_X52Y42.F1      net (fanout=16)       3.218   addr_and00001_wg_cy<6>
+    SLICE_X52Y42.X       Tilo                  0.759   addr<2>
                                                        addr_and00001
-    SLICE_X52Y40.SR      net (fanout=2)        1.126   addr_and0000
-    SLICE_X52Y40.CLK     Tsrck                 0.910   addr<2>
+    SLICE_X52Y42.SR      net (fanout=2)        1.126   addr_and0000
+    SLICE_X52Y42.CLK     Tsrck                 0.910   addr<2>
                                                        addr_2
     -------------------------------------------------  ---------------------------
-    Total                                      9.977ns (3.779ns logic, 6.198ns route)
-                                                       (37.9% logic, 62.1% route)
+    Total                                      9.538ns (3.901ns logic, 5.637ns route)
+                                                       (40.9% logic, 59.1% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     21.371ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               addr_counter_21 (FF)
+Slack (setup path):     21.863ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addr_counter_6 (FF)
   Destination:          addr_2 (FF)
   Requirement:          31.250ns
-  Data Path Delay:      9.873ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.006ns (0.096 - 0.102)
+  Data Path Delay:      9.387ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 31.250ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: addr_counter_21 to addr_2
+  Maximum Data Path: addr_counter_6 to addr_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X53Y79.YQ      Tcko                  0.587   addr_counter<20>
-                                                       addr_counter_21
-    SLICE_X51Y75.G2      net (fanout=2)        1.281   addr_counter<21>
-    SLICE_X51Y75.COUT    Topcyg                1.001   addr_counter_cmp_eq0000_wg_cy<5>
-                                                       addr_counter_cmp_eq0000_wg_lut<5>
-                                                       addr_counter_cmp_eq0000_wg_cy<5>
-    SLICE_X51Y76.CIN     net (fanout=1)        0.000   addr_counter_cmp_eq0000_wg_cy<5>
-    SLICE_X51Y76.XB      Tcinxb                0.404   addr_counter_cmp_eq0000
-                                                       addr_counter_cmp_eq0000_wg_cy<6>
-    SLICE_X52Y40.F1      net (fanout=17)       3.805   addr_counter_cmp_eq0000
-    SLICE_X52Y40.X       Tilo                  0.759   addr<2>
+    SLICE_X51Y73.XQ      Tcko                  0.591   addr_counter<6>
+                                                       addr_counter_6
+    SLICE_X53Y78.F4      net (fanout=2)        1.217   addr_counter<6>
+    SLICE_X53Y78.COUT    Topcyf                1.162   addr_and00001_wg_cy<5>
+                                                       addr_and00001_wg_lut<4>
+                                                       addr_and00001_wg_cy<4>
+                                                       addr_and00001_wg_cy<5>
+    SLICE_X53Y79.CIN     net (fanout=1)        0.000   addr_and00001_wg_cy<5>
+    SLICE_X53Y79.XB      Tcinxb                0.404   addr_and00001_wg_cy<6>
+                                                       addr_and00001_wg_cy<6>
+    SLICE_X52Y42.F1      net (fanout=16)       3.218   addr_and00001_wg_cy<6>
+    SLICE_X52Y42.X       Tilo                  0.759   addr<2>
                                                        addr_and00001
-    SLICE_X52Y40.SR      net (fanout=2)        1.126   addr_and0000
-    SLICE_X52Y40.CLK     Tsrck                 0.910   addr<2>
+    SLICE_X52Y42.SR      net (fanout=2)        1.126   addr_and0000
+    SLICE_X52Y42.CLK     Tsrck                 0.910   addr<2>
                                                        addr_2
     -------------------------------------------------  ---------------------------
-    Total                                      9.873ns (3.661ns logic, 6.212ns route)
-                                                       (37.1% logic, 62.9% route)
+    Total                                      9.387ns (3.826ns logic, 5.561ns route)
+                                                       (40.8% logic, 59.2% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     21.408ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               addr_counter_18 (FF)
+Slack (setup path):     21.983ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addr_counter_5 (FF)
   Destination:          addr_2 (FF)
   Requirement:          31.250ns
-  Data Path Delay:      9.836ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.006ns (0.096 - 0.102)
+  Data Path Delay:      9.267ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 31.250ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: addr_counter_18 to addr_2
+  Maximum Data Path: addr_counter_5 to addr_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X53Y78.XQ      Tcko                  0.591   addr_counter<18>
-                                                       addr_counter_18
-    SLICE_X51Y75.F1      net (fanout=2)        1.079   addr_counter<18>
-    SLICE_X51Y75.COUT    Topcyf                1.162   addr_counter_cmp_eq0000_wg_cy<5>
-                                                       addr_counter_cmp_eq0000_wg_lut<4>
-                                                       addr_counter_cmp_eq0000_wg_cy<4>
-                                                       addr_counter_cmp_eq0000_wg_cy<5>
-    SLICE_X51Y76.CIN     net (fanout=1)        0.000   addr_counter_cmp_eq0000_wg_cy<5>
-    SLICE_X51Y76.XB      Tcinxb                0.404   addr_counter_cmp_eq0000
-                                                       addr_counter_cmp_eq0000_wg_cy<6>
-    SLICE_X52Y40.F1      net (fanout=17)       3.805   addr_counter_cmp_eq0000
-    SLICE_X52Y40.X       Tilo                  0.759   addr<2>
+    SLICE_X51Y72.YQ      Tcko                  0.587   addr_counter<4>
+                                                       addr_counter_5
+    SLICE_X53Y78.F1      net (fanout=2)        1.101   addr_counter<5>
+    SLICE_X53Y78.COUT    Topcyf                1.162   addr_and00001_wg_cy<5>
+                                                       addr_and00001_wg_lut<4>
+                                                       addr_and00001_wg_cy<4>
+                                                       addr_and00001_wg_cy<5>
+    SLICE_X53Y79.CIN     net (fanout=1)        0.000   addr_and00001_wg_cy<5>
+    SLICE_X53Y79.XB      Tcinxb                0.404   addr_and00001_wg_cy<6>
+                                                       addr_and00001_wg_cy<6>
+    SLICE_X52Y42.F1      net (fanout=16)       3.218   addr_and00001_wg_cy<6>
+    SLICE_X52Y42.X       Tilo                  0.759   addr<2>
                                                        addr_and00001
-    SLICE_X52Y40.SR      net (fanout=2)        1.126   addr_and0000
-    SLICE_X52Y40.CLK     Tsrck                 0.910   addr<2>
+    SLICE_X52Y42.SR      net (fanout=2)        1.126   addr_and0000
+    SLICE_X52Y42.CLK     Tsrck                 0.910   addr<2>
                                                        addr_2
     -------------------------------------------------  ---------------------------
-    Total                                      9.836ns (3.826ns logic, 6.010ns route)
-                                                       (38.9% logic, 61.1% route)
+    Total                                      9.267ns (3.822ns logic, 5.445ns route)
+                                                       (41.2% logic, 58.8% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: NET "CLK_BUFGP/IBUFG" PERIOD = 31.25 ns HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point data_in_0 (SLICE_X55Y37.BX), 1 path
+Paths for end point RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram.A (RAMB16_X1Y4.ADDRA6), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      1.069ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               data_in_0 (FF)
-  Destination:          data_in_0 (FF)
+Slack (hold path):      1.106ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               addr_0 (FF)
+  Destination:          RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram.A (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      1.069ns (Levels of Logic = 0)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      1.125ns (Levels of Logic = 0)
+  Clock Path Skew:      0.019ns (0.049 - 0.030)
   Source Clock:         CLK_BUFGP rising at 31.250ns
   Destination Clock:    CLK_BUFGP rising at 31.250ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: data_in_0 to data_in_0
+  Minimum Data Path: addr_0 to RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram.A
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X55Y37.XQ      Tcko                  0.473   data_in<0>
-                                                       data_in_0
-    SLICE_X55Y37.BX      net (fanout=4)        0.503   data_in<0>
-    SLICE_X55Y37.CLK     Tckdi       (-Th)    -0.093   data_in<0>
-                                                       data_in_0
+    SLICE_X53Y42.XQ      Tcko                  0.473   addr<0>
+                                                       addr_0
+    RAMB16_X1Y4.ADDRA6   net (fanout=6)        0.783   addr<0>
+    RAMB16_X1Y4.CLKA     Tbcka       (-Th)     0.131   RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram
+                                                       RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram.A
     -------------------------------------------------  ---------------------------
-    Total                                      1.069ns (0.566ns logic, 0.503ns route)
-                                                       (52.9% logic, 47.1% route)
+    Total                                      1.125ns (0.342ns logic, 0.783ns route)
+                                                       (30.4% logic, 69.6% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point we_toggle (SLICE_X55Y38.BY), 1 path
+Paths for end point RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram.B (RAMB16_X1Y4.ADDRB6), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      1.077ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               we_toggle (FF)
-  Destination:          we_toggle (FF)
+Slack (hold path):      1.106ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               addr_0 (FF)
+  Destination:          RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram.B (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      1.077ns (Levels of Logic = 0)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      1.125ns (Levels of Logic = 0)
+  Clock Path Skew:      0.019ns (0.049 - 0.030)
   Source Clock:         CLK_BUFGP rising at 31.250ns
   Destination Clock:    CLK_BUFGP rising at 31.250ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: we_toggle to we_toggle
+  Minimum Data Path: addr_0 to RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram.B
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X55Y38.YQ      Tcko                  0.470   we_toggle
-                                                       we_toggle
-    SLICE_X55Y38.BY      net (fanout=5)        0.472   we_toggle
-    SLICE_X55Y38.CLK     Tckdi       (-Th)    -0.135   we_toggle
-                                                       we_toggle
+    SLICE_X53Y42.XQ      Tcko                  0.473   addr<0>
+                                                       addr_0
+    RAMB16_X1Y4.ADDRB6   net (fanout=6)        0.783   addr<0>
+    RAMB16_X1Y4.CLKB     Tbcka       (-Th)     0.131   RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram
+                                                       RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram.B
     -------------------------------------------------  ---------------------------
-    Total                                      1.077ns (0.605ns logic, 0.472ns route)
-                                                       (56.2% logic, 43.8% route)
+    Total                                      1.125ns (0.342ns logic, 0.783ns route)
+                                                       (30.4% logic, 69.6% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram.A (RAMB16_X1Y5.DIA0), 1 path
+Paths for end point RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram.A (RAMB16_X1Y4.ADDRA7), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      1.125ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               data_in_0 (FF)
-  Destination:          RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram.A (RAM)
+Slack (hold path):      1.118ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               addr_1 (FF)
+  Destination:          RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram.A (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      1.145ns (Levels of Logic = 0)
-  Clock Path Skew:      0.020ns (0.119 - 0.099)
+  Data Path Delay:      1.137ns (Levels of Logic = 0)
+  Clock Path Skew:      0.019ns (0.049 - 0.030)
   Source Clock:         CLK_BUFGP rising at 31.250ns
   Destination Clock:    CLK_BUFGP rising at 31.250ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: data_in_0 to RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram.A
+  Minimum Data Path: addr_1 to RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram.A
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X55Y37.XQ      Tcko                  0.473   data_in<0>
-                                                       data_in_0
-    RAMB16_X1Y5.DIA0     net (fanout=4)        0.798   data_in<0>
-    RAMB16_X1Y5.CLKA     Tbckd       (-Th)     0.126   RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram
-                                                       RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram.A
+    SLICE_X53Y42.YQ      Tcko                  0.470   addr<0>
+                                                       addr_1
+    RAMB16_X1Y4.ADDRA7   net (fanout=5)        0.798   addr<1>
+    RAMB16_X1Y4.CLKA     Tbcka       (-Th)     0.131   RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram
+                                                       RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram.A
     -------------------------------------------------  ---------------------------
-    Total                                      1.145ns (0.347ns logic, 0.798ns route)
-                                                       (30.3% logic, 69.7% route)
+    Total                                      1.137ns (0.339ns logic, 0.798ns route)
+                                                       (29.8% logic, 70.2% route)
 
 --------------------------------------------------------------------------------
 
@@ -462,26 +477,26 @@ Slack: 28.074ns (period - (min low pulse limit / (low pulse / period)))
   Period: 31.250ns
   Low pulse: 15.625ns
   Low pulse limit: 1.588ns (Tbpwl)
-  Physical resource: RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram/CLKA
-  Logical resource: RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram.A/CLKA
-  Location pin: RAMB16_X1Y5.CLKA
+  Physical resource: RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram/CLKA
+  Logical resource: RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram.A/CLKA
+  Location pin: RAMB16_X1Y4.CLKA
   Clock network: CLK_BUFGP
 --------------------------------------------------------------------------------
 Slack: 28.074ns (period - (min high pulse limit / (high pulse / period)))
   Period: 31.250ns
   High pulse: 15.625ns
   High pulse limit: 1.588ns (Tbpwh)
-  Physical resource: RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram/CLKA
-  Logical resource: RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram.A/CLKA
-  Location pin: RAMB16_X1Y5.CLKA
+  Physical resource: RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram/CLKA
+  Logical resource: RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram.A/CLKA
+  Location pin: RAMB16_X1Y4.CLKA
   Clock network: CLK_BUFGP
 --------------------------------------------------------------------------------
 Slack: 28.074ns (period - min period limit)
   Period: 31.250ns
   Min period limit: 3.176ns (314.861MHz) (Tbp)
-  Physical resource: RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram/CLKA
-  Logical resource: RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram.A/CLKA
-  Location pin: RAMB16_X1Y5.CLKA
+  Physical resource: RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram/CLKA
+  Logical resource: RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/spram.ram.A/CLKA
+  Location pin: RAMB16_X1Y4.CLKA
   Clock network: CLK_BUFGP
 --------------------------------------------------------------------------------
 
@@ -498,7 +513,7 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |   10.009|         |         |         |
+CLK            |    9.565|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -507,16 +522,16 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 1627 paths, 0 nets, and 206 connections
+Constraints cover 1584 paths, 0 nets, and 184 connections
 
 Design statistics:
-   Minimum period:  10.009ns{1}   (Maximum frequency:  99.910MHz)
+   Minimum period:   9.565ns{1}   (Maximum frequency: 104.548MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Sun Oct 28 11:17:55 2018 
+Analysis completed Fri Nov  9 23:02:08 2018 
 --------------------------------------------------------------------------------
 
 Trace Settings:

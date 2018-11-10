@@ -7,7 +7,7 @@ ise -dd _ngo -sd ../serial-communication -sd ../shift_register -sd ipcore_dir
 test_receiver.ngd
 
 Reading NGO file
-"/home/roby/hardware-projects/data_communication/test_receiver.ngc" ...
+"/home/roby-jacob/hardware-projects/data_communication/test_receiver.ngc" ...
 Loading design module "ipcore_dir/memory.ngc"...
 Gathering constraint information from source properties...
 Done.
@@ -35,7 +35,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   1
 
-Total memory usage is 399836 kilobytes
+Total memory usage is 382180 kilobytes
 
 Writing NGD file "test_receiver.ngd" ...
 Total REAL time to NGDBUILD completion:  2 sec

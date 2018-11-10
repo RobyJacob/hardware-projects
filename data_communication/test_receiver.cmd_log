@@ -952,3 +952,19 @@ par -w -intstyle ise -ol high -t 1 test_receiver_map.ncd test_receiver.ncd test_
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml test_receiver.twx test_receiver.ncd -o test_receiver.twr test_receiver.pcf -ucf pin.ucf 
 bitgen -intstyle ise -f test_receiver.ut test_receiver.ncd 
 xst -intstyle ise -ifn "/home/roby/hardware-projects/data_communication/test_receiver.xst" -ofn "/home/roby/hardware-projects/data_communication/test_receiver.syr" 
+xst -intstyle ise -ifn "/home/roby-jacob/hardware-projects/data_communication/test_receiver.xst" -ofn "/home/roby-jacob/hardware-projects/data_communication/test_receiver.syr" 
+xst -intstyle ise -ifn "/home/roby-jacob/hardware-projects/data_communication/test_receiver.xst" -ofn "/home/roby-jacob/hardware-projects/data_communication/test_receiver.syr" 
+xst -intstyle ise -ifn "/home/roby-jacob/hardware-projects/data_communication/test_receiver.xst" -ofn "/home/roby-jacob/hardware-projects/data_communication/test_receiver.syr" 
+xst -intstyle ise -ifn "/home/roby-jacob/hardware-projects/data_communication/test_receiver.xst" -ofn "/home/roby-jacob/hardware-projects/data_communication/test_receiver.syr" 
+xst -intstyle ise -ifn "/home/roby-jacob/hardware-projects/data_communication/test_receiver.xst" -ofn "/home/roby-jacob/hardware-projects/data_communication/test_receiver.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../serial-communication -sd ../shift_register -sd ipcore_dir -nt timestamp -uc pin.ucf -p xc3s500e-vq100-4 test_receiver.ngc test_receiver.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o test_receiver_map.ncd test_receiver.ngd test_receiver.pcf 
+par -w -intstyle ise -ol high -t 1 test_receiver_map.ncd test_receiver.ncd test_receiver.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml test_receiver.twx test_receiver.ncd -o test_receiver.twr test_receiver.pcf -ucf pin.ucf 
+bitgen -intstyle ise -f test_receiver.ut test_receiver.ncd 
+xst -intstyle ise -ifn "/home/roby-jacob/hardware-projects/data_communication/test_receiver.xst" -ofn "/home/roby-jacob/hardware-projects/data_communication/test_receiver.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../serial-communication -sd ../shift_register -sd ipcore_dir -nt timestamp -uc pin.ucf -p xc3s500e-vq100-4 test_receiver.ngc test_receiver.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o test_receiver_map.ncd test_receiver.ngd test_receiver.pcf 
+par -w -intstyle ise -ol high -t 1 test_receiver_map.ncd test_receiver.ncd test_receiver.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml test_receiver.twx test_receiver.ncd -o test_receiver.twr test_receiver.pcf -ucf pin.ucf 
+bitgen -intstyle ise -f test_receiver.ut test_receiver.ncd 
